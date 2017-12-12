@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!--   form -->
     <form action="https://formspree.io/mr.sulowski@gmail.com" method="POST">
 
         <label for="name">Imię</label>
@@ -25,25 +26,24 @@
 
         <label for="city">Miasto</label>
         <select name="City" id="city">
-           <option value="Kraków" name="Kraków">Kraków</option>
-           <option value="Warszawa" name="Warszawa">Warszawa</option>
-           <option value="Gdańsk" name="Gdańsk">Gdańsk</option>
+           <option value="Kraków" id="Kraków">Kraków</option>
+           <option value="Warszawa" id="Warszawa">Warszawa</option>
+           <option value="Gdańsk" id="Gdańsk">Gdańsk</option>
        </select>
 
         <label>Płeć</label>
-        <label for="male">Mężczyzna</label>
-        <input type="radio" id="male" name="Gender" value="male">
-        <label for="female">Kobieta</label>
-        <input type="radio" id="femal" name="Gender" value="female">
+        <input type="radio" name="Gender" value="Male">Mężczyzna
+        <input type="radio" name="Gender" value="Female">Kobieta
 
         <textarea name="Message" placeholder="Twoja wiadomość"></textarea>
-        
+
         <label for="consent">Wyrażam zgodę na przetwarzanie danych osobowych</label>
-        <input type="checkbox" id="consent" name="Agreed to personal data processing">
+        <input type="checkbox" id="consent" name="Personal data processing consent">
 
         <input type="submit" value="Wyślij">
-
     </form>
+    <!--    end form -->
+
 </body>
 
 </html>

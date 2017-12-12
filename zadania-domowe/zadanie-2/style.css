@@ -1,8 +1,12 @@
+/* General styles */
+
 body, html {
     margin: 0;
     font-family: "Work Sans";
     font-size: 0.9em;
 }
+
+/* Form styles */
 
 form {
     margin: 15px;
@@ -25,7 +29,27 @@ input, select {
     margin-bottom: 15px;
 }
 
+input[type=radio] {
+    display: inline;
+    width: 15px;
+}
+
 textarea {
     width: 98.5%;
     height: 200px;
+    margin-bottom: 10px;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    float: left;
+}
+
+input[type=checkbox], label[for=consent] {
+    display: inline;
+}
+
+input[type=submit] {
+    width: 15%;
+    margin-top: 15px;
 }
