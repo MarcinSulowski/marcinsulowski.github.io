@@ -1,0 +1,31 @@
+body, html {
+    margin: 0;
+    font-family: "Work Sans";
+    font-size: 0.9em;
+}
+
+form {
+    margin: 15px;
+    border: 1px solid #000;
+    padding: 15px 15px;
+    width: 32%;
+}
+
+
+label, input {
+    display: block;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 98.5%;
+    height: 200px;
+}
