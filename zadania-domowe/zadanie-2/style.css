@@ -30,8 +30,14 @@ input, select {
 }
 
 input[type=radio] {
-    display: inline;
     width: 15px;
+    display: inline;
+    margin: 0 0 20px 0;
+}
+
+label[for=male], label[for=female] {
+    display: inline;
+    margin-right: 20px;
 }
 
 textarea {
@@ -47,6 +53,7 @@ input[type=checkbox] {
 
 input[type=checkbox], label[for=consent] {
     display: inline;
+    vertical-align: middle;
 }
 
 input[type=submit] {
