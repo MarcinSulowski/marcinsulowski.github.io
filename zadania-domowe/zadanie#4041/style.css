@@ -1,0 +1,54 @@
+/* General styles */
+
+body, html {
+    margin: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* Form styles */
+
+form {
+    margin: 35px;
+    width: 52%;
+    font-size: 0.9em;
+}
+
+fieldset {
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+legend {
+    font-size: 1.2em;
+}
+
+input {
+    margin-bottom: 20px;
+    height: 20px;
+    padding-left: 4px; 
+    width: 41%;
+}
+
+input#quantity {
+    width: 18%;
+}
+
+label, input {
+    display: block;
+}
+
+input[type=submit] {
+    height: 30px;
+    width: 67px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Barlow Semi Condensed";
+    font-size: 1em;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
