@@ -32,18 +32,23 @@
        </select>
 
         <p>Płeć</p>
+        <div class="plec">
         <input type="radio" id="male" name="Gender" value="Male">
         <label for="male">Mężczyzna</label>
-
+        </div>
+        
+        <div class="plec">
         <input type="radio" id="female" name="Gender" value="Female">
         <label for="female">Kobieta</label>
-
-        <textarea name="Message" placeholder="Twoja wiadomość"></textarea>
+        </div>
+        
+        <label for="message">Wiadomość</label>
+        <textarea name="Message" id="message" placeholder="Twoja wiadomość"></textarea>
 
         <label for="consent">Wyrażam zgodę na przetwarzanie danych osobowych</label>
         <input type="checkbox" id="consent" name="Personal data processing consent">
 
-        <input type="submit" value="Wyślij">
+        <input type="submit" value="send">
     </form>
     <!--    end form -->
 
