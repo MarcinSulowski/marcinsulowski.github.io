@@ -48,7 +48,7 @@
         letter-spacing: 0.05em;
         font-size: 2.3vw;
         text-align: center;
-        top: 61vw;
-        left: 25vw
+        top: 100%;
+        left: 25%;
     }
 }
