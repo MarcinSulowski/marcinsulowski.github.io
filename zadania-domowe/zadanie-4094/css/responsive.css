@@ -38,7 +38,7 @@
 @media screen and (max-width: 991px) {
 
     #main-header {
-        min-height: 60vw;
+        min-height: 50vw;
         max-height: 50vw;
         background-image: url(../img/man-1.jpg);
     }
