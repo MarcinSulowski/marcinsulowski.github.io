@@ -5,6 +5,7 @@ body {
 }
 
 #main-header {
+    width: 100%;
     position: relative;
     background-size: cover;
     background-position: center;

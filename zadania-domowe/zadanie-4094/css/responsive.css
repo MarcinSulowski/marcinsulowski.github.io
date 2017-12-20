@@ -1,8 +1,8 @@
 @media screen and (min-width: 1171px) {
 
     #main-header {
-        min-height: 60vw;
-        max-height: 100vw;
+        min-height: 100vh;
+        max-height: 100vh;
         background-image: url(../img/man-1.jpg);
     }
 
@@ -20,8 +20,8 @@
 @media screen and (min-width: 992px) and (max-width: 1170px) {
     
     #main-header {
-        min-height: 60vw;
-        max-height: 70vw;
+        min-height: 70vh;
+        max-height: 70vh;
         background-image: url(../img/man-2.jpg);
     }
 
@@ -31,15 +31,15 @@
         letter-spacing: 0.03em;
         font-size: 1.6vw;
         top: 10%;
-        right: 5%
+        right: 5%;
     }
 }
 
 @media screen and (max-width: 991px) {
 
     #main-header {
-        min-height: 50vw;
-        max-height: 50vw;
+        min-height: 50vh;
+        max-height: 50vh;
         background-image: url(../img/man-1.jpg);
     }
 
