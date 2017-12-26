@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    background-color: #98fb98;
+}
+
+#gallery {
+    position: relative;
+    top: 100px;
+    display: block;
+    border: 2px solid red;
+    text-align: center;
+}
+
+figure.products {
+    width: 30px;
+    height: 40px;
+    display: inline-block;
+    border: 2px solid black;
+    background-position: center;
+    background-size: cover;
+}
+   
+#product-1 {
+    background-image: url(../img/product-1.jpg);
+}
+
+#product-2 {
+    background-image: url(../img/product-2.jpg);
+}
+
+#product-3 {
+    background-image: url(../img/product-3.jpg);
+}
+
+#product-4 {
+    background-image: url(../img/product-4.jpg);
+}
