@@ -4,16 +4,21 @@
 	}
 	
 	.products {
-		width: 1000%;
+		width: 90%;
 	}
+    
+    .mask {
+        width: 100%;
+    }
+    
 }
 
 @media screen and (min-width: 481px) and (max-width: 992px) {
-    #gallery {
-        width: %;
+    .products {
+        width: 45%;
     }
     
-    products {
-        width: %;
+    .mask {
+        width: 100%;
     }
 }
