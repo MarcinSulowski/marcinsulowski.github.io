@@ -1,23 +1,23 @@
 @media screen and (max-width: 480px) {
-	#gallery {
-		width: 100%;
-	}
-	
-	.products {
-		width: 90%;
-	}
-    
+    #gallery {
+        width: 100%;
+    }
+
+    .products {
+        width: 90%;
+    }
+
     .mask {
         width: 100%;
     }
-    
+
 }
 
 @media screen and (min-width: 481px) and (max-width: 992px) {
     .products {
         width: 45%;
     }
-    
+
     .mask {
         width: 100%;
     }
@@ -27,7 +27,7 @@
     .products {
         width: 30%;
     }
-    
+
     .mask {
         width: 100%;
     }
@@ -37,7 +37,7 @@
     .products {
         width: 22%;
     }
-    
+
     .mask {
         width: 100%;
     }

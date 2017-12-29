@@ -36,11 +36,18 @@ a {
     position: absolute;
     color: #fff;
     font-size: 4em;
-    transform: translate(-50%, 250%);
+    transform: translate(-50%, -350%);
+    opacity: 0;
+    transition: opacity 300ms ease;
 }
 
-.mask:hover {
+.products:hover > .mask {
     opacity: 0.7;
+}
+
+.mask:hover + a,
+a:hover {
+    opacity: 1;
 }
 
 #product-1 {
