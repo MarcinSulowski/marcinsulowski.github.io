@@ -36,7 +36,8 @@ a {
     position: absolute;
     color: #fff;
     font-size: 4em;
-    transform: translate(-50%, -350%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 300ms ease;
 }
