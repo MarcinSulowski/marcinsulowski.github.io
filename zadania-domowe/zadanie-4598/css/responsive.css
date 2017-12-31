@@ -1,0 +1,54 @@
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-flow: column nowrap;
+    }
+
+
+    #main-header,
+    #main-footer {
+        height: 100px;
+    }
+
+    #main-content,
+    #aside-left,
+    #aside-right {
+        height: 400px;
+    }
+
+
+}
+
+@media screen and (min-width: 992px) {
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .wrapper > * {
+        padding: 10px;
+        flex: 1 100%;
+    }
+
+    #main-header {
+        order: 0;
+    }
+
+    #main-footer {
+        order: 4;
+    }
+
+    #main-content {
+        flex: 3 0px;
+        order: 2;
+    }
+
+    #aside-left {
+        order: 1;
+    }
+
+    #aside-right {
+        order: 3;
+    }
+
+
+}

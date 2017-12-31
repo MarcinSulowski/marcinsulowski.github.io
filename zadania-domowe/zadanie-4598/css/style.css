@@ -1,0 +1,34 @@
+.wrapper {
+    display: flex;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-size: 2em;
+    font-weight: 100;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#main-header {
+    background-color: #FF421F;
+}
+
+#main-content {
+    background-color: #00C2FA;
+}
+
+#aside-left {
+    background-color: #0A8B35;
+}
+
+#aside-right {
+    background-color: #FDB5BF;
+}
+
+#main-footer {
+    background-color: #9170CF;
+}
