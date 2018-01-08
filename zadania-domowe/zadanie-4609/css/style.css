@@ -236,7 +236,7 @@ i {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    margin: 0 15%;
+    margin: 30px 15% 0 15%;
 }
 
 .circle-container {
@@ -318,13 +318,82 @@ i {
 }
 
 
-
-
-
 /* feedback section */
 
 #feedback {
     background-color: #d74981;
+    padding-bottom: 50px;
+
+}
+
+#feedback-flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 30px 10% 0 10%;
+}
+
+#feedback-flexbox > figure {
+    width: 40%;
+    margin-bottom: 100px;
+
+}
+
+#feedback-flexbox .picture {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    float: left;
+}
+
+#pic1 {
+    background-image: url(../img/pic1.jpeg);
+    background-position: center;
+}
+
+#pic2 {
+    background-image: url(../img/pic2.jpg);
+    background-position: top;
+}
+
+#pic3 {
+    background-image: url(../img/pic3.jpg);
+    background-position: bottom;
+}
+
+#pic4 {
+    background-image: url(../img/pic4.jpg);
+    background-position: bottom;
+}
+
+p.quote {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: #f7e0e8;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 0.05em;
+}
+
+p.function {
+    margin-top: 0;
+    color: #facd92;
+    font-size: 18px;
+        letter-spacing: 0.05em;
+
+}
+
+#feedback-flexbox figcaption {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 /* contact section */
@@ -332,4 +401,22 @@ i {
 #contact {
     background-color: #3c569b;
     margin: 0;
+}
+
+/* footer */
+
+footer {
+    background-color: #344d8f;
+    padding: 40px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    font-size: 32px;
+    padding: 40px;
+}
+
+footer a:hover {
+    color: #32bbe8;
 }
