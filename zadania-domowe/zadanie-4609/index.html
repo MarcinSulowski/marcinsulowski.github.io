@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Zadanie-4609</title>
+
     <!--    Styles     -->
     <link href="css/style.css" rel="stylesheet">
+
     <!--    Fonts     -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,300i,400,400i,600" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+
     <!--    responsive styles     -->
 
 </head>
@@ -17,27 +21,109 @@
         <nav id="menu">
             <ul>
                 <li class="menu-item"><a href="#main-header" alt="home">home</a></li>
-                <li class="menu-item"><a href="" alt="about">about</a></li>
-                <li class="menu-item"><a href="" alt="work">work</a></li>
-                <li class="menu-item"><a href="" alt="blog">blog</a></li>
-                <li class="menu-item"><a href="" alt="contact">contact</a></li>
+                <li class="menu-item"><a href="#about" alt="about">about</a></li>
+                <li class="menu-item"><a href="#skills" alt="work">work</a></li>
+                <li class="menu-item"><a href="#feedback" alt="blog">blog</a></li>
+                <li class="menu-item"><a href="#contact" alt="contact">contact</a></li>
             </ul>
         </nav>
-        <h1>Hi there! We are the new kids on the block <br>and we build awesome websites and mobile apps.</h1>
+        <h1>Hi there! We are the new kids on the block<br>and we build awesome websites and mobile apps.</h1>
         <div class="button-container">
             <div class="button-mask"></div>
             <a id="button" href="#contact" alt="work with us"><span>work with us!</span></a>
         </div>
     </header>
 
+    <!-- about section -->
     <section id="about">
         <h2 class="greyish">meet our beautiful team</h2>
         <p class="subheading grey">We are a small team of designers and developers who help brands with big ideas.</p>
+        <div id="about-flexbox">
+            <figure>
+                <div class="team" id="team-member1"></div>
+                <figcaption>Luke Skywalker</figcaption>
+                <p class="position">CEO / Marketing Guru</p>
+                <p class="description">I am a Jedi, as my father was before me. The Force is strong in my team – my father had it, I have it, my sister has it. You have that power too.</p>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fas fa-envelope"></i></a>
+            </figure>
+            <figure>
+                <div class="team" id="team-member2"></div>
+                <figcaption>Princess Leia</figcaption>
+                <p class="position">Creative Director</p>
+                <p class="description">We have our moments. Not many of them, but we do have them. Will someone get this big walking carpet out of my way?</p>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fas fa-envelope"></i></a>
+            </figure>
+            <figure>
+                <div class="team" id="team-member3"></div>
+                <figcaption>Chewbacca</figcaption>
+                <p class="position">Lead Designer</p>
+                <p class="description">Arrrrhhhn. Gaaaaaaaaaaahhhhhrnnn! Rhhhnngggnn. Garrrrr! Rrrrrrr rrrraaaahhh! Gaarrr grrnnnnn rrhnngg!</p>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fas fa-envelope"></i></a>
+            </figure>
+            <figure>
+                <div class="team" id="team-member4"></div>
+                <figcaption>Darth Vader</figcaption>
+                <p class="position">SEO / Developer</p>
+                <p class="description">When I left you I was but the learner. Now I am the master. I am your developer. <strong>I am your father.</strong> Give yourself to the dark side.</p>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fas fa-envelope"></i></a>
+            </figure>
+        </div>
     </section>
 
+    <!-- skills section -->
     <section id="skills">
         <h2 class="greyish">we got skills!</h2>
-        <p class="subheading grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="subheading grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <div id="skills-flexbox">
+            <div class="circle-container">
+                <div class="circle">
+                    <span>90%</span>
+                    <div class="bar blue"></div>
+                    <div id="p90" class="fill blue"></div>
+                </div>
+                <p>web design</p>
+            </div>
+
+            <div class="circle-container">
+                <div class="circle">
+                    <span>75%</span>
+                    <div class="bar red"></div>
+                    <div id="p75" class="fill red"></div>
+                </div>
+                <p>html / css</p>
+            </div>
+
+            <div class="circle-container">
+                <div class="circle">
+                    <span>70%</span>
+                    <div class="bar green"></div>
+                    <div id="p70" class="fill green"></div>
+                </div>
+                <p>graphic design</p>
+            </div>
+
+            <div class="circle-container">
+                <div class="circle">
+                    <span>85%</span>
+                    <div class="bar orange"></div>
+                    <div id="p85" class="fill orange"></div>
+                </div>
+                <p>ui / ux</p>
+            </div>
+
+        </div>
+
     </section>
 
     <section id="feedback">
@@ -52,5 +138,6 @@
 
     <footer></footer>
 </body>
+
 
 </html>

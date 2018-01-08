@@ -107,13 +107,13 @@ p.subheading {
 
 /* header button and contact section button*/
 
-
 .button-container {
     position: relative;
     width: 300px;
     height: 65px;
     margin: 0 auto;
 }
+
 .button-mask {
     width: 300px;
     height: 65px;
@@ -145,13 +145,181 @@ p.subheading {
 
 #about {
     background-color: #e7f1f8;
+    padding-bottom: 100px;
+}
+
+#about-flexbox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0 15%;
+}
+
+#about-flexbox > figure {
+    width: 25%;
+    text-align: center;
+}
+
+.team {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+#team-member1 {
+    background-image: url(../img/luuke.png);
+
+}
+
+#team-member2 {
+    background-image: url(../img/Princess-Leia.jpg);
+}
+
+#team-member3 {
+    background-image: url(../img/chewie.jpg);
+    background-position: top;
+}
+
+#team-member4 {
+    background-image: url(../img/vader.jpg);
+}
+
+#about-flexbox figcaption {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3c4761;
+}
+
+p.position {
+    color: #54c2ea;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p.description {
+    height: 100px;
+    color: #606b80;
+    margin-bottom: 30px;
+}
+
+#about-flexbox a {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #bdd1e0;
+    margin: 0 5px;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 /* skills section */
 
 #skills {
     background-color: #fff;
+    padding-bottom: 100px;
 }
+
+#skills-flexbox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin: 0 15%;
+}
+
+.circle-container {
+    text-align: center;
+    width: 25%;
+}
+
+.circle {
+    margin: 0 auto;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 10px solid #dfe8ed;
+    border-radius: 50%;
+}
+
+.circle > span {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 44px;
+    font-weight: 200;
+    color: #3c4761;
+}
+
+.circle-container > p {
+    font-size: 26px;
+    font-weight: 600;
+    color: #3c4761;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+}
+
+.bar,
+.fill {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: inherit;
+    height: inherit;
+    border: 10px solid #32bbe8;
+    border-radius: 50%;
+    clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
+}
+
+#p90 {
+    transform: rotate(144deg);
+}
+
+#p75 {
+    transform: rotate(90deg);
+}
+
+#p70 {
+    transform: rotate(72deg);
+}
+
+#p85 {
+    transform: rotate(126deg);
+}
+
+.blue {
+    border-color: #32bbe8;
+}
+
+.red {
+    border-color: #d74981;
+}
+
+.green {
+    border-color: #1cc6a6;
+}
+
+.orange {
+    border-color: #eb7d49;
+}
+
+
+
+
 
 /* feedback section */
 
@@ -165,4 +333,3 @@ p.subheading {
     background-color: #3c569b;
     margin: 0;
 }
-
