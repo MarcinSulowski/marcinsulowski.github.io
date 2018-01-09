@@ -401,13 +401,44 @@ p.function {
 
 #contact {
     background-color: #3c569b;
-    padding-bottom: 100px;    
+    padding-bottom: 100px;
 }
 
 form {
     margin: 20px auto 0 auto;
     width: 1000px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+div#input-name, div#input-email {
+    position: relative;
+    box-sizing: border-box;
+    width: 47%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+div#input-name {
+    float: left;
+}
+
+#input-email {
+    float: right;
+}
+
+div#textarea {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+    clear: both;
+}
+
+textarea {
+    width: inherit;
+    height: inherit;
 }
 
 input[type="text"],
@@ -420,45 +451,54 @@ textarea {
     padding: 20px;
 }
 
-textarea::placeholder::first-letter {
-    color: red;
-}
-
 input {
-    margin-bottom: 25px;
-    height: 50px;
-    width: 47%;
-}
-
-input[type="text"] {
-    float: left;
-}
-
-input[type="email"] {
-    float: right;
+    height: inherit;
+    width: 100%;
 }
 
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+input:required,
+textarea:required {
     color: #fff;
     font-family: 'Titillium Web', sans-serif;
     font-size: 18px;
     font-weight: 200;
 }
 
-textarea {
-    display: block;
-    width: 100%;
-    height: 200px;
-    margin-bottom: 50px;
+form span {
+    font-size: 18px;
+    position: absolute;
+    color: red;
 }
 
-form #button {
-    border: none;
+#input-email > span, #input-name > span {
+    top: 23%;
 }
 
-form #button, form div.button-mask {
+#input-email > span {
+    left: 22%;
+}
+
+#input-name > span {
+    left: 23%;
+}
+
+#textarea > span {
+    top: 10%;
+    left: 13%
+}
+
+input:valid ~ span, textarea:valid ~ span {
+    display: none;
+}
+
+/* contact section button*/
+
+form > .button-container > #button,
+form > .button-container > div.button-mask {
     background-color: #32bbe8;
+    border: none;
 }
 
 input#button {
@@ -470,7 +510,6 @@ input#button {
 input#button:hover {
     cursor: pointer;
 }
-
 
 /* footer */
 

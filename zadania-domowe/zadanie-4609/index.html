@@ -162,14 +162,27 @@
         <p class="subheading white">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</p>
 
         <form action="https://formspree.io/mr.sulowski@gmail.com" method="POST">
-            <input type="text" placeholder="Your Name *" required>
-            <input type="email" placeholder="Your Email *" required>
-            <textarea placeholder="Your Message *" required></textarea>
+            <div id="input-name">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <span>*</span>
+            </div>
+
+            <div id="input-email">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <span>*</span>
+            </div>
+
+            <div id="textarea">
+                <textarea placeholder="Your Message" name="message" required></textarea>
+                <span>*</span>
+            </div>
+
             <div class="button-container">
                 <div class="button-mask"></div>
                 <input id="button" type="submit" value="send message">
             </div>
         </form>
+
     </section>
 
     <footer>
@@ -181,6 +194,7 @@
         <a href="" target="_blank">Dribble</a>
         <a href="" target="_blank">GitHub</a>
     </footer>
+
 </body>
 
 
