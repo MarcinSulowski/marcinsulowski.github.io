@@ -410,7 +410,8 @@ form {
     margin-bottom: 50px;
 }
 
-div#input-name, div#input-email {
+div#input-name,
+div#input-email {
     position: relative;
     box-sizing: border-box;
     width: 47%;
@@ -439,6 +440,7 @@ div#textarea {
 textarea {
     width: inherit;
     height: inherit;
+    resize: none;
 }
 
 input[type="text"],
@@ -472,7 +474,8 @@ form span {
     color: red;
 }
 
-#input-email > span, #input-name > span {
+#input-email > span,
+#input-name > span {
     top: 23%;
 }
 
@@ -489,8 +492,31 @@ form span {
     left: 13%
 }
 
-input:valid ~ span, textarea:valid ~ span {
+input:valid ~ span,
+textarea:valid ~ span {
     display: none;
+}
+
+#custom-resize {
+    margin: 0;
+    padding-right: 0.2%;
+    position: absolute;
+    bottom: 2%;
+    right: 0.3%;
+    width: 3%;
+    height: 14%;
+    background-color: #273c72;
+    text-align: right;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+#custom-resize > p {
+    color: #5d71ab;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 6px;
 }
 
 /* contact section button*/
