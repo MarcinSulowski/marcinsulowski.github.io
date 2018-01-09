@@ -50,6 +50,7 @@ p.subheading {
     font-size: 20px;
     margin: 0;
     padding-bottom: 50px;
+    letter-spacing: 0.05em;
 }
 
 .grey {
@@ -123,7 +124,7 @@ p.subheading {
     margin: 0 auto;
 }
 
-#button {
+.button {
     position: absolute;
     top: 0%;
     display: block;
@@ -137,7 +138,7 @@ p.subheading {
 }
 
 
-#button > span {
+.button > span {
     font-size: 18px;
     line-height: 60px;
 }
@@ -153,15 +154,15 @@ p.subheading {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 0 15%;
+    margin: 50px 15%;
 }
 
-#about-flexbox > figure {
+div.figure {
     width: 25%;
     text-align: center;
 }
 
-.team {
+div.team {
     margin: 0 auto;
     width: 200px;
     height: 200px;
@@ -189,26 +190,27 @@ p.subheading {
     background-image: url(../img/vader.jpg);
 }
 
-#about-flexbox figcaption {
+p.caption {
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
     color: #3c4761;
+    margin: 0;
 }
 
 p.position {
     color: #54c2ea;
     font-size: 18px;
-    margin: 10px 0;
+    margin: 0;
 }
 
 p.description {
     height: 100px;
     color: #606b80;
-    margin-bottom: 30px;
+    margin: 30px 40px;
 }
 
-#about-flexbox a {
+.figure > a {
     position: relative;
     display: inline-block;
     width: 40px;
@@ -330,11 +332,11 @@ i {
 #feedback-flexbox {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 30px 10% 0 10%;
 }
 
-#feedback-flexbox > figure {
+.feedback-figure {
     width: 40%;
     margin-bottom: 100px;
 
@@ -381,20 +383,21 @@ p.quote {
     letter-spacing: 0.05em;
 }
 
+p.feedback-caption {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+}
+
 p.function {
     margin-top: 0;
     color: #facd92;
     font-size: 18px;
     letter-spacing: 0.05em;
 
-}
-
-#feedback-flexbox figcaption {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
 }
 
 /* contact section */
@@ -468,6 +471,8 @@ textarea:required {
     font-weight: 200;
 }
 
+/* styling asterisk */
+
 form span {
     font-size: 18px;
     position: absolute;
@@ -497,6 +502,8 @@ textarea:valid ~ span {
     display: none;
 }
 
+/* custom resizer*/
+
 #custom-resize {
     margin: 0;
     padding-right: 0.2%;
@@ -507,7 +514,7 @@ textarea:valid ~ span {
     height: 14%;
     background-color: #273c72;
     text-align: right;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 }
 
 #custom-resize > p {
@@ -521,19 +528,19 @@ textarea:valid ~ span {
 
 /* contact section button*/
 
-form > .button-container > #button,
+form > .button-container > .button,
 form > .button-container > div.button-mask {
     background-color: #32bbe8;
     border: none;
 }
 
-input#button {
+input.button {
     font-family: 'Titillium Web', sans-serif;
     font-size: 18px;
     line-height: 60px;
 }
 
-input#button:hover {
+input.button:hover {
     cursor: pointer;
 }
 
