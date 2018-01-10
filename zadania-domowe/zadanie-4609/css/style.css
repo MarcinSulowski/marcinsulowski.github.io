@@ -107,7 +107,7 @@ p.subheading {
     background-color: #633c7a;
 }
 
-#main-header > h1 {
+#main-heading {
     margin: 150px 0 50px 0;
     font-size: 54px;
     transition: margin-top .5s linear;

@@ -17,5 +17,5 @@ window.onclick = function (event) {
 }
 
 function changeMargin() {
-    document.getElementById("main-heading").style.marginTop = "250px";
+    document.getElementById("main-heading").style.marginTop = "300px";
 }

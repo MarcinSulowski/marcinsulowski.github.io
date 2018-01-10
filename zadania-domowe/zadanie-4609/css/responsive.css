@@ -8,12 +8,14 @@
     #dropdown-container {
         display: block;
     }
-    
-    .button-container, .button-mask, .button {
+
+    .button-container,
+    .button-mask,
+    .button {
         width: 200px;
     }
 
-    #main-header > h1 {
+    #main-heading {
         font-size: 34px;
     }
 
@@ -111,7 +113,8 @@
     .menu-item > a {
         font-size: 22px;
     }
-    #main-header > h1 {
+
+    #main-heading {
         font-size: 38px;
     }
 
@@ -210,7 +213,7 @@
     }
 
 
-    #main-header > h1 {
+    #main-heading {
         font-size: 42px;
     }
 
@@ -285,7 +288,7 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1279px) {
-    #main-header > h1 {
+    #main-heading {
         font-size: 42px;
     }
 
@@ -363,7 +366,7 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
 
-    #main-header > h1 {
+    #main-heading {
         font-size: 48px;
     }
 
