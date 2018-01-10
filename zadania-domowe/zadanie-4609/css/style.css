@@ -3,6 +3,9 @@
 body {
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
 }
 
 a {
@@ -14,7 +17,7 @@ a {
 h2 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 48px;
+    font-size: 48px; 
     letter-spacing: 0.1em;
     margin: 0;
     padding: 100px 0 20px 0;
@@ -99,11 +102,16 @@ p.subheading {
 
 .menu-item > a:hover {
     background-color: #633c7a;
+} 
+
+.menu-item:first-of-type a {
+    background-color: #633c7a;
 }
 
 #main-header > h1 {
     margin: 150px 0 50px 0;
-    font-size: 3.4em;
+    font-size: 54px;
+
 }
 
 /* header button and contact section button*/
@@ -160,6 +168,7 @@ p.subheading {
 div.figure {
     width: 25%;
     text-align: center;
+    position: relative;
 }
 
 div.team {
@@ -201,16 +210,21 @@ p.caption {
 p.position {
     color: #54c2ea;
     font-size: 18px;
-    margin: 0;
+    margin: 0 0 30px 0;
 }
 
 p.description {
-    height: 100px;
     color: #606b80;
-    margin: 30px 40px;
+    margin: 0 50px 80px 50px;
 }
 
-.figure > a {
+#media-icons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#media-icons > a {
     position: relative;
     display: inline-block;
     width: 40px;
@@ -220,7 +234,7 @@ p.description {
     margin: 0 5px;
 }
 
-i {
+#media-icons > a > i {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -338,8 +352,6 @@ i {
 
 .feedback-figure {
     width: 40%;
-    margin-bottom: 100px;
-
 }
 
 #feedback-flexbox .picture {
@@ -348,7 +360,7 @@ i {
     height: 140px;
     border-radius: 50%;
     background-size: cover;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     margin-right: 50px;
     float: left;
 }
@@ -378,7 +390,7 @@ p.quote {
     margin-bottom: 25px;
     color: #f7e0e8;
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
     letter-spacing: 0.05em;
 }
@@ -481,20 +493,20 @@ form span {
 
 #input-email > span,
 #input-name > span {
-    top: 23%;
-}
-
-#input-email > span {
-    left: 22%;
+    top: 10px;
 }
 
 #input-name > span {
-    left: 23%;
+    left: 107px;
+}
+
+#input-email > span {
+    left: 105px;
 }
 
 #textarea > span {
-    top: 10%;
-    left: 13%
+    top: 15px;
+    left: 130px;
 }
 
 input:valid ~ span,
@@ -506,12 +518,12 @@ textarea:valid ~ span {
 
 #custom-resize {
     margin: 0;
-    padding-right: 0.2%;
+    padding-right: 1px;
     position: absolute;
-    bottom: 2%;
-    right: 0.3%;
-    width: 3%;
-    height: 14%;
+    bottom: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
     background-color: #273c72;
     text-align: right;
     clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
@@ -552,12 +564,19 @@ footer {
     text-align: center;
 }
 
-footer a {
-    color: #fff;
-    font-size: 32px;
-    padding: 40px;
+#media-links {
+    margin: 0 auto;
+    width: 80%;
 }
 
-footer a:hover {
+#media-links a {
+    color: #fff;
+    font-size: 32px;
+    padding: 20px;
+}
+
+#media-links a:hover {
     color: #32bbe8;
 }
+
+.show {display:block;}

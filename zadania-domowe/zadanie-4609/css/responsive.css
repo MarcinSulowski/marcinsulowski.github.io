@@ -1,0 +1,277 @@
+/*Small phones media queries*/
+
+@media screen and (max-width: 480px) {
+
+    #main-header > h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p.subheading {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #about-flexbox,
+    #skills-flexbox,
+    #feedback-flexbox {
+        flex-flow: column nowrap;
+    }
+
+    div.figure,
+    .circle-container,
+    .feedback-figure {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #feedback-flexbox .picture {
+        float: none;
+        margin: 0;
+    }
+
+    .feedback-figure {
+        text-align: center;
+        position: relative;
+    }
+
+    p.quote {
+        margin-top: 100px;
+    }
+
+    p.feedback-caption,
+    p.function {
+        position: absolute;
+        width: 100%;
+    }
+
+    p.feedback-caption {
+        top: 140px;
+    }
+
+    p.function {
+        top: 200px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    div#input-name,
+    div#input-email,
+    div#textarea {
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    #media-links {
+        text-align: center;
+        width: 100%;
+    }
+
+    #media-links a {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+
+}
+
+/*Phones media queries*/
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #main-header > h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p.subheading {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #about-flexbox,
+    #feedback-flexbox {
+        flex-flow: column nowrap;
+    }
+
+    #skills-flexbox {
+        flex-flow: row wrap;
+        margin: 30px 10% 0 10%;
+
+    }
+    .circle-container {
+        width: 50%;
+    }
+
+
+    div.figure,
+    .feedback-figure {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #feedback-flexbox .picture {
+        float: none;
+        margin: 0;
+    }
+
+    .feedback-figure {
+        text-align: center;
+        position: relative;
+    }
+
+    p.quote {
+        margin-top: 100px;
+    }
+
+    p.feedback-caption,
+    p.function {
+        position: absolute;
+        width: 100%;
+    }
+
+    p.feedback-caption {
+        top: 140px;
+    }
+
+    p.function {
+        top: 200px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    div#input-name,
+    div#input-email,
+    div#textarea {
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    #media-links {
+        text-align: center;
+        width: 100%;
+    }
+
+    #media-links a {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+}
+
+/*Medium and small devices media queries*/
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    #main-header > h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    p.subheading {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #about-flexbox,
+    #skills-flexbox,
+    #feedback-flexbox {
+        flex-flow: row wrap;
+    }
+
+    div.figure,
+    .circle-container {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    
+    .feedback-figure {
+        width: 40%;
+        margin-bottom: 50px;
+    }
+
+    #feedback-flexbox .picture {
+        float: none;
+        margin: 0;
+    }
+
+    .feedback-figure {
+        text-align: center;
+        position: relative;
+    }
+
+    p.quote {
+        margin-top: 100px;
+    }
+
+    p.feedback-caption,
+    p.function {
+        position: absolute;
+        width: 100%;
+    }
+
+    p.feedback-caption {
+        top: 140px;
+    }
+
+    p.function {
+        top: 200px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    #media-links {
+        text-align: center;
+        width: 100%;
+    }
+
+    #media-links a {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+}
+
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+    
+    #main-header > h1 {
+        font-size: 48px;
+    }
+    
+    p.description {
+    margin: 0 30px 80px 30px;
+}
+    #about-flexbox, #skills-flexbox {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    #feedback-flexbox .picture {
+        margin-right: 30px;
+    }
+    
+    #media-links {
+        width: 100%;
+    }
+    
+    #media-links a {
+        padding: 20px;
+    }
+    
+}
