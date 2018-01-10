@@ -40,6 +40,10 @@
         width: 100%;
         margin-bottom: 50px;
     }
+    
+    p.description {
+        margin: 0 0 80px 0;
+    }
 
     #feedback-flexbox .picture {
         float: none;
@@ -236,6 +240,10 @@
     .circle-container {
         width: 50%;
         margin-bottom: 50px;
+    }
+    
+    p.description {
+        margin: 0 30px 80px 30px;
     }
 
     .feedback-figure {
