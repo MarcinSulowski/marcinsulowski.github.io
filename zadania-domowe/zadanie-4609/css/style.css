@@ -330,7 +330,6 @@ p.description {
 }
 
 .circle > span {
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -359,6 +358,10 @@ p.description {
     border: 10px solid #32bbe8;
     border-radius: 50%;
     clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
+    -moz-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
+    -o-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
+    -ms-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
 }
 
 #p90 {
@@ -586,6 +589,10 @@ textarea:valid ~ span {
     background-color: #273c72;
     text-align: right;
     clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    -moz-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    -ms-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    -o-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 }
 
 #custom-resize > p {
