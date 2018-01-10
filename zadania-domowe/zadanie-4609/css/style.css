@@ -110,8 +110,6 @@ p.subheading {
 #main-heading {
     margin: 150px 0 50px 0;
     font-size: 54px;
-    transition: margin-top .5s linear;
-
 }
 
 /* dropdown menu for small screens */
@@ -148,7 +146,6 @@ p.subheading {
     margin: 6px auto;
     border: 1px solid #f1edf3;
     width: 25px;
-    transition: all .5s linear;
 }
 
 .dropdown-content {
