@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zadanie-4609</title>
 
     <!--    Styles     -->
@@ -31,8 +31,22 @@
                 <li class="menu-item"><a href="#contact">contact</a></li>
             </ul>
         </nav>
+        <div id="dropdown-container">
+            <button onclick="menuDrop();changeMargin();" class="dropdown-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                </button>
+            <div id="droppie" class="dropdown-content">
+                <a href="#main-header">home</a>
+                <a href="#about">about</a>
+                <a href="#skills">skills</a>
+                <a href="#feedback">blog</a>
+                <a href="#contact">contact</a>
+            </div>
+        </div>
 
-        <h1>Hi there! We are the new kids on the block<br>and we build awesome websites and mobile apps.</h1>
+        <h1 id="main-heading">Hi there! We are the new kids on the block<br>and we build awesome websites and mobile apps.</h1>
         <div class="button-container">
             <div class="button-mask"></div>
             <a class="button" href="#contact"><span>work with us!</span></a>
@@ -49,7 +63,7 @@
         <div id="about-flexbox">
 
             <div class="figure">
-               
+
                 <div class="team" id="team-member1"></div>
                 <p class="caption">Luke Skywalker</p>
                 <p class="position">CEO / Marketing Guru</p>
@@ -61,53 +75,53 @@
                     <a href=""><i class="fab fa-linkedin-in"></i></a>
                     <a href=""><i class="fas fa-envelope"></i></a>
                 </div>
-                
+
             </div>
 
             <div class="figure">
-               
+
                 <div class="team" id="team-member2"></div>
                 <p class="caption">Princess Leia</p>
                 <p class="position">Creative Director</p>
                 <p class="description">We have our moments. Not many of them, but we do have them. Will someone get this big walking carpet out of my way?</p>
-                
+
                 <div class="media-icons">
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fab fa-linkedin-in"></i></a>
                     <a href=""><i class="fas fa-envelope"></i></a>
                 </div>
-                
+
             </div>
 
             <div class="figure">
-               
+
                 <div class="team" id="team-member3"></div>
                 <p class="caption">Chewbacca</p>
                 <p class="position">Lead Designer</p>
                 <p class="description">Arrrrhhhn. Gaaaaaaaahhhhhrnnn! Rhhhnngggnn. Garrrrr! Rrrrrrr rrrraaaahhh! Gaarrr grrnnnnn rrhnngg!</p>
-                
+
                 <div class="media-icons">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fab fa-linkedin-in"></i></a>
                     <a href=""><i class="fas fa-envelope"></i></a>
                 </div>
-                
+
             </div>
 
             <div class="figure">
-               
+
                 <div class="team" id="team-member4"></div>
                 <p class="caption">Darth Vader</p>
                 <p class="position">SEO / Developer</p>
                 <p class="description">When I left you I was but the learner. Now I am the master. I am your developer. <strong>I am your father.</strong> Give yourself to the dark side.</p>
-                
+
                 <div class="media-icons">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fas fa-envelope"></i></a>
                 </div>
-                
+
             </div>
 
         </div>
@@ -231,16 +245,17 @@
     </section>
 
     <footer>
-       <div id="media-links">
-        <a href="" target="_blank">Facebook</a>
-        <a href="" target="_blank">Twitter</a>
-        <a href="" target="_blank">Google+</a>
-        <a href="" target="_blank">LinkedIn</a>
-        <a href="" target="_blank">Behance</a>
-        <a href="" target="_blank">Dribble</a>
-        <a href="" target="_blank">GitHub</a>
+        <div id="media-links">
+            <a href="" target="_blank">Facebook</a>
+            <a href="" target="_blank">Twitter</a>
+            <a href="" target="_blank">Google+</a>
+            <a href="" target="_blank">LinkedIn</a>
+            <a href="" target="_blank">Behance</a>
+            <a href="" target="_blank">Dribble</a>
+            <a href="" target="_blank">GitHub</a>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 
 </body>
 

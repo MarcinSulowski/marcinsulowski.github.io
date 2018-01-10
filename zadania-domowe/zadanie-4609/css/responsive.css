@@ -3,20 +3,10 @@
 @media screen and (max-width: 480px) {
 
     #menu {
-        text-align: center;
+        display: none;
     }
-
-    .menu-item {
-        margin: 0;
-    }
-
-    #main-header {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-
-    .menu-item > a {
-        font-size: 16px;
+    #dropdown-container {
+        display: block;
     }
     
     .button-container, .button-mask, .button {
@@ -107,11 +97,10 @@
 @media screen and (min-width: 481px) and (max-width: 767px) {
 
     #menu {
-        text-align: center;
+        display: none;
     }
-
-    .menu-item {
-        margin: 0;
+    #dropdown-container {
+        display: block;
     }
 
     #main-header {

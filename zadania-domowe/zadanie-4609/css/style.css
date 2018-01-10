@@ -15,7 +15,7 @@ a {
 h2 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 48px; 
+    font-size: 48px;
     letter-spacing: 0.1em;
     margin: 0;
     padding: 100px 10px 20px 10px;
@@ -101,7 +101,7 @@ p.subheading {
 
 .menu-item > a:hover {
     background-color: #633c7a;
-} 
+}
 
 .menu-item:first-of-type a {
     background-color: #633c7a;
@@ -110,7 +110,70 @@ p.subheading {
 #main-header > h1 {
     margin: 150px 0 50px 0;
     font-size: 54px;
+    transition: margin-top .5s linear;
 
+}
+
+/* dropdown menu for small screens */
+
+#dropdown-container {
+    display: none;
+    box-sizing: border-box;
+    position: relative;
+    width: 70px;
+    height: 50px;
+    float: right;
+}
+
+.dropdown-button {
+    background-color: #87509C;
+    width: inherit;
+    height: inherit;
+    border: 2px solid #633c7a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    background-color: #633c7a;
+}
+
+.dropdown-button:hover span,
+.dropdown-button:focus span {
+    margin: 2px auto;
+}
+
+.dropdown-button > span {
+    display: block;
+    margin: 6px auto;
+    border: 1px solid #f1edf3;
+    width: 25px;
+    transition: all .5s linear;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0%;
+    background-color: #87509C;
+    min-width: 200px;
+    overflow: auto;
+}
+
+.dropdown-content a {
+    display: block;
+    margin: 10px 0;
+    padding-right: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #f1edf3;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: right;
+}
+
+.show {
+    display: block;
 }
 
 /* header button and contact section button*/
@@ -578,4 +641,6 @@ footer {
     color: #32bbe8;
 }
 
-.show {display:block;}
+.show {
+    display: block;
+}
