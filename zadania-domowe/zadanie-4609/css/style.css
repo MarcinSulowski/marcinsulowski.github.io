@@ -321,10 +321,11 @@ p.description {
 }
 
 .circle {
+    box-sizing: border-box;
     margin: 0 auto;
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     border: 10px solid #dfe8ed;
     border-radius: 50%;
 }
@@ -345,11 +346,11 @@ p.description {
     color: #3c4761;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-
 }
 
 .bar,
 .fill {
+    box-sizing: border-box;
     position: absolute;
     top: -10px;
     left: -10px;
@@ -357,11 +358,17 @@ p.description {
     height: inherit;
     border: 10px solid #32bbe8;
     border-radius: 50%;
+    clip: rect(0px, 170px, 170px, 85px);
+    
+    /*
+    
     clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
     -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
     -moz-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
     -o-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
     -ms-clip-path: polygon(100% 0, 100% 100%, 50% 100%, 50% 0);
+    
+    */
 }
 
 #p90 {
@@ -576,7 +583,7 @@ textarea:valid ~ span {
     display: none;
 }
 
-/* custom resizer*/
+/* custom resizer */
 
 #custom-resize {
     margin: 0;
