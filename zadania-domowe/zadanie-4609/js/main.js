@@ -1,5 +1,9 @@
 function menuDrop() {
- document.getElementById("droppie").classList.toggle("show");
+    document.getElementById("droppie").classList.toggle("show");
+}
+
+function changeMargin() {
+    document.getElementById("main-heading").style.marginTop = "300px";
 }
 
 window.onclick = function (event) {
@@ -14,8 +18,29 @@ window.onclick = function (event) {
             }
         }
     }
+}          
+
+/*
+function styleMargin() {
+    var heading = document.getElementById("main-heading");
+    if (heading.marginTop = "150px") {
+        document.getElementById("main-heading").style.marginTop = "300px";
+    }
 }
 
-function changeMargin() {
-    document.getElementById("main-heading").style.marginTop = "300px";
+window.onload = styleMargin();
+*/
+
+
+window.onclick = function (event) {
+    if (event.target.matches(".dropdown-button")) {
+        
+        var heading = document.getElementById("main-heading");
+        
+        if (heading.marginTop = "150px") {
+            document.getElementById("main-heading").style.marginTop = "300px";
+        } else if (heading.marginTop = "300px") {
+            document.getElementById("main-heading").style.marginTop = "150px";
+        }
+    }
 }
