@@ -7,12 +7,31 @@ body {
     width: 100%;
     height: 100vh;
 }
+
+#countdown-button {
+    display: block;
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ddd7d7;
+    background-color: #020219;
+    border: 2px solid #ddd7d7;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Titillium Web';
+    font-size: 1em;
+}
+
 .wrapper > ul {
     list-style-type: none;
     margin: 0;
 }
 
-.box, .box-css {
+.box,
+.box-css {
     width: 400px;
     height: 200px;
     position: absolute;
@@ -29,16 +48,19 @@ body {
     opacity: 0;
 }
 
-.box {
+.box-css > i {
+    color: #f43232;
+}
+
+.box-anim {
     animation: countdown 1s linear forwards;
 }
 
-.box-css > i {
-    color: #f43232;
+.i-anim {
     animation: heartbeat 5s linear 10s forwards infinite;
 }
 
-.box-css {
+.box-css-anim {
     animation: show 5s linear 10s forwards infinite;
 }
 
@@ -85,7 +107,8 @@ body {
 
 
 @keyframes countdown {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 0;
     }
 
@@ -118,7 +141,7 @@ body {
     0% {
         opacity: 0;
     }
-    
+
     0.01%,
     100% {
         opacity: 1;
