@@ -16,49 +16,6 @@ body {
     margin: 0;
 }
 
-/* main header */
-
-#main-header {
-    display: inline-block;
-}
-
-.main-header-content {
-    text-transform: uppercase;
-    font-family: "Futura Light";
-    margin-left: 15px;
-}
-
-.main-header-content > h1 {
-    font-size: 3.5em;
-    font-weight: 400;
-    margin: 30px 0 0 0;
-    line-height: 1em;
-}
-
-.main-header-content > h2 {
-    margin: 0 0 15px 0;
-}
-
-.main-header-content > h2::after {
-    content: '';
-    display: inline-block;
-    width: 120px;
-    margin: 0 10px; 
-    border-top: 2px solid #A6A6A6;
-}
-
-#header-button {
-    border: 1px solid #EF7B00;
-    color: #EF7B00;
-    font-family: "Futura Light";
-    padding: 5px 20px;
-}
-
-#header-button:hover {
-    cursor: pointer;
-}
-
-
 /* sidebar - navigation menu */
 
 #sidebar-nav {
@@ -179,13 +136,64 @@ span.news-date {
     border: 1px solid #5b5c55;
 }
 
-#col-1-2 {
+/* flex container for main header and main section */
+
+#flex-container {
+    display: flex;
+}
+
+/* main header - col-1-2 */
+
+#main-header {
+    display: inline-block;
+}
+
+.main-header-content {
+    text-transform: uppercase;
+    font-family: "Futura Light";
+    margin-left: 15px;
+}
+
+.main-header-content > h1 {
+    font-size: 3.5em;
+    font-weight: 400;
+    margin: 30px 0 0 0;
+    line-height: 1em;
+}
+
+.main-header-content > h2 {
+    margin: 0 0 15px 0;
+}
+
+.main-header-content > h2::after {
+    content: '';
+    display: inline-block;
+    width: 140px;
+    margin: 0 15px;
+    border-top: 2px solid #A6A6A6;
+}
+
+#header-button {
+    border: 1px solid #EF7B00;
+    color: #EF7B00;
+    font-family: "Futura Light";
+    padding: 5px 20px;
+}
+
+#header-button:hover {
+    cursor: pointer;
+}
+
+/* parameters section  - col-1-2 */
+
+.flex-parameters {
     width: 680px;
     display: flex;
     flex-flow: row wrap;
     font-family: "Futura Light";
     color: #2D2D2D;
     overflow: hidden;
+    margin-right: 0;
 }
 
 .parameters-container {
@@ -194,11 +202,13 @@ span.news-date {
     padding: 20px 30px;
 }
 
-#parameters-container-1, #parameters-container-3 {
+#parameters-container-1,
+#parameters-container-3 {
     width: 45%;
 }
 
-#parameters-container-2, #parameters-container-4 {
+#parameters-container-2,
+#parameters-container-4 {
     width: 55%;
 }
 
@@ -217,7 +227,8 @@ span.news-date {
     line-height: 10px;
 }
 
-.parameters-container::after, .parameters-container::before {
+.parameters-container::after,
+.parameters-container::before {
     content: '';
     position: absolute;
     width: 60px;
@@ -225,21 +236,23 @@ span.news-date {
     display: block;
 }
 
-#parameters-container-1::after, #parameters-container-2::after {
+#parameters-container-1::after,
+#parameters-container-2::after {
     right: 0;
     bottom: 0;
     transform: translateY(50%);
     border-right: 2px solid #CFCFCF;
 }
 
-#parameters-container-3::after, #parameters-container-4::after {
+#parameters-container-3::after,
+#parameters-container-4::after {
     right: 0;
     top: 0;
     transform: translateX(50%);
     border-top: 2px solid #CFCFCF;
 }
 
-#parameters-container-1::before{
+#parameters-container-1::before {
     left: 0;
     bottom: 0;
     transform: translateY(50%);
@@ -253,4 +266,94 @@ span.news-date {
     border-top: 2px solid #CFCFCF;
 }
 
+/* showcase section - col-1-2 */
 
+#col-2-2 {
+    margin: 108px 0 0 15px;
+    position: relative;
+}
+
+.showcase-image {
+    position: absolute;
+    top: 50px;
+    left: -50px;
+}
+
+.tooltip-button {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border: 1px solid #9E9E9E;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.tooltip-button::after,
+.tooltip-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.tooltip-button::after {
+    width: 40px;
+    border-top: 1px solid #9E9E9E;
+}
+
+.tooltip-button::before {
+    height: 40px;
+    border-right: 1px solid #9E9E9E;
+}
+
+.tooltip-button:first-of-type {
+    bottom: 240px;
+    left: -10px;
+}
+
+.tooltip-button:nth-of-type(2) {
+    top: 100px;
+    right: 130px;
+}
+
+.tooltip-button:last-of-type {
+    bottom: 40px;
+    left: 150px;
+}
+
+.tooltip-text {
+    position: absolute;
+    left: 110px;
+    top: -50px;
+    width: 350px;
+    height: 180px;
+    background-color: #fff;
+    visibility: visible;
+    font-family: "Futura Light";
+    padding: 20px 25px;
+    box-shadow: 0 0 20px 1px #2D2D2D;
+}
+
+.tooltip-text::before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 55px;
+    border: 30px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.tooltip-text h3 {
+    font-size: 2em;
+    font-weight: 200;
+    margin: 0;
+}
+
+.tooltip-text p {
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: justify;
+}
