@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Futura Light";
+    src: url("../fonts/FuturaLT-Light.ttf");
+}
+
+@font-face {
+    font-family: "Futura Book";
+    src: url("../fonts/FuturaLT-Book.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* sidebar - navigation menu */
+
+#sidebar-nav {
+    width: 270px;
+    height: 100vh;
+}
+
+#nav-menu {
+    width: 100%;
+    height: 100%;
+    font-family: "Futura Light";
+    color: #2d2d2b;
+    background-color: #DDDED8;
+}
+
+#nav-menu > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#nav-menu a {
+    text-decoration: none;
+}
+
+#nav-menu li {
+    position: relative;
+    height: 80px;
+}
+
+/* menu items sidebar */
+
+.menu-item {
+    border-bottom: 1px solid #E7E7E7;
+    border-right: 1px solid #E7E7E7;
+}
+
+.menu-item > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-left: 50px;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #323232;
+    background-color: #fff;
+}
+
+.menu-item > a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -3px;
+    height: 100%;
+}
+
+.menu-item > a:hover::after {
+    border-right: 3px solid #EF7C01;
+}
+
+/* news items sidebar */
+
+#menu-news > li {
+    border-bottom: 1px solid #DFE0DA;
+    padding-right: 5px;
+}
+.news-caption {
+    padding-left: 50px;
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 80px;
+}
+
+.news-item {
+    background-color: #D8D9D3;
+    padding: 20px 0 20px 20px;
+    font-size: 13px;
+    font-family: "Futura Book";
+    color: #21221d;
+}
+
+.news-caption a, .news-item a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 11px;
+    padding: 5px 10px;
+    color: #5b5c55;
+}
+
+.news-caption a {
+    height: 80px;
+    line-height: 65px;
+    text-transform: lowercase;
+}
+
+span.news-date {
+    font-size: 12px;
+    font-family: "Futura Light";
+}
+.news-item-fill {
+    margin: 20px 10px;
+    text-align: right;
+}
+
+.news-item-fill > p {
+    margin: 0;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 2px;
+    border: 1px solid #5b5c55;
+}
+
+
