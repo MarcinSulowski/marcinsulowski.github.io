@@ -19,15 +19,13 @@ body {
 /* sidebar - navigation menu */
 
 #sidebar-nav {
-    width: 270px;
-    height: 100vh;
+    width: 15%;
     float: left;
-    margin-right: 25px;
 }
 
 #nav-menu {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     font-family: "Futura Light";
     color: #2d2d2b;
     background-color: #DDDED8;
@@ -45,7 +43,6 @@ body {
 
 #nav-menu li {
     position: relative;
-    height: 80px;
 }
 
 /* menu items sidebar */
@@ -60,7 +57,7 @@ body {
     height: 100%;
     display: block;
     padding-left: 50px;
-    line-height: 80px;
+    line-height: 5em;
     text-transform: uppercase;
     font-size: 1em;
     color: #323232;
@@ -88,9 +85,10 @@ body {
 
 .news-caption {
     padding-left: 50px;
+    height: 80px;
+    padding-top: 30px;
     font-size: 1em;
     text-transform: uppercase;
-    line-height: 80px;
 }
 
 .news-item {
@@ -101,19 +99,22 @@ body {
     color: #21221d;
 }
 
-.news-caption a,
+.news-item a,
+.news-caption a {
+    color: #5b5c55;
+    font-size: 11px;
+    padding: 5px 10px;
+    float: right;
+}
+
 .news-item a {
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: 11px;
-    padding: 5px 10px;
-    color: #5b5c55;
 }
 
 .news-caption a {
-    height: 80px;
-    line-height: 65px;
+    display: inline-block;
     text-transform: lowercase;
 }
 
@@ -140,41 +141,50 @@ span.news-date {
 
 #flex-container {
     display: flex;
+    width: 85%;
 }
 
 /* main header - col-1-2 */
 
+#col-1-2 {
+    width: 45%;
+}
+
 #main-header {
     display: inline-block;
+    width: 100%;
 }
 
 .main-header-content {
     text-transform: uppercase;
     font-family: "Futura Light";
-    margin-left: 15px;
+    margin-left: 30px;
 }
 
 .main-header-content > h1 {
-    font-size: 3.5em;
+    font-size: 3vw;
     font-weight: 400;
     margin: 30px 0 0 0;
-    line-height: 1em;
+    line-height: 3vw;
 }
 
 .main-header-content > h2 {
     margin: 0 0 15px 0;
+    font-size: 1.2vw;
+    white-space: nowrap;
 }
 
-.main-header-content > h2::after {
-    content: '';
+.main-header-content > h2 > span {
     display: inline-block;
-    width: 140px;
-    margin: 0 15px;
-    border-top: 2px solid #A6A6A6;
+    width: 20%;
+    height: 2px;
+    background-color: #A6A6A6;
+    margin-left: 15px;
 }
 
 #header-button {
     border: 1px solid #EF7B00;
+    background-color: #fff;
     color: #EF7B00;
     font-family: "Futura Light";
     padding: 5px 20px;
@@ -187,19 +197,19 @@ span.news-date {
 /* parameters section  - col-1-2 */
 
 .flex-parameters {
-    width: 680px;
+    max-width: 680px;
     display: flex;
     flex-flow: row wrap;
     font-family: "Futura Light";
     color: #2D2D2D;
     overflow: hidden;
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .parameters-container {
     position: relative;
-    height: 200px;
-    padding: 20px 30px;
+    min-height: 200px;
 }
 
 #parameters-container-1,
@@ -213,17 +223,17 @@ span.news-date {
 }
 
 .parameter {
-    font-size: 3.5em;
-    margin: 20px 0 10px;
+    font-size: 3vw;
+    margin: 50px 0 10px 20px;
 }
 
 .mm-unit {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .description {
-    font-size: 1.4em;
-    margin: 0 0 0 5px;
+    font-size: 1.2vw;
+    margin: 0 0 0 25px;
     line-height: 10px;
 }
 
@@ -231,8 +241,8 @@ span.news-date {
 .parameters-container::before {
     content: '';
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: block;
 }
 
@@ -269,19 +279,30 @@ span.news-date {
 /* showcase section - col-1-2 */
 
 #col-2-2 {
-    margin: 108px 0 0 15px;
     position: relative;
+    width: 55%;
+    padding: 10px;
 }
 
-.showcase-image {
+#background-image {
+    margin-top: 10vh;
+}
+
+#background-image,
+#window-image {
+    max-width: 100%;
+}
+
+.showcase-image-container {
     position: absolute;
-    top: 50px;
-    left: -50px;
+    top: 25%;
+    left: -5%;
+    width: 50%;
 }
 
 .tooltip-button {
-    width: 70px;
-    height: 70px;
+    min-width: 15%;
+    min-height: 10%;
     position: absolute;
     border: 1px solid #9E9E9E;
     border-radius: 50%;
@@ -300,28 +321,28 @@ span.news-date {
 }
 
 .tooltip-button::after {
-    width: 40px;
+    width: 50%;
     border-top: 1px solid #9E9E9E;
 }
 
 .tooltip-button::before {
-    height: 40px;
+    height: 50%;
     border-right: 1px solid #9E9E9E;
 }
 
 .tooltip-button:first-of-type {
-    bottom: 240px;
-    left: -10px;
+    bottom: 35%;
+    left: -2%;
 }
 
 .tooltip-button:nth-of-type(2) {
-    top: 100px;
-    right: 130px;
+    top: 17%;
+    right: 33%;
 }
 
 .tooltip-button:last-of-type {
-    bottom: 40px;
-    left: 150px;
+    bottom: 8%;
+    left: 32%;
 }
 
 .tooltip-text {
@@ -331,7 +352,7 @@ span.news-date {
     width: 350px;
     height: 180px;
     background-color: #fff;
-    visibility: visible;
+    visibility: hidden;
     font-family: "Futura Light";
     padding: 20px 25px;
     box-shadow: 0 0 20px 1px #2D2D2D;
