@@ -4,20 +4,30 @@ for (var i = 0; i < tool.length; i++) {
 }
 
 function showTooltip() {
-    var toolTipText = this.childNodes[1];
-    if (toolTipText.style.visibility === 'hidden') {
-        toolTipText.style.visibility = 'visible';
+    var tooltipText = this.childNodes[1];
+    if (tooltipText.style.visibility === 'hidden') {
+        tooltipText.style.visibility = 'visible';
     } else {
-        toolTipText.style.visibility = 'hidden';
+        tooltipText.style.visibility = 'hidden';
     }
-    
-    var allTooltipTexts = document.getElementsByClassName('tooltip-text');
+
+    var tips = document.getElementsByClassName('tooltip-text');
     window.onclick = function(e) {
-    if(!e.target.matches('.tooltip-button')) {
-        if (toolTipText.style.visibility === 'visible') {
-        toolTipText.style.visibility = 'hidden';
-    } 
+        if (!e.target.matches('.tooltip-button')) {
+            for (var i = 0; i < tips.length; i++) {
+                var openTip = tips[i];
+                if (openTip.style.visibility === 'visible') {
+                    openTip.style.visibility = 'hidden';
+                }
+            }
+        }
     }
-}
 }
 
+var checkbox = document.getElementById('submenu-checkbox');
+var submenu = document.getElementById('submenu-container');
+window.onclick = function(e) {
+    if(!e.target.matches('#submenu-checkbox') && checkbox.checked) {
+        checkbox.checked = false;
+    }
+}
