@@ -26,6 +26,7 @@ function showTooltip() {
 
 var checkbox = document.getElementById('submenu-checkbox');
 var submenu = document.getElementById('submenu-container');
+var label = document.getElementById('checkbox-label');
 window.onclick = function(e) {
     if(!e.target.matches('#submenu-checkbox') && checkbox.checked) {
         checkbox.checked = false;
