@@ -12,59 +12,42 @@ body {
 }
 
 section {
-    padding: 0 80px;
+    padding: 60px 0 80px 0;
     overflow: hidden;
 
 }
 
-section > h2 {
-    margin: 60px 0 35px 0;
+.section-header > h2 {
+    margin-bottom: 50px;
     font-weight: 200;
     font-size: 2em;
     text-align: center;
 }
 
-section > h2 span {
+.section-header > h2 span {
     color: #00BF64;
     font-weight: 400;
 }
 
 /* menu */
 
-#main-nav {
-    position: fixed;
-    width: 100%;
-    background-color: #fff;
-    right: 0;
-    top: 0;
-    z-index: 10;
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
 }
 
-#drop, .toggle {
-    display: none;
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #00BF64;
 }
 
-#main-nav > ul {
-    margin: 0;
-    list-style-type: none;
-    float: right;
+.navbar-light .navbar-toggler {
+    margin-right: 1rem;
+    background-color: #f9fcfe;
 }
 
-#main-nav > ul > li {
-    display: inline-block;
-    text-decoration: none;
-    padding: 20px 40px;
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
 }
 
-#main-nav > ul > li > a {
-    text-decoration: none;
-    font-weight: 300;
-    color: #1ac056;
-}
-
-#main-nav > ul > li > a:hover {
-    color: #291f1a;
-}
 
 /* main header */
 
@@ -100,59 +83,40 @@ section > h2 span {
 /* about section */
 
 section#about {
-    box-sizing: border-box;
-    width: 100%;
     background-color: #f9fcfe;
-    background-size: cover;
-    overflow: hidden;
 }
 
-#about > figure > img {
+#about .about-pic > figure {
+    text-align: center;
+}
+
+#about .about-pic > figure > img {
     max-height: 350px;
     max-width: 100%;
     border: 15px solid #fff;
     border-radius: 5%;
 }
 
-#about > figure {
-    margin: 0 0 100px 0;
-    width: 50%;
-    float: left;
-    text-align: center;
-}
-
-#about > article {
-    width: 50%;
-    float: left;
-}
-
-#about > article p {
-    line-height: 1.4em;
+#about .about-text p {
+    line-height: 1.5em;
 }
 
 /* skills section */
 
-#skills > p {
+#skills .section-header > p {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
-#skills-icon {
-    text-align: center;
-    margin-bottom: 100px;
+#skills-icon .col-md-3 {
+    flex-basis: 15%;
 }
 
-#skills-icon > figure {
-    display: inline-block;
-}
 
 #skills-icon > figure > img {
     margin-bottom: 20px;
 }
 
-figure > figcaption {
-    text-align: center;
-}
 
 /* portfolio section */
 
