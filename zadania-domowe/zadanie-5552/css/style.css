@@ -13,8 +13,14 @@ body {
 
 section {
     padding: 60px 0 80px 0;
-    overflow: hidden;
+}
 
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.3rem;
 }
 
 .section-header > h2 {
@@ -46,6 +52,7 @@ section {
 
 .navbar-light .navbar-nav .nav-link {
     padding-right: 1rem;
+    padding-left: 2rem;
 }
 
 .navbar {
@@ -301,7 +308,11 @@ footer {
     background-color: #142634;
 }
 
-footer  p {
+footer .container {
+    padding: 0;
+}
+
+footer p {
     font-weight: 200;
     margin: 0;
     padding: 7px 0;
