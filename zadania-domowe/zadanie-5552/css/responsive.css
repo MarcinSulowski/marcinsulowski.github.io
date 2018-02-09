@@ -1,109 +1,44 @@
-/*
-@media all and (max-width: 1200px) {
-    
-    .portfolio-item {
-        width: 50%;
-    } 
-    
-    .portfolio-item:nth-of-type(1) {
-        width: 100%;
-        margin-bottom: 0;
-    }
-    
-}
-
 @media all and (max-width: 992px) {
-    
-    .portfolio-item {
-    width: 100%;
-    margin-bottom: 0;
-    }
-    
-    .portfolio-item:last-of-type {
-        margin-bottom: 100px;
-    }
-    
-    #about > figure, #about > article {
-        width: 100%;
-        float: none;
-    }
-    
-    #about > figure {
-        margin-bottom: 30px;
-    }
-    
-    #about > figure > img {
-        max-height: inherit;
-    }
-    
-    #about > article {
+
+    #about p {
         text-align: center;
         margin-bottom: 50px;
     }
     
-    #contact, #contact h2 {
+    #contact .section-header > h2, #contact .contact-data {
         text-align: center;
     }
     
-    .contact-data, .contact-form {
-        width: 100%;
-        float: none;
+    .contact-social-icons {
+        justify-content: center;
     }
     
-    .main-header-content {
-        padding: 10%;
+    #main-header .main-header-content {
+        padding: 25%;
     }
-    
-    .toggle {
-        display: block;
-        background-color: #fff;
-        padding: 0 20px;
-        color: #1ac056;
-        font-size: 20px;
-        line-height: 60px;
-        text-decoration: none;
-        border: none;
-        text-align: right;
-    }
-    
-    #main-nav > ul {
-        display: none;
-    }
-    
-    #main-nav > ul > li {
-        display: block;
-        width: 100%;
-        padding: 20px;
-        text-align: right;
-    }
-    
-    #drop:checked + ul {
-        display: block;
-    }
+
 }
 
 @media all and (max-width: 768px) {
-    section {
-        padding: 0 40px 50px;
-    }
     
-    h1 {
+    #main-header .main-header-content h1 {
         font-size: 3em;
     }
     
-    h2 {
+    #main-header .main-header-content h2 {
         font-size: 1.5em;
     }
     
     #main-header .main-header-content {
-        padding: 20vh;
+        padding: 19vh;
     }
 }
 
 
 @media all and (max-width: 576px) {
+    
     section {
-        padding: 0 10px 30px;
+        padding: 20px 10px 30px;
     }
     
     #main-header .main-header-content {
@@ -114,4 +49,3 @@
 
 
 
-*/

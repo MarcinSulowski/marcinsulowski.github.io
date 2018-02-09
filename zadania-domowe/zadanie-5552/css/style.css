@@ -44,10 +44,17 @@ section {
     background-color: #f9fcfe;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
     padding-right: 1rem;
 }
 
+.navbar {
+    transition: all .5s ease-in;
+}
+
+.nav-scroll {
+    background-color: rgba(22, 54, 83, 0.55);
+}
 
 /* main header */
 
@@ -88,10 +95,11 @@ section#about {
 
 #about .about-pic > figure {
     text-align: center;
+    padding-bottom: 50px;
 }
 
 #about .about-pic > figure > img {
-    max-height: 350px;
+    max-height: 400px;
     max-width: 100%;
     border: 15px solid #fff;
     border-radius: 5%;
@@ -120,20 +128,16 @@ section#about {
 
 /* portfolio section */
 
-.portfolio-items {
-    font-size: 0;
+#portfolio .portfolio-items {
     text-align: center;
 }
 
-.portfolio-item {
+#portfolio .portfolio-item {
     position: relative;
-    width: 33.33333%;
-    float: left;
     height: 350px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 100px;
 }
 
 #portfolio-item-1 {
@@ -148,30 +152,30 @@ section#about {
     background-image: url(../img/portfolio3.jpg);
 }
 
-.item-mask {
+.portfolio-item .item-mask {
     background-color: rgba(42, 61, 79, 0.8);
     width: 100%;
     height: 100%;
     opacity: 0;
+    top: 0;
+    left: 0;
     position: absolute;
     font-size: initial;
     transition: all .3s ease-in-out;
 }
 
-/* cmd + e for coverting to rgb */
-
-.item-mask:hover {
+.portfolio-item .item-mask:hover {
     opacity: 1;
 }
 
-.item-content {
+.portfolio-item .item-content {
     position: relative;
     margin: 10px;
     height: 330px;
     border: 1px solid #fff;
 }
 
-.item-content-inner {
+.portfolio-item .item-content-inner {
     position: absolute;
     top: 50%;
     margin: 0 auto;
@@ -180,106 +184,98 @@ section#about {
     padding: 10px;
 }
 
-.item-content-inner > a {
+.portfolio-item .item-content-inner > a {
     font-size: 28px;
     color: #fff;
 }
 
-.item-content-inner > a:hover {
+.portfolio-item .item-content-inner > a:hover {
     color: #1ac056;
 }
 
 /* contact section */
 
 section#contact {
-    padding-top: 40px;
-    padding-bottom: 40px;
     background-color: #213b50;
     color: #fff;
 }
 
-.contact-data,
-.contact-form {
-    float: left;
-    width: 50%;
+#contact .container {
+    padding: 0;
 }
 
-#contact h2 {
+#contact .section-header > h2 {
     text-align: left;
-    font-weight: 300;
-    font-size: 32px;
-    margin-bottom: 60px;
 }
 
-#contact h2 > span {
-    color: #00BF64;
-    font-weight: 400;
-}
-
-.contact-data > address {
-    margin-bottom: 70px;
+#contact .contact-data > address {
+    margin-bottom: 50px;
     font-style: normal;
     font-weight: 200;
     line-height: 25px;
 }
 
-.address-data {
+#contact .contact-data .address-data {
     margin-bottom: 30px;
 }
 
-.contact-data > address > a {
+.contact-data .address-data > a {
     color: #1ac056;
 }
 
+.contact-social-icons {
+    padding-left: 15px;
+    padding-bottom: 50px;
+}
+
 .contact-social-icons a {
-    display: inline-block;
     color: #fff;
     border: 1px solid #fff;
-    width: 40px;
-    height: 40px;
-    margin-right: 30px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
     text-align: center;
 }
 
 .contact-social-icons a > i {
-    line-height: 40px;
+    line-height: 50px;
     font-size: 24px;
 }
 
 /* contact form */
 
-.contact-form {
-    margin-top: 100px;
+.contact-form .col {
+    padding: 0;
 }
 
-input[type="email"],
-input[type="text"],
-textarea {
-    width: 100%;
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
     padding: 15px;
     margin-bottom: 15px;
     border: 0 solid #2b4a64;
     background-color: #2b4a64;
 }
 
-input::placeholder,
-textarea::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #A9A9A9;
 }
 
-input:focus,
-textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
     background-color: #426684;
 }
 
-textarea {
+.contact-form textarea {
     height: 90px;
 }
 
-input[type="submit"] {
+.contact-form input[type="submit"] {
     float: right;
     padding: 15px 30px;
     text-transform: uppercase;
@@ -290,9 +286,10 @@ input[type="submit"] {
     font-weight: 600;
     font-size: 14px;
     transition: all .3s;
+    cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.contact-form input[type="submit"]:hover {
     background-color: #fff;
     color: #1ac056;
 }
@@ -301,13 +298,12 @@ input[type="submit"]:hover {
 /* footer */
 
 footer {
-    padding: 0 80px;
     background-color: #142634;
 }
 
-footer > p {
+footer  p {
     font-weight: 200;
     margin: 0;
-    padding: 5px 0;
+    padding: 7px 0;
     color: #fff;
 }
