@@ -3,9 +3,10 @@ for (var i = 0; i < tool.length; i++) {
     tool[i].addEventListener("click", showTooltip);
 }
 
-function showTooltip() {
+function showTooltip(e) {
     var tooltipText = this.childNodes[1];
-    if (tooltipText.style.visibility === 'hidden') {
+    var toolStyle = window.getComputedStyle(tooltipText, null).getPropertyValue('visibility');
+    if (toolStyle === 'hidden') {
         tooltipText.style.visibility = 'visible';
     } else {
         tooltipText.style.visibility = 'hidden';
@@ -27,8 +28,8 @@ function showTooltip() {
 var checkbox = document.getElementById('submenu-checkbox');
 var submenu = document.getElementById('submenu-container');
 var label = document.getElementById('checkbox-label');
-window.onclick = function(e) {
-    if(!e.target.matches('#submenu-checkbox') && checkbox.checked) {
+window.onclick = function (e) {
+    if (!e.target.matches('#submenu-checkbox') && checkbox.checked) {
         checkbox.checked = false;
     }
 }
