@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Lato", sans-serif;
+    background-color: #ACABAB;
+    text-align: center;
+    color: #1f1f1f;
+}
+
+form {
+    margin: 0 auto;
+    text-align: left;
+    width: 400px;
+    padding: 50px 100px;
+    box-shadow: 0 0 1px 1px #EEEEEE;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #EEEEEE;
+}
+
+input, textarea {
+    display: block;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #656262;
+    box-shadow: 0 0 10px 1px #ACABAB;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+input[type=checkbox] {
+    box-shadow: 0 0 5px 1px #ACABAB;
+}
+
+input[type=button] {
+    margin-top: 20px;
+    width: 100px;
+}
+
+textarea {
+    width: 200px;
+}
+
+input#password {
+    padding: 10px;
+    width: 200px;
+}
+
+div#clipboard {
+    cursor: pointer;
+}
