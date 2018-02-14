@@ -1,0 +1,39 @@
+@media (max-width: 992px) {
+    .navbar,
+    .nav-scroll {
+        background-color: #fff;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-brand {
+        color: #0ed8d6;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-brand:hover {
+        color: #333;
+    }
+
+    .navbar-light .navbar-nav .nav-item {
+        text-align: right;
+        padding: 5px 0;
+        border-top: 1px solid rgba(119, 119, 119, 0.52);
+    }
+
+    .navbar-light .navbar-toggler {
+        border: 1px solid #0ed8d6;
+    }
+
+    footer .footer-item {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    footer .footer-nav ul {
+        text-align: center;
+    }
+
+    .footer-nav .footer-nav-item {
+        padding: 0 10px;
+    }
+}
