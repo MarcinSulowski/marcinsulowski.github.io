@@ -1,0 +1,25 @@
+@import "variables";
+@import "mixins";
+
+#services-section {
+    .service-item {
+        i {
+            background-color: $turqiose;
+            color: $white;
+            width: 80px;
+            height: 80px;
+            border: $border-turq;
+            line-height: 80px;
+            font-size: 32px;
+            border-radius: 50%;
+            text-align: center;
+            transition: $trans3s;
+
+            &:hover {
+                transform: rotate(360deg);
+                background-color: $white;
+                color: $turqiose;
+            }
+        }
+    }
+}

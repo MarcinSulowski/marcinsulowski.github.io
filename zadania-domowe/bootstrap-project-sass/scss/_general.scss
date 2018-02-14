@@ -1,0 +1,79 @@
+@import "variables";
+
+body {
+    font-family: $roboto-font;
+    color: $grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $mont-font;
+    color: $black-lt;
+}
+
+h2 {
+    margin: 25px 0;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+section {
+    padding: 100px 0;
+    
+    .section-header {
+        margin-bottom: 60px;
+    }
+}
+
+.uni-btn {
+    background-color: $turqiose;
+    font-family: $mont-font;
+    border: $border-turq;
+    transition: $trans3s;
+    text-transform: uppercase;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: $white;
+        color: $turqiose;
+        border: $border-turq;
+    }
+}
+
+.social-icons {
+    a {
+        padding: 10px;
+        i {
+            background-color: $black;
+            color: $white;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 24px;
+            border-radius: 50%;
+            text-align: center;
+            transition: $trans3s;
+
+            &:hover {
+                background-color: $turqiose;
+            }
+        }
+    }
+}
+
+.progressbar {
+    height: 5px;
+    background-color: rgba(102, 247, 246, 0.8);
+    width: 0;
+    top: 74px;
+    position: fixed;
+    z-index: 1000;
+}

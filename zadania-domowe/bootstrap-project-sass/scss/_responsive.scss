@@ -1,0 +1,50 @@
+@import "variables";
+
+@media (max-width: 992px) {
+    .navbar,
+    .nav-scroll {
+        background-color: #fff;
+    }
+
+    .navbar-light {
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: $turqiose;
+
+            &:hover {
+                color: $black-lt;
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                text-align: right;
+                padding: 5px 0;
+                border-top: 1px solid rgba(119, 119, 119, 0.52);
+            }
+        }
+        .navbar-toggler {
+            border: $border-turq;
+
+        }
+    }
+
+    footer {
+        .footer-item {
+            text-align: center;
+            margin: 10px 0;
+
+            .footer-nav {
+                ul {
+                    text-align: center;
+
+                    .footer-nav-item {
+                        padding: 0 10px;
+
+                    }
+                }
+            }
+        }
+    }
+
+}

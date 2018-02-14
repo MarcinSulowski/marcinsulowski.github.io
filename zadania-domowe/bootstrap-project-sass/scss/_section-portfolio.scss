@@ -1,0 +1,43 @@
+@import "variables";
+@import "mixins";
+
+#portfolio-section {
+    background-color: $whitish;
+
+    .portfolio-item {
+        margin-bottom: 30px;
+
+        .portfolio-image-holder {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+
+            &:hover img {
+                transform: scale(1.5);
+            }
+
+            &:hover .portfolio-mask {
+                opacity: 1;
+            }
+
+            img {
+                @include full-size-trans;
+                object-fit: cover;
+            }
+            .portfolio-mask {
+                @include flex-center;
+                @include full-size-trans;
+                position: absolute;
+                background-color: rgba(14, 216, 214, 0.56);
+                top: 0;
+                color: $white;
+                font-size: 2em;
+                opacity: 0;
+            }
+        }
+        figcaption {
+            background-color: $white;
+            padding: 10px 0;
+        }
+    }
+}

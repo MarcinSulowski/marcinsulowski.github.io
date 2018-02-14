@@ -1,0 +1,47 @@
+@import "variables";
+@import "mixins";
+
+#contact-section {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/footer/world-map.jpg);
+
+    .section-header {
+
+        h2,
+        p {
+            color: $white;
+        }
+    }
+
+    form {
+
+        .form-inputs,
+        .form-textarea {
+            display: flex;
+            margin-bottom: 30px;
+            height: 220px;
+        }
+
+        .form-inputs input,
+        .form-textarea textarea {
+            text-transform: uppercase;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: $mont-font;
+            border: none;
+        }
+
+        .form-inputs {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .form-textarea {
+            textarea {
+                flex-basis: 100%;
+
+            }
+        }
+
+    }
+
+}

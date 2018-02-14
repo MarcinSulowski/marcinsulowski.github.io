@@ -1,0 +1,40 @@
+@import "variables";
+@import "mixins";
+
+footer {
+    padding: 20px 0;
+    
+    .footer-item {
+        .copyright {
+            margin: 0;
+        }
+        .social-icons {
+            text-align: center;
+        }
+        .footer-nav {
+            ul {
+                margin: 0;
+                padding: 0;
+                text-align: right;
+
+                .footer-nav-item {
+                    display: inline-block;
+                    padding-left: 20px;
+
+                    a {
+                        color: $black-lt;
+                        text-decoration: none;
+                        transition: $trans3s;
+
+                        &:hover {
+                            color: $turqiose;
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+
+#main-header {
+    @include flex-center;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/header/pictures_on_the_wall.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $white;
+
+    .main-header-container {
+        h1 {
+            text-transform: uppercase;
+            font-size: 4em;
+            margin-bottom: 30px;
+            color: $white;
+        }
+        h2 {
+            font-family: $droid-font;
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: $white;
+        }
+    }
+}
