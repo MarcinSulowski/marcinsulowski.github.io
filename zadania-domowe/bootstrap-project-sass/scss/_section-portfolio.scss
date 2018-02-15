@@ -5,7 +5,7 @@
     background-color: $whitish;
 
     .portfolio-item {
-        margin-bottom: 30px;
+        margin-bottom: $marg-btm * 3;
 
         .portfolio-image-holder {
             height: 300px;

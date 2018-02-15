@@ -17,7 +17,7 @@
         .form-inputs,
         .form-textarea {
             display: flex;
-            margin-bottom: 30px;
+            margin-bottom: $marg-btm * 3;
             height: 220px;
         }
 
