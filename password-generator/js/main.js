@@ -51,13 +51,13 @@ function generatePassword(num) {
     }
     
     //takes in 2 parameters from 'checked' array
-    //if both parameters == '0' returns 0 for error handling
+    //if both parameters === 0 returns 0 for error handling
     //else returns a random char from the specified ASCII range
     function randomChar(min, max) {
         min = parseInt(min);
         max = parseInt(max);
 
-        if (max == '0' && min == '0') {
+        if (!max && !min) {
             return 0;
         } else {
             return String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min);
