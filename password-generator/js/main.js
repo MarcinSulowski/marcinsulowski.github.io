@@ -7,9 +7,8 @@
 //123-126 specialChars
 
 
-// click event for 'generate-password' button to prevent submitting the form and to call generatePassword function
-document.getElementById('generate-password').addEventListener('click', function (e) {
-    e.preventDefault();
+// click event for 'generate-password' button to call generatePassword function
+document.getElementById('generate').addEventListener('click', function () {
     var passLength = parseInt(document.getElementById('pass-length').value);
     generatePassword(passLength);
 });
@@ -80,11 +79,11 @@ function generatePassword(num) {
 
     //if none of the checkboxes is checked, display a warning message
     if (checked[0] === '00' && checked[1] === '00' && checked[2] === '00' && checked[3] === '00') {
-        document.getElementById('warning').innerHTML = 'Choose at least one option!';
+        document.getElementById('warning').setAttribute('class', 'show');
     } else {
         document.getElementById('password').value = password;
         //clear the warning
-        document.getElementById('warning').innerHTML = '';
+        document.getElementById('warning').removeAttribute('class', 'show');
     }
 }
 
