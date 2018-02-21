@@ -4,38 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Generator</title>
-    <link rel="stylesheet" href="css/style.css">
 
+    <!--    Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
+
+    <!--    Font Awesome     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!--    Custom styles     -->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-    <form action="">
+    <form>
+       
+        <h1>Password Generator</h1>
 
-        <label for="uppercase">Include uppercase</label>
-        <input type="checkbox" id="uppercase" value="65,90">
+        <div class="checkbox-container">
+            <input type="checkbox" id="uppercase" value="65,90" checked>
+            <label for="uppercase">Include uppercase letters</label>
+        </div>
 
-        <label for="lowercase">Include lowercase</label>
-        <input type="checkbox" id="lowercase" value="97,122">
+        <div class="checkbox-container">
+            <input type="checkbox" id="lowercase" value="97,122" checked>
+            <label for="lowercase">Include lowercase letters</label>
+        </div>
 
-        <label for="numbers">Include numbers</label>
-        <input type="checkbox" id="numbers" value="48,57">
+        <div class="checkbox-container">
+            <input type="checkbox" id="numbers" value="48,57" checked>
+            <label for="numbers">Include numbers</label>
+        </div>
 
-        <label for="special-chars">Include special characters</label>
-        <input type="checkbox" id="special-chars" value="33,47">
+        <div class="checkbox-container">
+            <input type="checkbox" id="special-chars" value="33,47" checked>
+            <label for="special-chars">Include special characters</label>
+        </div>        
+           
+           <div class="checkbox-container">
+            <input type="checkbox" id="repetitive-chars" value="33,47">
+            <label for="repetitive-chars">Exclude repetitive characters (under construction)</label>
+        </div>
 
+        <label for="pass-length">Password length:</label>
+        <input type="number" id="pass-length" value="8">        
 
+        <button type="button" id="generate">Generate password</button>
+        
+        <input type="text" id="password" value="" placeholder="Your new password">
 
-        <label for="pass-length">Password length</label>
-        <input type="number" id="pass-length" value="16">
-        <input type="submit" id="generate-password" value="Generate">
-        <input type="text" id="password" value="">
-
-        <div id="clipboard"><i class="far fa-clipboard"></i>Copy to clipboard</div>
+        <div id="clipboard"><i class="far fa-clipboard"></i><span>Copy to clipboard</span></div>
     </form>
-    <div id="warning"></div>
 
+    <div id="warning">Choose at least one option!</div>
+
+    <!--     JavaScript     -->
     <script src="js/main.js"></script>
 </body>
 
