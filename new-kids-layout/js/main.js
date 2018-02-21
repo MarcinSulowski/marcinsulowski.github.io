@@ -1,46 +1,22 @@
-function menuDrop() {
-    document.getElementById("droppie").classList.toggle("show");
-}
+document.addEventListener('DOMContentLoaded', function () {
+    menuDrop();
+});
 
-function changeMargin() {
-    document.getElementById("main-heading").style.marginTop = "300px";
-}
-
-window.onclick = function (event) {
-    if (!event.target.matches(".dropdown-button")) {
-
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
+function menuDrop(e) {
+    document.getElementById("dropdown-button").addEventListener('click', function (e) {
+        if (this.nextElementSibling.classList.contains('show')) {
+            this.nextElementSibling.removeAttribute('class');
+            document.getElementById('main-heading').removeAttribute('style');
+        } else {
+            this.nextElementSibling.setAttribute('class', 'show');
+            document.getElementById('main-heading').style.marginTop = '300px';
         }
-    }
-}          
+        e.stopPropagation();
+    });
 
-/*
-function styleMargin() {
-    var heading = document.getElementById("main-heading");
-    if (heading.marginTop = "150px") {
-        document.getElementById("main-heading").style.marginTop = "300px";
-    }
-}
+    document.body.addEventListener('click', function () {
+        document.getElementById('dropdown-menu').removeAttribute('class');
+        document.getElementById('main-heading').removeAttribute('style');
 
-window.onload = styleMargin();
-*/
-
-
-window.onclick = function (event) {
-    if (event.target.matches(".dropdown-button")) {
-        
-        var heading = document.getElementById("main-heading");
-        
-        if (heading.marginTop = "150px") {
-            document.getElementById("main-heading").style.marginTop = "300px";
-        } else if (heading.marginTop = "300px") {
-            document.getElementById("main-heading").style.marginTop = "150px";
-        }
-    }
+    });
 }
