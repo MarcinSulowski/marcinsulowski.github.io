@@ -1,405 +1,147 @@
-/*Small phones media queries*/
+@media screen and (min-width: 1080px) and (max-width: 1279px) {
 
-@media screen and (max-width: 480px) {
-
-    #menu {
-        display: none;
-    }
-    #dropdown-container {
-        display: block;
-    }
-
-    .button-container,
-    .button-mask,
-    .button {
-        width: 200px;
-    }
-
-    #main-heading {
-        font-size: 34px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    p.subheading {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #about-flexbox,
-    #skills-flexbox,
-    #feedback-flexbox {
-        flex-flow: column nowrap;
-    }
-
-    div.figure,
-    .circle-container,
-    .feedback-figure {
-        width: 100%;
+    #about-section .figure > .description {
         margin-bottom: 50px;
     }
-    
-    p.description {
-        margin: 0 0 80px 0;
+    footer > #media-links a {
+        font-size: 1.65em;
+        padding: 15px;
     }
-
-    #feedback-flexbox .picture {
-        float: none;
-        margin: 0;
-    }
-
-    .feedback-figure {
-        text-align: center;
-        position: relative;
-    }
-
-    p.quote {
-        margin-top: 100px;
-    }
-
-    p.feedback-caption,
-    p.function {
-        position: absolute;
-        width: 100%;
-    }
-
-    p.feedback-caption {
-        top: 140px;
-    }
-
-    p.function {
-        top: 200px;
-    }
-
-    form {
-        width: 80%;
-    }
-
-    div#input-name,
-    div#input-email,
-    div#textarea {
-        width: 100%;
-        display: block;
-        float: none;
-    }
-
-    #media-links {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    #media-links a {
-        font-size: 22px;
-        padding: 10px;
-    }
-
-
-}
-
-/*Phones media queries*/
-
-@media screen and (min-width: 481px) and (max-width: 767px) {
-
-    #menu {
-        display: none;
-    }
-    #dropdown-container {
-        display: block;
-    }
-
-    #main-header {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-
-    #main-heading {
-        font-size: 38px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    p.subheading {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    #about-flexbox,
-    #feedback-flexbox {
-        flex-flow: column nowrap;
-    }
-
-    #skills-flexbox {
-        flex-flow: row wrap;
-        margin: 30px 10% 0 10%;
-
-    }
-    .circle-container {
-        width: 50%;
-        margin-bottom: 50px;
-    }
-
-    div.figure,
-    .feedback-figure {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    #feedback-flexbox .picture {
-        float: none;
-        margin: 0;
-    }
-
-    .feedback-figure {
-        text-align: center;
-        position: relative;
-    }
-
-    p.quote {
-        margin-top: 100px;
-    }
-
-    p.feedback-caption,
-    p.function {
-        position: absolute;
-        width: 100%;
-    }
-
-    p.feedback-caption {
-        top: 140px;
-    }
-
-    p.function {
-        top: 200px;
-    }
-
-    form {
-        width: 80%;
-    }
-
-    div#input-name,
-    div#input-email,
-    div#textarea {
-        width: 100%;
-        display: block;
-        float: none;
-    }
-
-    #media-links {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    #media-links a {
-        font-size: 24px;
-        padding: 10px;
-    }
-
 }
 
 /*Medium and small devices media queries*/
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (max-width: 1079px) {
 
-    #menu {
-        text-align: center;
-    }
-
-    .menu-item {
-        margin: 5px;
-    }
-
-
-    #main-heading {
-        font-size: 42px;
-    }
-
-    h2 {
-        font-size: 36px;
-    }
-
-    p.subheading {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    #about-flexbox,
-    #skills-flexbox,
-    #feedback-flexbox {
+    #about-section > #about-flexbox,
+    #skills-section > #skills-flexbox,
+    #feedback-section > #feedback-flexbox {
         flex-flow: row wrap;
     }
 
-    div.figure,
-    .circle-container {
+    #about-section .figure,
+    #skills-section .circle-container,
+    #feedback-section > #feedback-flexbox > .feedback-figure {
         width: 50%;
         margin-bottom: 50px;
     }
-    
-    p.description {
-        margin: 0 30px 80px 30px;
+
+    #about-section #about-flexbox .figure {
+        margin-bottom: 80px;
     }
 
-    .feedback-figure {
-        width: 40%;
-        margin-bottom: 50px;
+    #about-section .figure > .description {
+        margin-bottom: 0;
     }
 
-    #feedback-flexbox .picture {
-        float: none;
-        margin: 0;
-    }
-
-    .feedback-figure {
+    #feedback-section > #feedback-flexbox > .feedback-figure {
         text-align: center;
         position: relative;
     }
 
-    p.quote {
-        margin-top: 100px;
+    #feedback-section > #feedback-flexbox .picture {
+        float: none;
+        margin: 0;
     }
 
-    p.feedback-caption,
-    p.function {
+    #feedback-section .feedback-figure > h3,
+    #feedback-section .feedback-figure > .position {
         position: absolute;
         width: 100%;
     }
 
-    p.feedback-caption {
-        top: 140px;
+    #feedback-section .feedback-figure > h3 {
+        top: 160px;
     }
 
-    p.function {
-        top: 200px;
+    #feedback-section .feedback-figure > .position {
+        top: 190px;
     }
 
-    form {
-        width: 80%;
+    #feedback-section .feedback-figure .quote {
+        margin-top: 100px;
+        padding: 0 20px;
     }
 
-    #media-links {
+    footer > #media-links {
         display: flex;
-        flex-flow: row wrap;
         justify-content: space-around;
+    }
+
+    footer > #media-links a {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+}
+
+/*Phones media queries*/
+
+@media screen and (max-width: 767px) {
+
+    #main-nav > #nav-menu {
+        display: none;
+    }
+
+    #main-nav > #dropdown-container {
+        display: block;
+    }
+
+    #main-header > #main-heading {
+        font-size: 2.5em;
+    }
+
+    section > .section-header > h2 {
+        font-size: 2em;
+    }
+
+    section > .section-header > p {
+        font-size: 1.1em;
+    }
+
+    #about-section > #about-flexbox,
+    #feedback-section > #feedback-flexbox {
+        flex-flow: column nowrap;
+    }
+
+    #about-section .figure,
+    #feedback-section > #feedback-flexbox > .feedback-figure {
         width: 100%;
     }
 
-    #media-links a {
-        font-size: 24px;
-        padding: 10px;
+    #about-section .figure > .description {
+        height: 80px;
     }
 
-}
-
-@media screen and (min-width: 992px) and (max-width: 1279px) {
-    #main-heading {
-        font-size: 42px;
-    }
-
-    h2 {
-        font-size: 36px;
-    }
-
-    p.subheading {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    #about-flexbox,
-    #feedback-flexbox {
-        flex-flow: row wrap;
-    }
-
-    div.figure {
-        width: 50%;
-        margin-bottom: 50px;
-    }
-    #skills-flexbox {
-        margin: 30px 10% 0 10%;
-
-    }
-    .feedback-figure {
-        width: 40%;
-        margin-bottom: 50px;
-    }
-
-    #feedback-flexbox .picture {
+    #contact-section > form > .input-container,
+    #contact-section > form > #textarea-container {
+        width: 100%;
         float: none;
-        margin: 0;
     }
 
-    .feedback-figure {
-        text-align: center;
-        position: relative;
+    footer > #media-links {
+        display: none;
     }
 
-    p.quote {
-        margin-top: 100px;
+    footer > .social-media-icons {
+        display: flex;
+        justify-content: space-between;
     }
-
-    p.feedback-caption,
-    p.function {
-        position: absolute;
-        width: 100%;
-    }
-
-    p.feedback-caption {
-        top: 140px;
-    }
-
-    p.function {
-        top: 200px;
-    }
-
-    form {
-        width: 80%;
-    }
-
-    #media-links {
-        text-align: center;
-        width: 100%;
-    }
-
-    #media-links a {
-        font-size: 28px;
-        padding: 10px;
-    }
-
 }
 
+/*Small phones media queries*/
 
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
+@media screen and (max-width: 480px) {
 
-    #main-heading {
-        font-size: 48px;
+    #about-section .figure > .description {
+        height: 100px;
     }
 
-    p.description {
-        margin: 0 30px 80px 30px;
+    #skills-section > #skills-flexbox {
+        flex-flow: column nowrap;
     }
 
-    #about-flexbox,
-    #skills-flexbox {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    #feedback-flexbox .picture {
-        margin-right: 30px;
-    }
-
-    #media-links {
+    #skills-section .circle-container {
         width: 100%;
+        margin-bottom: 50px;
     }
-
-    #media-links a {
-        padding: 20px;
-    }
-
 }
