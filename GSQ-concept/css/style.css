@@ -30,7 +30,6 @@ a {
 .header-wrapper {
     position: relative;
     height: 250px;
-    background-color: 
 }
 
 .header-wrapper > #main-header {
@@ -121,8 +120,7 @@ a {
 .header-wrapper > .rectangle > .grid li {
     border-top: 2px solid #fffff0;
     margin-bottom: 5px;
-    box-shadow: 0 0 1px 1px #4e1f1c;
-    -webkit-box-shadow: 0 0 1px 1px rgba(78, 31, 28, 0.6);
+    box-shadow: 0 0 1px 1px rgba(78, 31, 28, 0.6);
 }
 
 .header-wrapper > .rectangle .fill {
