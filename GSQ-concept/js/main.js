@@ -3,7 +3,8 @@ document.getElementById('nav-menu').addEventListener('click', function (e) {
 
     var elemRect = e.target.getBoundingClientRect(),
         indicator = document.getElementById('indicator').getBoundingClientRect(),
-        slide = (elemRect.left + elemRect.width / 2) - 256 + 'px',
+        panel = document.getElementsByClassName('panel')[0].getBoundingClientRect(),
+        slide = (elemRect.left + elemRect.width / 2) - panel.left + 'px',
         links = document.querySelectorAll('.menu-item a');
 
     for (var i of links) {
