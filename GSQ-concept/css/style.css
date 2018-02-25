@@ -1,0 +1,224 @@
+/* General styles */
+
+body {
+    margin: 0;
+    padding-top: 5px;
+    background: linear-gradient(to top, rgba(252, 185, 135, 0.21), rgba(252, 185, 135, 0.21)), url(/img/greynoise.jpg);
+    background-attachment: fixed;
+    font-family: 'Great Vibes', cursive;
+    color: #624632;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* main header styles */
+
+.header-wrapper {
+    position: relative;
+    height: 250px;
+}
+
+.header-wrapper > #main-header {
+    text-align: center;
+}
+
+.header-wrapper > #main-header > h1 {
+    position: absolute;
+    z-index: 30;
+    font-size: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    color: #33230d;
+}
+
+#main-header > .social-media-icons {
+    position: absolute;
+    z-index: 30;
+    top: 40%;
+    right: 7%;
+}
+
+#main-header > .social-media-icons a {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+#main-header > .social-media-icons a:hover {
+    border-color: #33230d;
+}
+
+#main-header > .social-media-icons a > i {
+    line-height: 45px;
+    font-size: 32px;
+    color: #33230d;
+}
+
+.header-wrapper > .rectangle {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border: 5px solid #773902;
+    background-color: #efd2a9;
+    overflow: hidden;
+}
+
+.header-wrapper > .rectangle.left {
+    left: 5%;
+    transform: skewX(-10deg);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-right: none;
+}
+
+.header-wrapper > .rectangle.right {
+    right: 5%;
+    transform: skewX(10deg);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-left: transparent;
+}
+
+.header-wrapper > .rectangle.left > #speaker {
+    transform: skewX(10deg);
+    margin: 10px 0 0 40px;
+    width: 190px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.header-wrapper > .rectangle > .grid {
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    z-index: 20;
+}
+
+.header-wrapper > .rectangle > .grid li {
+    border-top: 2px solid #eab974;
+    margin-bottom: 5px;
+    box-shadow: 0 0 1px 1px #91601b;
+    -webkit-box-shadow: 0 0 1px 1px #91601b;
+}
+
+.header-wrapper > .rectangle .fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38%;
+    background: linear-gradient(to top, rgba(155, 84, 30, 0.42), rgba(155, 84, 30, 0.42)), url('../img/beigenoise.jpg');
+}
+
+.header-wrapper > .panel {
+    position: absolute;
+    bottom: 60px;
+    left: 20%;
+    width: 60%;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #33230d;
+    z-index: 40;
+    box-shadow: inset 0 0 10px 2px rgba(177, 132, 68, 0.69);
+}
+
+.header-wrapper > .panel > #scale {
+    position: absolute;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f4ebdd;
+    height: 2px;
+}
+
+.header-wrapper > .panel > #indicator {
+    position: absolute;
+    left: 0%;
+    width: 4px;
+    height: 100%;
+    background-color: #e34f4f;
+    transition: all .3s ease-out;
+}
+
+
+#main-nav {
+    position: absolute;
+    width: 50%;
+    bottom: 24px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-nav > #nav-menu .menu-item {
+    display: inline-block;
+}
+
+#main-nav > #nav-menu .menu-item > a {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 3px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f4ebdd;
+    transform: matrix3d(1, 0, 0.00, 0.0, 0.00, 1, 0.00, 0.001, 0, 0, 1, 0, 0, 5, 20, 1);
+    box-shadow: 1px -1px 10px 1px #333;
+    transition: all .2s;
+    color: #33230d;
+}
+
+#main-nav > #nav-menu .menu-item a:hover {
+    color: #eab974;
+}
+
+#main-nav > #nav-menu .menu-item a:active,
+#main-nav > #nav-menu .menu-item a.active {
+    color: #eab974;
+    box-shadow: inset 0px 0px 4px 1px #333;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+section {
+    padding: 0 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-content {
+    border-radius: 50px;
+    border: 5px solid #773902;
+    padding: 20px;
+}
+
+.section-content > img {
+    display: block;
+    margin: 25px auto;
+    width: 80%;
+}
