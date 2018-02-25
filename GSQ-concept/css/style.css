@@ -6,7 +6,6 @@ body {
     background: linear-gradient(to top, rgba(252, 185, 135, 0.21), rgba(252, 185, 135, 0.21)), url(/img/greynoise.jpg);
     background-attachment: fixed;
     font-family: 'Great Vibes', cursive;
-    color: #624632;
 }
 
 h1,
