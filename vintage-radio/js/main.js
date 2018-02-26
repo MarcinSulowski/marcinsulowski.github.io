@@ -3,7 +3,7 @@ document.getElementById('nav-menu').addEventListener('click', function (e) {
 
     var elemRect = e.target.getBoundingClientRect(),
         indicator = document.getElementById('indicator').getBoundingClientRect(),
-        panel = document.getElementsByClassName('panel')[0].getBoundingClientRect(),
+        panel = document.getElementById('radio-panel').getBoundingClientRect(),
         slide = (elemRect.left + elemRect.width / 2) - panel.left + 'px',
         links = document.querySelectorAll('.menu-item a');
 
@@ -15,4 +15,5 @@ document.getElementById('nav-menu').addEventListener('click', function (e) {
     
     e.target.setAttribute('class', 'active');
     document.getElementById('indicator').style.left = slide;
+    e.stopPropagation();
 });
