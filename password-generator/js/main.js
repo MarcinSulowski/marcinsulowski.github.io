@@ -7,78 +7,80 @@
 //123-126 specialChars
 
 
-// click event for 'generate-password' button to call generatePassword function
 document.getElementById('generate').addEventListener('click', function () {
-    var passLength = parseInt(document.getElementById('pass-length').value);
+    let passLength = parseInt(document.getElementById('pass-length').value);
     generatePassword(passLength);
 });
 
-// click event for 'clipboard' to copy to clipboard
+// copy to clipboard
 document.getElementById('clipboard').addEventListener('click', function () {
     document.getElementById('password').select();
     document.execCommand('Copy');
 });
 
+const charCodes = {
+    'uppercase': [65, 90],
+    'lowercase': [97, 122],
+    'numbers': [48, 57],
+    'special': [33, 47]
+};
+
 function generatePassword(num) {
 
-    var password = '';
-    var inputs = document.getElementsByTagName('input');
-    var checked = [];
+    let password = '';
+    let inputs = document.getElementsByTagName('input');
+    let charTypes = [];
 
-    //checking if checkboxes are checked
-    //yes - split and slice their value and push into array 'checked' (function drawChars takes two parameters)
-    //no - push '00' into 'checked' array for error handling
-    //we get an array with parameters for later
-
-    for (var i of inputs) {
-        if (i.type === 'checkbox' && i.checked) {
-            checked.push(i.value.split(',').slice(0));
-        } else if (i.type === 'checkbox' && !i.checked) {
-            checked.push(('00'));
+    //checking if checkboxes are checked and have the same value as the corresponding key in charCodes
+    //no - returns 0 for error handling
+    for (let key in charCodes) {
+        
+        for (var i of inputs) {
+            if (i.type === 'checkbox' && i.checked && i.value === key) {
+                charTypes.push(charCodes[key]);
+            } else if (i.type === 'checkbox' && !i.checked && i.value === key) {
+                charTypes.push(0);
+            }
         }
     }
     
     //looping throught functions to fill 'password' string with random characters
     while (password.length < num) {
         password += drawChars(
-            randomChar(checked[0][0], checked[0][1]),
-            randomChar(checked[1][0], checked[1][1]),
-            randomChar(checked[2][0], checked[2][1]),
-            randomChar(checked[3][0], checked[3][1])
-
+            getRandomCharOfType(charTypes[0]),
+            getRandomCharOfType(charTypes[1]),
+            getRandomCharOfType(charTypes[2]),
+            getRandomCharOfType(charTypes[3])
         );
     }
-    
-    //takes in 2 parameters from 'checked' array
-    //if both parameters === 0 returns 0 for error handling
-    //else returns a random char from the specified ASCII range
-    function randomChar(min, max) {
-        min = parseInt(min);
-        max = parseInt(max);
 
-        if (!max && !min) {
+    //if charType === 0 returns 0 for error handling
+    //else returns a random char from the specified ASCII range
+    function getRandomCharOfType(charType) {
+        let min = charType[0];
+        let max = charType[1];
+
+        if (charType === 0) {
             return 0;
         } else {
             return String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min);
         }
     }
-    
-    //takes in 4 parameters - 4 random characters from randomChar function
-    //creates an empty array for storing filtered parameters
-    //returns a random character from an array of filtered parameters
+
+    //draws 1 character from 4 random characters from getRandomCharOfType function
     //this eliminates the possibility of not returning a character
     function drawChars(a, b, c, d) {
-        var argFilter = [];
+        let charFilter = [];
         for (let i of arguments) {
             if (i !== 0) {
-                argFilter.push(i);
+                charFilter.push(i);
             }
         }
-        return argFilter[Math.floor(Math.random() * argFilter.length)];
+        return charFilter[Math.floor(Math.random() * charFilter.length)];
     }
 
     //if none of the checkboxes is checked, display a warning message
-    if (checked[0] === '00' && checked[1] === '00' && checked[2] === '00' && checked[3] === '00') {
+    if (charTypes[0] === 0 && charTypes[1] === 0 && charTypes[2] === 0 && charTypes[3] === 0) {
         document.getElementById('warning').setAttribute('class', 'show');
     } else {
         document.getElementById('password').value = password;
@@ -86,4 +88,3 @@ function generatePassword(num) {
         document.getElementById('warning').removeAttribute('class', 'show');
     }
 }
-
