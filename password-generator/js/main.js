@@ -28,59 +28,38 @@ const charCodes = {
 function generatePassword(num) {
 
     let password = '';
-    let inputs = document.getElementsByTagName('input');
+    let checked = document.querySelectorAll('input[type=checkbox]:checked');
     let charTypes = [];
 
-    //checking if checkboxes are checked and have the same value as the corresponding key in charCodes
-    //no - returns 0 for error handling
-    for (let key in charCodes) {
-        
-        for (var i of inputs) {
-            if (i.type === 'checkbox' && i.checked && i.value === key) {
+    for (var i of checked) {
+
+        for (let key in charCodes) {
+            if (i.value === key) {
                 charTypes.push(charCodes[key]);
-            } else if (i.type === 'checkbox' && !i.checked && i.value === key) {
-                charTypes.push(0);
             }
         }
     }
-    
+
     //looping throught functions to fill 'password' string with random characters
     while (password.length < num) {
-        password += drawChars(
-            getRandomCharOfType(charTypes[0]),
-            getRandomCharOfType(charTypes[1]),
-            getRandomCharOfType(charTypes[2]),
-            getRandomCharOfType(charTypes[3])
-        );
+        password += getRandomCharOfType(charTypes);
     }
 
-    //if charType === 0 returns 0 for error handling
-    //else returns a random char from the specified ASCII range
-    function getRandomCharOfType(charType) {
-        let min = charType[0];
-        let max = charType[1];
-
-        if (charType === 0) {
-            return 0;
-        } else {
-            return String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min);
-        }
-    }
-
-    //draws 1 character from 4 random characters from getRandomCharOfType function
-    //this eliminates the possibility of not returning a character
-    function drawChars(a, b, c, d) {
-        let charFilter = [];
-        for (let i of arguments) {
-            if (i !== 0) {
-                charFilter.push(i);
-            }
-        }
-        return charFilter[Math.floor(Math.random() * charFilter.length)];
+    function getRandomCharOfType(charTypes) {
+        let randomChars = [];
+        
+        charTypes.forEach(function (charRange) {
+            let min = charRange[0];
+            let max = charRange[1];
+            let randomChar = String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min);
+            randomChars.push(randomChar);
+        })
+        
+        return randomChars[Math.floor(Math.random() * randomChars.length)];
     }
 
     //if none of the checkboxes is checked, display a warning message
-    if (charTypes[0] === 0 && charTypes[1] === 0 && charTypes[2] === 0 && charTypes[3] === 0) {
+    if (!checked[0] && !checked[1] && !checked[2] && !checked[3]) {
         document.getElementById('warning').setAttribute('class', 'show');
     } else {
         document.getElementById('password').value = password;
