@@ -19,26 +19,25 @@
 
 <body>
     <form>
-       
         <h1>Password Generator</h1>
 
         <div class="checkbox-container">
-            <input type="checkbox" id="uppercase" value="65,90" checked>
+            <input type="checkbox" id="uppercase" value="uppercase" checked>
             <label for="uppercase">Include uppercase letters</label>
         </div>
 
         <div class="checkbox-container">
-            <input type="checkbox" id="lowercase" value="97,122" checked>
+            <input type="checkbox" id="lowercase" value="lowercase" checked>
             <label for="lowercase">Include lowercase letters</label>
         </div>
 
         <div class="checkbox-container">
-            <input type="checkbox" id="numbers" value="48,57" checked>
+            <input type="checkbox" id="numbers" value="numbers" checked>
             <label for="numbers">Include numbers</label>
         </div>
 
         <div class="checkbox-container">
-            <input type="checkbox" id="special-chars" value="33,47" checked>
+            <input type="checkbox" id="special-chars" value="special" checked>
             <label for="special-chars">Include special characters</label>
         </div>        
            
@@ -55,6 +54,7 @@
         <input type="text" id="password" value="" placeholder="Your new password">
 
         <div id="clipboard"><i class="far fa-clipboard"></i><span>Copy to clipboard</span></div>
+        
     </form>
 
     <div id="warning">Choose at least one option!</div>
