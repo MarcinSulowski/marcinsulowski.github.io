@@ -1,5 +1,5 @@
 document.getElementById('generate').addEventListener('click', function () {
-    let passLength = parseInt(document.getElementById('pass-length').value);
+    const passLength = parseInt(document.getElementById('pass-length').value);
     generatePassword(passLength);
 });
 
@@ -36,10 +36,10 @@ function generatePassword(num) {
     }
 
     const charTypes = readCharTypes();
-    const password = _generatePassword(num, charTypes);
+    const password = generatePasswordString(num, charTypes);
 
 
-    function updateView(password) {
+    function updateViewPassword(password) {
         if (!checked[0] && !checked[1] && !checked[2] && !checked[3]) {
             warning.setAttribute('class', 'show');
         } else {
@@ -47,10 +47,10 @@ function generatePassword(num) {
             warning.removeAttribute('class', 'show');
         }
     }
-    updateView(password);
+    updateViewPassword(password);
 }
 
-function _generatePassword(length, charTypes) {
+function generatePasswordString(length, charTypes) {
     let password = '';
 
     while (password.length < length) {
