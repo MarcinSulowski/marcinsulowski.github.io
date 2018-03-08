@@ -1,0 +1,141 @@
+/* expandable navigation */
+
+#main-nav {
+    position: fixed;
+    background: rgb(10, 33, 39);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    text-align: center;
+    transition: top 0.8s;
+    z-index: 10;
+}
+
+.nav-toggle-button {
+    position: fixed;
+    cursor: pointer;
+    width: 3em;
+    height: 3em;
+    will-change: transform;
+    transition: all 0.3s;
+    z-index: 20;
+}
+
+.nav-toggle-button span {
+    display: block;
+    margin-bottom: 5px;
+    border: 4px solid #01bfa6;
+    width: 100%;
+    transition: all .3s;
+}
+
+.nav-toggle-button span.white {
+    border-color: #fff;
+}
+
+.nav-toggle-button span:nth-of-type(1) {
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left: none;
+}
+
+.nav-toggle-button span:nth-of-type(2) {
+    width: 54px;
+    border-bottom-color: transparent;
+    border-left: none;
+    border-right: none;
+}
+
+.nav-toggle-button span:nth-of-type(3) {
+    border-top: none;
+    border-left-color: transparent;
+    border-right: none;
+}
+
+#expandable-menu.collapsed #main-nav {
+    top: -100%;
+}
+
+#expandable-menu.collapsed .menu-item {
+    position: relative;
+    transform: translateY(-100%);
+}
+
+#main-nav,
+#main-nav ul {
+    height: 100%;
+}
+
+#main-nav ul {
+    display: flex;
+}
+
+.menu-item {
+    flex-basis: 20%;
+    height: 100%;
+    transition: transform 0.8s;
+}
+
+.menu-item > a {
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1.2em;
+    display: block;
+}
+
+.menu-item:first-of-type {
+    background: #0a2f38;
+    transition-delay: 0;
+}
+
+.menu-item:nth-of-type(2) {
+    background: #fe6a22;
+    transition-delay: 100ms;
+}
+
+.menu-item:nth-of-type(3) {
+    background: #01bfa6;
+    transition-delay: 200ms;
+}
+
+.menu-item:nth-of-type(4) {
+    background: #468966;
+    transition-delay: 300ms;
+}
+
+.menu-item:last-of-type {
+    background: #c3a392;
+    transition-delay: 400ms;
+}
+
+/* language navigation */
+
+#lang-nav {
+    position: fixed;
+    right: 4%;
+}
+
+.lang-nav-item {
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.lang-nav-item > a {
+    color: #01bfa6;
+    font-family: 'Arimo', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.lang-nav-item > a.white {
+    color: #fff;
+}
+
+#lang-nav .lang-nav-item > a.active {
+    font-weight: 700;
+}

@@ -1,0 +1,5 @@
+@media only screen and (max-width: 728px) {
+    #main-nav > ul {
+        flex-direction: column;
+    }
+}

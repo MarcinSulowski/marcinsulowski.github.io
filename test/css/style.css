@@ -1,0 +1,185 @@
+/* general styles */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+.col-1-2,
+.col-2-2 {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 1.5em;
+}
+
+.col-1-2 {
+    float: left;
+}
+
+.col-2-2 {
+    float: right;
+}
+
+section {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 1.5em;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header h2 {
+    color: #fff;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* main header styles */
+
+#main-header {
+    box-sizing: border-box;
+    background: #01bfa6;
+    padding: 2%;
+    height: 100vh;
+}
+
+#main-header > .main-header-content {
+    position: relative;
+    background: url(../img/background.jpg) center;
+    background-size: cover;
+    height: 100%;
+}
+
+#main-header > .main-header-content .main-header-text {
+    transform: translateY(30%);
+    padding: 1em;
+    width: 30em;
+    text-align: right;
+    float: right;
+    max-width: 96%;
+}
+
+#main-header > .main-header-content h1 {
+    display: inline-block;
+    color: #01bfa6;
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+#main-header > .main-header-content h1::after {
+    content: '';
+    border-top: 1px solid #01bfa6;
+    margin-top: 20px;
+    display: block;
+}
+
+#main-header > .main-header-content h2 {
+    font-weight: 300;
+    font-size: 2em;
+    color: #fe6a22;
+    margin-bottom: 30px;
+    letter-spacing: 0.08em;
+}
+
+#main-header > .main-header-content p {
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+#main-header > .main-header-content > .col-2-2 {
+    background: url(../img/bike.jpg) bottom;
+    height: inherit;
+    background-size: cover;
+}
+
+/* chevrons */
+
+.chevron.left {
+    position: absolute;
+    top: 1.8em;
+    left: 8em;
+}
+
+.chevron.bottom {
+    position: fixed;
+    bottom: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chevron.bottom.white::before {
+    border-color: #fff;
+}
+
+.chevron::before {
+    border-style: solid;
+    border-color: #01bfa6;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+    position: relative;
+}
+
+.chevron.left::before {
+    transform: rotate(-135deg);
+}
+
+.chevron.bottom::before {
+    transform: rotate(135deg);
+}
+
+/* picture section*/
+
+#picture-section {
+    background: #fe6a22;
+}
+
+/* motion section*/
+
+#motion-section {
+    background: #01bfa6;
+}
+
+/* sound section*/
+
+#sound-section {
+    background: #468966;
+}
+
+/* contact section*/
+
+#contact-section {
+    background: #c3a392;
+}
