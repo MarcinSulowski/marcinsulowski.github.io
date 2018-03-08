@@ -59,6 +59,11 @@ section {
     letter-spacing: 0.1em;
 }
 
+.clearfix {
+    content: '';
+    clear: both;
+}
+
 /* main header styles */
 
 #main-header {
