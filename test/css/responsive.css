@@ -68,11 +68,11 @@
 }
 
 @media only screen and (max-width: 420px) {
+    #main-header, #main-header .main-header-content {
+        overflow: visible;
+    }
 
     #main-header > .main-header-content .main-header-text {
-        -webkit-transform: translate(-50%, -40%);
-        -ms-transform: translate(-50%, -40%);
-        transform: translate(-50%, -40%);
         width: 90%;
     }
 
@@ -104,7 +104,7 @@
     }
 }
 
-@media only screen and (max-width: 420px) and (orientation: landscape) {
+@media only screen and (max-device-width: 576px) and (orientation: landscape) {
     #main-header {
         height: 140vh;
     }
