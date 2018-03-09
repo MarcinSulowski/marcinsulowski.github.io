@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gems Interactive</title>
+
+    <!--    fonts     -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Raleway:300,700|Arimo:400,700" rel="stylesheet">
+
+    <!--    custom styles     -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navigation.css">
+
+    <!--    responsive styles     -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- main nav -->
+    <div id="expandable-menu" class="collapsed">
+        <nav id="main-nav">
+            <ul>
+                <li class="menu-item"><a href="#main-header">Home</a></li>
+                <li class="menu-item"><a href="#picture-section">Picture</a></li>
+                <li class="menu-item"><a href="#motion-section">Motion</a></li>
+                <li class="menu-item"><a href="#sound-section">Sound</a></li>
+                <li class="menu-item"><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-toggle-button" onclick="toggleNavigation()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="lang-nav">
+            <ul>
+                <li class="lang-nav-item"><a class="active" href="index.html" hreflang="en">ENG</a></li>
+                <li class="lang-nav-item"><a href="" hreflang="pl">PL</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- main header -->
+    <header id="main-header">
+        <div class="main-header-content">
+
+            <div class="col-1-2">
+
+                <div class="main-header-text">
+                    <h1>Testing 123</h1>
+                    <h2>Simple yet elegant is the way to go</h2>
+                    <p>Multidisciplinary artist-fanatic. Picture, motion and sound are all my elements. If I'm not watching a picture, I make it. If I'm not listening to music, I play it or compose it. I devour books like a maniac and my favourite state of being is FLOW, as Mihaly Csikszentmihalyi calls it. Knowledge of a subject and constant development are my way of life.</p>
+                </div>
+
+
+                <div class="chevron left"></div>
+                <div id="chevron-scroll" class="chevron bottom" onclick="sectionScroll()"></div>
+
+            </div>
+
+            <div class="col-2-2">
+            </div>
+
+        </div>
+    </header>
+
+    <!--    picture section -->
+    <section id="picture-section">
+        <header class="section-header">
+            <h2>Picture</h2>
+        </header>
+    </section>
+
+    <!--    motion section -->
+    <section id="motion-section">
+        <header class="section-header">
+            <h2>Motion</h2>
+        </header>
+    </section>
+
+    <!--    sound section -->
+    <section id="sound-section">
+        <header class="section-header">
+            <h2>Sound</h2>
+        </header>
+    </section>
+
+    <!--   contact section -->
+    <section id="contact-section">
+        <header class="section-header">
+            <h2>Contact</h2>
+        </header>
+    </section>
+
+    <!--    scripts     -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
