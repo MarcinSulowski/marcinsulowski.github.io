@@ -87,6 +87,7 @@
     -ms-flex-preferred-size: 20%;
     flex-basis: 20%;
     height: 100%;
+    overflow: hidden;
     -webkit-transition: -webkit-transform 0.8s;
     transition: -webkit-transform 0.8s;
     -o-transition: transform 0.8s;
