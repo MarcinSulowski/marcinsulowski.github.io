@@ -8,11 +8,16 @@
 @media only screen and (max-width: 815px) {
 
     #main-header > .main-header-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
     }
 
     #main-header > .main-header-content .main-header-text {
         text-align: center;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         width: 24em;
     }
@@ -32,6 +37,9 @@
     }
 
     #main-header > .main-header-content > .col-2-2 {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 13, 16)), to(rgba(2, 12, 15, 0))), url(../img/bike-sm.jpg) center;
+        background: -webkit-linear-gradient(top, rgb(0, 13, 16), rgba(2, 12, 15, 0)), url(../img/bike-sm.jpg) center;
+        background: -o-linear-gradient(top, rgb(0, 13, 16), rgba(2, 12, 15, 0)), url(../img/bike-sm.jpg) center;
         background: linear-gradient(to bottom, rgb(0, 13, 16), rgba(2, 12, 15, 0)), url(../img/bike-sm.jpg) center;
         background-size: cover;
     }
@@ -39,13 +47,17 @@
 
 @media only screen and (max-width: 728px) {
     #main-nav > ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 }
 
-@media all and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
 
     #main-header > .main-header-content > .col-1-2 {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
 
@@ -53,4 +65,41 @@
         display: none;
     }
 
+}
+
+@media only screen and (max-width: 420px) {
+
+    #main-header > .main-header-content .main-header-text {
+        -webkit-transform: translate(-50%, -40%);
+        -ms-transform: translate(-50%, -40%);
+        transform: translate(-50%, -40%);
+        width: 90%;
+    }
+
+    #main-header > .main-header-content h1 {
+        font-size: 2.8em;
+    }
+
+
+    #main-header > .main-header-content p {
+        font-size: 0.8em;
+    }
+
+    #main-header > .main-header-content h2,
+    .section-header h2 {
+        font-size: 1.4em;
+    }
+
+    #lang-nav {
+        position: absolute;
+        right: 1em;
+    }
+
+    .nav-toggle-button {
+        left: 1em;
+    }
+
+    .chevron.left {
+        left: 6em;
+    }
 }
