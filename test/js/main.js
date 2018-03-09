@@ -7,6 +7,15 @@ document.getElementById('main-nav').addEventListener('click', function (e) {
     document.querySelector('#expandable-menu').classList.toggle('collapsed');
 })
 
+function sectionScroll () {
+    const chevronBtm = document.querySelector('.chevron.bottom');
+    const section = $('a[href*="#"]');
+    
+    var cls = $(chevronBtm).closest('.menu-item');
+		$("html, body").animate({scrollTop: cls}, "slow");
+
+}
+
 /*
 smooth scroll
 */
@@ -23,6 +32,9 @@ nav color change
 */
 
 $(window).scroll(function () {
+    
+        const chevronBtm = $('.chevron.bottom');
+
 
     if ($(this).scrollTop() > ($(this).height() - 80)) {
         
@@ -40,5 +52,11 @@ $(window).scroll(function () {
         
         $('.chevron.bottom').removeClass('white');
     }
-
+    
+//    if ($(this).scrollTop() > 2900) {
+//        chevronBtm.removeClass('bottom').addClass('up');
+//    } else {
+//        chevronBtm.removeClass('up').addClass('bottom');
+//    }
+    
 });

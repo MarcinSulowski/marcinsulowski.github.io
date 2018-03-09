@@ -1,36 +1,56 @@
+@media only screen and (max-width: 880px) {
+
+    #main-header > .main-header-content .main-header-text {
+        width: 21em;
+    }
+}
+
+@media only screen and (max-width: 815px) {
+
+    #main-header > .main-header-content {
+        flex-flow: column nowrap;
+    }
+
+    #main-header > .main-header-content .main-header-text {
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 24em;
+    }
+
+    #main-header > .main-header-content > .col-1-2 {
+        height: 50vh;
+    }
+
+    #main-header > .main-header-content > .col-2-2 {
+        height: 50vh;
+    }
+
+    #main-header > .main-header-content > .col-1-2 {
+        background: url(../img/bg-sm.jpg) center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #main-header > .main-header-content > .col-2-2 {
+        background: linear-gradient(to bottom, rgb(0, 13, 16), rgba(2, 12, 15, 0)), url(../img/bike-sm.jpg) center;
+        background-size: cover;
+    }
+}
+
 @media only screen and (max-width: 728px) {
     #main-nav > ul {
         flex-direction: column;
     }
-
-    #main-header > .main-header-content {
-        background: url(../img/bg-sm.jpg) center;
-    }
 }
 
 @media all and (max-width: 576px) {
-    
-    #main-header {
-        height: 140vh;
-    }
-    #main-header > .main-header-content > .col-2-2 {
-        display: none;
-
-    }
 
     #main-header > .main-header-content > .col-1-2 {
-        width: 100%;
-    }
-    
-    #main-header > .main-header-content .main-header-text {
-        text-align: center;
+        flex-basis: 100%;
     }
 
-    #main-header > .main-header-content h1 {
-        font-size: 3em;
+    #main-header > .main-header-content > .col-2-2 {
+        display: none;
     }
-    
-    #main-header > .main-header-content h2 {
-        font-size: 1.5em;
-    }
+
 }
