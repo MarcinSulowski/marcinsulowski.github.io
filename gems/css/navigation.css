@@ -85,6 +85,7 @@
 }
 
 .menu-item {
+    position: relative;
     -ms-flex-preferred-size: 20%;
     flex-basis: 20%;
     height: 100%;
@@ -97,13 +98,14 @@
 }
 
 .menu-item > a {
-    position: relative;
+    position: absolute;
     padding: 1em;
     color: #fff;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 1.2em;
