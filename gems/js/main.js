@@ -6,12 +6,13 @@ function toggleNavigation(e) {
 
     document.querySelector('#expandable-menu').classList.toggle('collapsed');
     document.body.classList.toggle('disable-scroll');
-
 }
 
 /*
 scroll to section
 */
+
+const chevronBtn = $('#chevron-scroll');
 
 function sectionScroll() {
 
@@ -19,12 +20,18 @@ function sectionScroll() {
         windowHeight = window.innerHeight,
         offset = windowHeight + currentPosition;
 
-    $('html, body').animate({
-        scrollTop: offset
-    }, 800);
+    if (chevronBtn.hasClass('bottom')) {
+        $('html, body').animate({
+            scrollTop: offset
+        }, 800);
+
+    } else {
+        $('html, body').animate({
+            scrollTop: -offset
+        }, 800);
+    }
 
 }
-
 
 /*
 smooth scroll and menu collapse on click
@@ -45,35 +52,33 @@ for (let i = 0; i < anchorLinks.length; i++) {
 }
 
 /* 
-nav color change 
+nav, chevron color change 
 */
 
 $(window).scroll(function () {
 
-    const chevron = $('#chevron-scroll');
+    const navBtn = $('.nav-toggle-button');
+    const headerHeight = $('#main-header').height();
 
-
-    if ($(this).scrollTop() > ($(this).height() - 80)) {
-
+    // fixed nav color change
+    if (navBtn.offset().top > headerHeight) {
         $('.nav-toggle-button span, .lang-nav-item > a').addClass('white');
-
     } else {
-
         $('.nav-toggle-button span, .lang-nav-item > a').removeClass('white');
     }
 
-    if ($(chevron).offset().top > $('#main-header').height()) {
-
-        $(chevron).addClass('white');
-
+    // chevron color change
+    if (chevronBtn.offset().top > headerHeight) {
+        chevronBtn.addClass('white');
     } else {
-
-        $(chevron).removeClass('white');
+        chevronBtn.removeClass('white');
     }
 
+    // chevron up/down change
     if ($(this).scrollTop() > (window.innerHeight * 3.8)) {
-        chevron.removeClass('bottom').addClass('up');
-    } else if ($(this).scrollTop() < $('#main-header').height()) {
-        chevron.removeClass('up').addClass('bottom');
+        chevronBtn.removeClass('bottom').addClass('up');
+    } else if ($(this).scrollTop() < 70) {
+        chevronBtn.removeClass('up').addClass('bottom');
     }
+
 });
