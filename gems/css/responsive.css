@@ -101,23 +101,29 @@
     .section-header h2 {
         font-size: 1.2em;
     }
+    
+    .menu-item > a {
+        padding: 0;
+    }
 
     #lang-nav {
         position: absolute;
         right: 1em;
+        top: 1.5em;
     }
 
     .nav-toggle-button {
-        left: 1em;
+        left: 1.5em;
+        top: 1.5em;
     }
 
     .chevron.left {
         left: 6em;
+        top: 1.7em;
     }
 }
 
-@media only screen and (max-device-width: 576px) and (orientation: landscape) {
+@media screen and (max-device-width: 576px) and (orientation: landscape) {
     #main-header {
-        height: 140vh;
     }
 }
