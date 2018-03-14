@@ -144,10 +144,6 @@
     .section-header h2 {
         font-size: 1.2em;
     }
-    
-    .menu-item > a {
-        padding: 0;
-    }
 
     #lang-nav {
         position: absolute;
