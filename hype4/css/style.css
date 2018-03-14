@@ -1,0 +1,178 @@
+/* general styles */
+
+body {
+    margin: 0;
+    background-color: #E7ECF5;
+    font-family: 'Poppins', sans-serif;
+    color: #474747;
+    font-size: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* table row */
+
+.row-container {
+    position: relative;
+    box-sizing: border-box;
+    margin: 5em auto;
+    display: flex;
+    width: 96%;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(151, 151, 151, 0.3);
+}
+
+.row-container::before {
+    position: absolute;
+    top: 0;
+    content: 'Altcoins';
+    background-color: #FFBE33;
+    color: #fff;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    width: 20px;
+    height: 100%;
+    text-align: center;
+    line-height: 20px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+/* table row - header */
+
+.row-header {
+    flex-basis: 24%;
+    padding-left: 4em;
+    border-right: 1px solid #D8D8D8;
+}
+
+.row-header h4 {
+    word-break: keep-all;
+    font-weight: normal;
+    padding-right: 0.4em;
+    margin-bottom: 0.2em;
+    font-size: 1.4em;
+}
+
+.row-header > ul > li {
+    position: relative;
+    padding-left: 1.4em;
+}
+
+.row-header > ul > li::before {
+    position: absolute;
+}
+
+.row-header > ul > li:first-of-type::before {
+    content: url('../img/parasol.png');
+    left: -3px;
+    top: 1px;
+}
+
+.row-header > ul > li:last-of-type::before {
+    content: '•';
+    color: #FFBE33;
+    font-size: 2.4em;
+    top: -10px;
+    left: 0;
+}
+
+/* table row - cells */
+
+.row-cell,
+.row-header {
+    margin: 2em 0;
+}
+
+.row-cell {
+    text-align: center;
+    flex-basis: 10%;
+    padding: 1.5em 0;
+}
+
+.row-cell p {
+    font-size: 2em;
+}
+
+.row-cell h5 {
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
+
+.row-cell:not(:last-of-type) {
+    border-right: 1px solid #D8D8D8;
+}
+
+/* value cell */
+
+.row-cell.value p {
+    font-size: 2em;
+    color: #D83550;
+}
+
+.row-cell.value p span {
+    padding-left: 0.4em;
+    font-size: 0.5em;
+    color: #474747;
+}
+
+/* invest cell */
+
+.row-cell.invest {
+    padding: 0.4em 0;
+}
+
+.btn-invest {
+    padding: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1em;
+    background: linear-gradient(90deg, #D22D4F 0%, #F86358 100%);
+    box-shadow: 0 2px 4px 0 rgba(250, 91, 30, 0.34);
+}
+
+.icons .icon {
+    cursor: pointer;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    transition: background-image .3s;
+    height: 20px;
+    width: 20px;
+}
+
+.icons .eye {
+    margin-right: 1em;
+    background-image: url(../img/oko.png);
+}
+
+.icons .eye:hover {
+    background-image: url(../img/okohover.png);
+}
+
+.icons .scale {
+    background-image: url(../img/waga.png);
+}
+
+.icons .scale:hover {
+    background-image: url(../img/wagahover.png);
+}
