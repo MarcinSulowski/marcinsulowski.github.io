@@ -81,9 +81,9 @@
 @media screen and (max-device-width: 576px) and (orientation: landscape) {
 
     #main-header > .main-header-content .main-header-text {
-        -webkit-transform: translate(-50%, -60%);
-        -ms-transform: translate(-50%, -60%);
-        transform: translate(-50%, -60%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         width: 90%;
     }
 
