@@ -1,0 +1,156 @@
+/* General styles */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #424246;
+    color: #f5f5f5;
+    transition: background-color .3s ease-in, color .3s ease-in;
+}
+
+body.day-theme {
+    background-color: #F4F0ED;
+    color: #424246;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: color .3s;
+}
+
+a.day-theme {
+    color: #424246;
+}
+
+a:hover {
+    color: #B2893B;
+}
+
+#main-header,
+footer {
+    padding: 2em 0;
+    margin: 0 2em;
+}
+
+/* main header */
+
+#main-header {
+    text-align: center;
+    height: 100vh;
+}
+
+#main-header > .headings {
+    margin-bottom: 2.4em;
+}
+
+#main-header h1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 0.4em;
+    border: 2px solid #B2893B;
+    font-size: 3.2em;
+    font-weight: 400;
+}
+
+#main-header h2 {
+    font-size: 1.4em;
+    font-weight: 300;
+    letter-spacing: .1em;
+}
+
+/* theme switch  */
+
+#theme-switch {
+    display: none;
+}
+
+label[for="theme-switch"] {
+    position: relative;
+    left: 94%;
+    display: block;
+    width: 3em;
+    height: 1.5em;
+    border-radius: 2em;
+    background-color: #f5f5f5;
+}
+
+label[for="theme-switch"]::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    box-shadow: 0 0 0.04em 0.04em #f5f5f5;
+    background-color: #424246;
+    transition: all .3s ease-in;
+}
+
+
+#theme-switch:checked + label[for="theme-switch"] {
+    background-color: #424246;
+}
+
+#theme-switch:checked + label[for="theme-switch"]::after {
+    background-color: #f5f5f5;
+    box-shadow: 0 0 0.04em 0.04em #424246;
+    left: 1.5em;
+}
+
+/* navigation */
+
+#main-nav .menu-item {
+    position: relative;
+    display: inline-block;
+    padding: 0 3em;
+}
+
+.menu-item a {
+    display: block;
+    padding: 0 20px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    border-radius: 0.4em;
+}
+
+.menu-item a.day-theme {
+    border-color: #424246;
+}
+
+/* footer */
+
+footer {
+    line-height: 40px;
+    margin: 0 10%;
+    clear: both;
+}
+
+footer > .copyright {
+    float: left;
+}
+
+.media-icons {
+    float: right;
+}
+
+.media-icons > a {
+    display: inline-block;
+    font-size: 1.6em;
+    padding-left: 20px;
+}
