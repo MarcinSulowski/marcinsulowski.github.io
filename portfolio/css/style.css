@@ -2,14 +2,14 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #424246;
+    background-color: #424241;
     color: #f5f5f5;
     transition: background-color .3s ease-in, color .3s ease-in;
 }
 
 body.day-theme {
     background-color: #F4F0ED;
-    color: #424246;
+    color: #424241;
 }
 
 body,
@@ -33,7 +33,7 @@ a {
 }
 
 a.day-theme {
-    color: #424246;
+    color: #424241;
 }
 
 a:hover {
@@ -72,6 +72,30 @@ footer {
     letter-spacing: .1em;
 }
 
+
+img {
+    position: absolute;
+    height: 30em;
+    width: 20em;
+}
+
+img:first-of-type {
+    top: 12em;
+    left: 0;
+}
+
+img:nth-of-type(2) {
+    right:0;
+    top: 14em;
+
+}
+
+img:nth-of-type(3) {
+    right:36%;
+    top: 15em;
+
+}
+
 /* theme switch  */
 
 #theme-switch {
@@ -96,22 +120,26 @@ label[for="theme-switch"]::after {
     height: 1.5em;
     border-radius: 50%;
     box-shadow: 0 0 0.04em 0.04em #f5f5f5;
-    background-color: #424246;
+    background-color: #424241;
     transition: all .3s ease-in;
 }
 
 
 #theme-switch:checked + label[for="theme-switch"] {
-    background-color: #424246;
+    background-color: #424241;
 }
 
 #theme-switch:checked + label[for="theme-switch"]::after {
     background-color: #f5f5f5;
-    box-shadow: 0 0 0.04em 0.04em #424246;
+    box-shadow: 0 0 0.04em 0.04em #424241;
     left: 1.5em;
 }
 
 /* navigation */
+
+#main-nav {
+    margin-bottom: 4em;
+}
 
 #main-nav .menu-item {
     position: relative;
@@ -122,23 +150,54 @@ label[for="theme-switch"]::after {
 .menu-item a {
     display: block;
     padding: 0 20px;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid #f5f5f5;
+    border-left: 1px solid #f5f5f5;
     font-weight: 400;
     letter-spacing: 0.1em;
     border-radius: 0.4em;
 }
 
 .menu-item a.day-theme {
-    border-color: #424246;
+    border-color: #424241;
+}
+
+
+.logo {
+    position: relative;
+    width: 4em;
+    height: 4em;
+    border: 2px solid #B2893B;
+}
+
+.logo::before {
+    content: '';
+    width: 4em;
+    border-top: 2px solid #B2893B;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 0;
+    top: 2em;
+}
+
+.logo span {
+    font-size: 1.6em;
+    position: absolute;
+}
+
+.logo span:first-of-type {
+    top: 0.1em;
+    left: 0.2em;
+}
+
+.logo span:nth-of-type(2) {
+    bottom: 0.1em;
+    right: 0.4em;
 }
 
 /* footer */
 
 footer {
     line-height: 40px;
-    margin: 0 10%;
-    clear: both;
 }
 
 footer > .copyright {
