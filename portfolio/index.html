@@ -21,37 +21,47 @@
 
 <body>
 
+    <!--   main header -->
     <header id="main-header">
 
-        <div class="theme-switch-container">
-            <input type="checkbox" id="theme-switch">
-            <label for="theme-switch"></label>
-        </div>
+            <div class="theme-switch-container">
+                <input type="checkbox" id="theme-switch">
+                <label for="theme-switch"></label>
+            </div>
 
-        <div class="headings">
-            <h1>MARCIN SULOWSKI</h1>
-            <h2>FRONT-END DEVELOPER</h2>
-        </div>
+            <div class="headings">
+                <h1>MARCIN SULOWSKI</h1>
+                <h2>FRONT-END DEVELOPER</h2>
+            </div>
 
-        <nav id="main-nav">
-            <ul>
-                <li class="menu-item"><a href="#about-section">about</a></li>
-                <li class="menu-item"><a href="#projects-section">works</a></li>
-                <li class="menu-item"><a href="#contact-section">contact</a></li>
-            </ul>
-        </nav>
+            <nav id="main-nav">
+                <ul>
+                    <li class="menu-item"><a href="#main-header"><span>[</span> home <span>]</span></a></li>
+                    <li class="menu-item"><a href="#about-section"><span>[</span> about <span>]</span></a></li>
+                    <li class="menu-item"><a href="#projects-section"><span>[</span> works <span>]</span></a></li>
+                    <li class="menu-item"><a href="#contact-section"><span>[</span> contact <span>]</span></a></li>
+                </ul>
+            </nav>
 
-        <img src="img/me-left.svg" class="svg" alt="">
-        <img src="img/me-right.svg" class="svg" alt="">
+            <img src="img/cogs2.svg" class="svg" alt="">
 
     </header>
 
 
-
-    <section id="about-section"></section>
+    <!--     about section     -->
+    <section id="about-section">
+        <header class="section-header">
+            <h2><span>[</span> about <span>]</span></h2>
+        </header>
+    </section>
 
     <!--   projects section     -->
     <section id="projects-section">
+
+        <header class="section-header">
+            <h2><span>[</span> works <span>]</span></h2>
+        </header>
+
         <div class="projects-container">
 
             <!--           project item 1     -->
@@ -163,7 +173,11 @@
     </section>
 
 
-    <section id="contact-section"></section>
+    <section id="contact-section">
+        <header class="section-header">
+            <h2><span>[</span> contact <span>]</span></h2>
+        </header>
+    </section>
 
     <!--     footer     -->
     <footer>
