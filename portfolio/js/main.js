@@ -1,9 +1,11 @@
-const themeSwitch = document.getElementById('theme-switch');
 const allLinks = document.querySelectorAll('a');
 const projectItems = document.querySelectorAll('.projects-item');
 const mainNav = document.getElementById('main-nav');
+const sideNav = document.getElementById('side-nav');
+const sideNavLinks = document.querySelectorAll('#side-nav a')
 
-themeSwitch.addEventListener('click', function () {
+
+const toggleTheme = () => {
     document.body.classList.toggle('night-theme');
 
     for (let i of allLinks) {
@@ -14,17 +16,41 @@ themeSwitch.addEventListener('click', function () {
         i.classList.toggle('night-theme');
     }
 
-    mainNav.classList.toggle('night-theme');
-
-})
+    sideNav.classList.toggle('night-theme');
+}
 
 window.onscroll = function () {
-    let scroll = window.scrollY;
-    const navOffset = mainNav.getBoundingClientRect();
 
-    if (scroll > 230) {
-        mainNav.classList.add('fixed');
+    if (this.scrollY > 20) {
+        sideNav.classList.add('visible');
     } else {
-        mainNav.classList.remove('fixed');
+        sideNav.classList.remove('visible');
+    }
+
+    if (this.scrollY < (this.innerHeight)) {
+        deactivateLinks();
+        sideNavLinks[0].classList.add('active');
+    } else if (this.scrollY > (this.innerHeight) && this.scrollY < ((this.innerHeight) * 2)) {
+        deactivateLinks();
+        sideNavLinks[1].classList.add('active');
+    } else if (this.scrollY > ((this.innerHeight) * 2) && this.scrollY < ((this.innerHeight) * 3)) {
+        deactivateLinks();
+        sideNavLinks[2].classList.add('active');
+    } else if (this.scrollY > ((this.innerHeight) * 3) && this.scrollY < ((this.innerHeight) * 4)) {
+        deactivateLinks();
+        sideNavLinks[3].classList.add('active');
     }
 };
+
+const deactivateLinks = () => {
+    for (let i of sideNavLinks) {
+        i.classList.remove('active');
+    }
+}
+
+sideNav.addEventListener('click', function (e) {
+    if (e.target.matches('a')) {
+        deactivateLinks();
+        e.target.classList.add('active');
+    }
+})

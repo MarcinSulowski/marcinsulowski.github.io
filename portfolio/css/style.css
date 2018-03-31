@@ -59,7 +59,7 @@ section {
 }
 
 .section-header h2 {
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: 400;
 }
 
@@ -81,29 +81,24 @@ section {
 }
 
 #main-header img {
-    position: absolute;
     height: 20em;
-    bottom: 8em;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 #main-header .headings {
     margin-bottom: 2.4em;
-    clear: right;
 }
 
 #main-header h1 {
     display: inline-block;
-    padding: .3em .6em;
+    padding: .2em .4em;
     margin-bottom: 0.2em;
     border: 2px solid #cca958;
-    font-size: 3.2em;
+    font-size: 3em;
     font-weight: 400;
 }
 
 #main-header h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: 300;
     letter-spacing: .1em;
 }
@@ -149,26 +144,30 @@ label[for="theme-switch"]::after {
 #main-nav {
     margin-bottom: 6em;
     width: 100%;
+    text-align: center;
+    transition: all .3s;
 }
 
 #main-nav.night-theme.fixed {
     background-color: #424241;
+    box-shadow: 0 0 .4em .01em #f5f5f5;
 }
 
 #main-nav.fixed {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0.6em 0;
+    padding: 1em 0;
     background-color: #F4F0ED;
     box-shadow: 0 0 .4em .01em #424241;
     z-index: 30;
 }
 
+
 #main-nav .menu-item {
     position: relative;
     display: inline-block;
-    padding: 0 3em;
+    padding: 0 2em;
 }
 
 .menu-item > a span {
@@ -198,11 +197,52 @@ label[for="theme-switch"]::after {
 
 .menu-item a:hover::before {
     opacity: 1;
-    left: 2em;
+    left: 3em;
 }
 
 .menu-item a.night-theme {
     border-color: #f5f5f5;
+}
+
+#side-nav {
+    position: fixed;
+    left: -10%;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    transition: all .3s;
+    perspective: 100px;
+    width: 3em;
+    box-shadow: 0 0 .2em .02em #424241;
+}
+
+
+#side-nav.visible {
+    left: 0%;
+}
+
+#side-nav.night-theme.visible {
+    box-shadow: 0 0 .2em .02em #222;
+}
+
+#side-nav.night-theme a {
+    border: .1em solid #CCA958;
+}
+
+
+#side-nav a {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    margin: 2em auto;
+    width: .9em;
+    height: .9em;
+    border-radius: 50%;
+    border: .1em solid #424241;
+}
+
+#side-nav a:hover,
+#side-nav a.active {
+    background-color: #CCA958;
 }
 
 /* projects section */
