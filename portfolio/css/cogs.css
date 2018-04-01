@@ -59,6 +59,10 @@
     transform-origin: 129px 508px;
 }
 
+#lightbulb-fill {
+    animation: lightbulb 3s ease-out 0s infinite;
+}
+
 @keyframes clockwise {
     from {
         transform: rotate(0);
@@ -75,4 +79,19 @@
     to {
         transform: rotate(-360deg);
     }
+}
+
+@keyframes lightbulb {
+    0%, 100% {
+        fill: rgba(66, 66, 65, 0.26);
+    }
+    
+    25% {
+        fill: rgb(212, 212, 85);
+    }
+    
+    50% {
+        fill: rgb(245, 244, 110);
+    }
+    
 }
