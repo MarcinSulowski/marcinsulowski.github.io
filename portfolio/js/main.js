@@ -54,3 +54,10 @@ sideNav.addEventListener('click', function (e) {
         e.target.classList.add('active');
     }
 })
+
+function getCoordinates (elem) {
+    const elementCord = document.getElementById(elem).getBBox();
+	const y = (elementCord.y + (elementCord.height / 2)).toFixed(0);
+	const x = (elementCord.x + (elementCord.width / 2)).toFixed(0);
+	console.log(x, y); 
+};
