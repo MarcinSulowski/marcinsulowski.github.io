@@ -60,7 +60,11 @@
 }
 
 #lightbulb-fill {
-    animation: lightbulb 3s ease-out 0s infinite;
+    animation: lightbulb 5s linear 0s infinite;
+}
+
+#lightbulb-wire {
+    animation: wire 5s linear 0s infinite;
 }
 
 @keyframes clockwise {
@@ -82,16 +86,31 @@
 }
 
 @keyframes lightbulb {
+
     0%, 100% {
-        fill: rgba(66, 66, 65, 0.26);
+        opacity: 0;
     }
     
-    25% {
-        fill: rgb(212, 212, 85);
+    30% {
+        opacity: 0.8;
     }
     
-    50% {
-        fill: rgb(245, 244, 110);
+    40%, 85% {
+        opacity: 1;
+    }
+}
+
+@keyframes wire {
+
+    0%, 100% {
+        opacity: 0.1;
     }
     
+    20% {
+        opacity: 0.8;
+    }
+    
+    30%, 75% {
+        opacity: 1;
+    }
 }
