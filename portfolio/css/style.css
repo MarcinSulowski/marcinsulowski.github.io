@@ -29,17 +29,20 @@ ul {
     padding: 0;
 }
 
-a {
+a,
+#form-submit-btn {
     text-decoration: none;
     color: #424241;
     transition: color .3s;
 }
 
-a.night-theme {
+a.night-theme,
+#form-submit-btn.night-theme {
     color: #f5f5f5;
 }
 
-a:hover {
+a:hover,
+#form-submit-btn:hover {
     color: #CCA958;
 }
 
@@ -54,10 +57,43 @@ section {
     min-height: 100vh;
 }
 
+.button > span {
+    color: #CCA958;
+}
+
+.button > span:first-of-type {
+    margin-right: 1em;
+}
+
+.button > span:nth-of-type(2) {
+    margin-left: 1em;
+}
+
+.button::before {
+    position: absolute;
+    top: .5em;
+    left: -30em;
+    content: '';
+    width: .3em;
+    height: .3em;
+    border-radius: .5em;
+    background-color: #CCA958;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.button:hover::before {
+    opacity: 1;
+    left: 1em;
+}
+
+.button.night-theme {
+    color: #f5f5f5;
+}
+
 /* main header */
 
 #main-header {
-    position: relative;
     text-align: center;
     height: 100vh;
 }
@@ -131,60 +167,10 @@ label[for="theme-switch"]::after {
     transition: all .3s;
 }
 
-#main-nav.night-theme.fixed {
-    background-color: #424241;
-    box-shadow: 0 0 .4em .01em #f5f5f5;
-}
-
-#main-nav.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 1em 0;
-    background-color: #F4F0ED;
-    box-shadow: 0 0 .4em .01em #424241;
-    z-index: 30;
-}
-
-
 #main-nav .menu-item {
     position: relative;
     display: inline-block;
     padding: 0 2em;
-}
-
-.menu-item > a span {
-    color: #CCA958;
-}
-
-.menu-item > a span:first-of-type {
-    margin-right: 1em;
-}
-
-.menu-item > a span:nth-of-type(2) {
-    margin-left: 1em;
-}
-
-.menu-item a::before {
-    position: absolute;
-    top: .5em;
-    left: -30em;
-    content: '';
-    width: .3em;
-    height: .3em;
-    border-radius: .5em;
-    background-color: #CCA958;
-    opacity: 0;
-    transition: all .3s;
-}
-
-.menu-item a:hover::before {
-    opacity: 1;
-    left: 3em;
-}
-
-.menu-item a.night-theme {
-    border-color: #f5f5f5;
 }
 
 #side-nav {
@@ -193,11 +179,9 @@ label[for="theme-switch"]::after {
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
     transition: all .3s;
-    perspective: 100px;
-    width: 3em;
+    width: 2.6em;
     box-shadow: 0 0 .2em .02em #424241;
 }
-
 
 #side-nav.visible {
     left: 0%;
@@ -211,14 +195,13 @@ label[for="theme-switch"]::after {
     border: .1em solid #CCA958;
 }
 
-
 #side-nav a {
     box-sizing: border-box;
     display: block;
     position: relative;
     margin: 2em auto;
-    width: .9em;
-    height: .9em;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
     border: .1em solid #424241;
 }
@@ -250,6 +233,8 @@ label[for="theme-switch"]::after {
     height: 50%;
     border: 1px solid #F4F0ED;
     background-color: #A8978F;
+    background-color: #b1ada3;
+    background-color: rgb(178, 169, 161);
     transition: background .3s linear;
     overflow: hidden;
 }
@@ -286,7 +271,6 @@ label[for="theme-switch"]::after {
 
 .projects-item h3 {
     color: #f5f5f5;
-    font-family: 'Mina', sans-serif;
     font-size: 1.6em;
     font-weight: 600;
     text-transform: uppercase;
@@ -298,8 +282,7 @@ label[for="theme-switch"]::after {
     height: 1.6em;
     font-size: 2em;
     color: #f5f5f5;
-    font-family: 'Mina', sans-serif;
-    background: #A8978F;
+    background-color: rgb(178, 169, 161);
     border: none;
     box-shadow: 0 0 .05em .05em #746a66;
     border-radius: 50%;
@@ -328,6 +311,53 @@ label[for="theme-switch"]::after {
     bottom: 10%;
 }
 
+/* contact section */
+
+#contact-section {
+    text-align: center;
+
+}
+
+#contact-section form {
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+.form-textarea textarea,
+.form-inputs input {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border: 1px solid #CCA958;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    background: none;
+}
+
+.form-textarea textarea {
+    height: 220px;
+
+}
+
+.form-textarea textarea::placeholder,
+.form-inputs input::placeholder {
+    letter-spacing: 0.1em;
+}
+
+#form-submit-btn {
+    cursor: pointer;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background: none;
+    font-size: 1em;
+}
+
+#form-submit-btn:hover::before {
+    left: -1em;
+}
 
 /* footer */
 

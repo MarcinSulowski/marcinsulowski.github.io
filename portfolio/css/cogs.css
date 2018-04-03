@@ -61,11 +61,15 @@
 
 #lightbulb-fill {
     animation: lightbulb 5s linear 0s infinite;
+    will-change: transform;
 }
 
 #lightbulb-wire {
     animation: wire 5s linear 0s infinite;
+    will-change: transform;
 }
+
+
 
 @keyframes clockwise {
     from {
@@ -106,7 +110,7 @@
         opacity: 0.1;
     }
     
-    20% {
+    10% {
         opacity: 0.8;
     }
     
