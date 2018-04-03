@@ -1,12 +1,12 @@
 const allLinks = document.querySelectorAll('a');
 const projectItems = document.querySelectorAll('.projects-item');
-const mainNav = document.getElementById('main-nav');
 const sideNav = document.getElementById('side-nav');
 const sideNavLinks = document.querySelectorAll('#side-nav a')
 
 
 const toggleTheme = () => {
     document.body.classList.toggle('night-theme');
+    document.getElementById('form-submit-btn').classList.toggle('night-theme');
 
     for (let i of allLinks) {
         i.classList.toggle('night-theme');
