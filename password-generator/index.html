@@ -39,22 +39,21 @@
         <div class="checkbox-container">
             <input type="checkbox" id="special-chars" value="special" checked>
             <label for="special-chars">Include special characters</label>
-        </div>        
-           
-           <div class="checkbox-container">
+        </div>
+
+        <div class="checkbox-container">
             <input type="checkbox" id="repetitive-chars" value="33,47">
             <label for="repetitive-chars">Exclude repetitive characters (under construction)</label>
         </div>
 
         <label for="pass-length">Password length:</label>
-        <input type="number" id="pass-length" value="8">        
+        <input type="number" id="pass-length" value="8">
 
-        <button type="button" id="generate">Generate password</button>
-        
+        <button type="button" id="generate" onclick="PassGen.generatePassword()">Generate password</button>
+
         <input type="text" id="password" value="" placeholder="Your new password">
 
-        <div id="clipboard"><i class="far fa-clipboard"></i><span>Copy to clipboard</span></div>
-        
+        <div id="clipboard" onclick="PassGen.copyToClipboard()"><i class="far fa-clipboard"></i><span>Copy to clipboard</span></div>
     </form>
 
     <div id="warning">Choose at least one option!</div>
