@@ -6,7 +6,7 @@ const PassGen = (function () {
 		'special'  : '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 	};
 	const warningDisplay = document.getElementById('warning'),
-          passwordDisplay = document.getElementById('password');
+          passwordDisplay = document.getElementById('password-display');
 
 	const generatePasswordString = ( length, selectedCharTypes ) => {
 		let password = '';
