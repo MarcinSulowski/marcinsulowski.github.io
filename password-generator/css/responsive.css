@@ -27,9 +27,29 @@
     #clipboard {
         text-align: center;
     }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    #generate-btn,
+    #clipboard {
+        font-size: 1em;
+    }
+
+    #warning {
+        font-size: 1.2em;
+    }
+
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 667px) {
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
 
     .checkbox-container,
     button {
