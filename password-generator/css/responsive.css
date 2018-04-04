@@ -1,0 +1,43 @@
+@media only screen and (max-width: 568px) {
+
+    body {
+        background-color: #6ac5ed;
+    }
+
+    form {
+        width: 100%;
+        padding: 1em 2em;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    #clipboard,
+    #password-display {
+        float: none;
+    }
+
+    #password-display {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 2em;
+    }
+
+    #clipboard {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 667px) {
+
+    .checkbox-container,
+    button {
+        margin-bottom: 1em;
+    }
+
+    .input-container {
+        margin-bottom: 3em;
+    }
+
+}
