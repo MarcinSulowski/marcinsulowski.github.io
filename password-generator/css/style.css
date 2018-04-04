@@ -2,95 +2,100 @@
 
 body {
     margin: 0;
-    background-color: #fff;
+    background-color: #edf1f4;
     color: #333;
 }
 
 body,
-form > input#pass-length,
-form > input#password,
-form > button#generate {
+input,
+button {
     font-family: 'Titillium Web', sans-serif;
 }
 
 form,
-form > button#generate {
+button {
     box-shadow: 0 0 1px 1px #8a94a8;
-
 }
 
 /* form styles */
 
 form {
-    margin: 20px auto;
-    width: 400px;
-    padding: 40px 60px;
+    box-sizing: border-box;
+    margin: 2em auto;
+    width: 35em;
+    padding: 2em 4em;
     border-radius: 2%;
     background-color: #6ac5ed;
 }
 
-form > h1 {
+h1 {
     text-align: center;
-    margin: 0 0 40px;
+    margin-bottom: 0 0 2em;
 }
 
-form > input,
-form > button {
-    padding: 5px 10px;
+.checkbox-container,
+button {
+    margin-bottom: 1.4em;
+}
+
+.input-container {
+    margin-bottom: 5em;
+}
+
+input,
+button {
+    padding: .4em .8em;
     border: none;
-    border-radius: 5px;
+    border-radius: .3em;
     color: #575757;
 }
 
-form > .checkbox-container,
-form > input[type=number],
-form > button {
-    margin-bottom: 20px;
+#pass-length {
+    font-size: .8em;
+    margin-left: .5em;
+    width: 3em;
 }
 
-form > input#pass-length {
-    font-size: 14px;
-    margin-left: 5px;
-    width: 50px;
-}
-
-form > button#generate, form > div#clipboard {
-    font-size: 18px;
+#generate-btn,
+#clipboard {
+    font-size: 1.2em;
     cursor: pointer;
 }
 
-form > button#generate {
+#generate-btn {
     width: 100%;
-    margin-top: 50px;
-    color: #333;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
     transition: all .3s;
 }
 
-form > button#generate:hover {
+#generate-btn:hover {
     color: #54ac58;
     box-shadow: 0 0 1px 1px #54ac58;
 }
 
-form > input#password {
-    padding: 10px;
-    font-size: 16px;
+#clipboard {
+    float: right;
+}
+
+#clipboard > span {
+    margin-left: .5em;
+}
+
+#password-display {
+    font-size: 1em;
     width: 50%;
     letter-spacing: 0.1em;
     margin-right: 10px;
+    float: left;
 }
 
-form > div#clipboard {
-    display: inline-block;
-}
-
-form > div#clipboard > span {
-    margin-left: 10px;
+.clearfix {
+    clear: both;
 }
 
 #warning {
-    font-size: 24px;
+    font-size: 1.6em;
     color: #fa5757;
     text-align: center;
     visibility: hidden;
@@ -102,43 +107,43 @@ form > div#clipboard > span {
 
 /* custom checkboxes */
 
-form > .checkbox-container {
-    margin-left: 5px;
+.checkbox-container {
+    margin-left: .3em;
 }
 
-form > .checkbox-container label {
+.checkbox-container label {
     position: relative;
 }
 
-form > .checkbox-container label::after,
-form > .checkbox-container label::before {
+.checkbox-container label::after,
+.checkbox-container label::before {
     position: absolute;
-    top: 4px;
+    top: .25em;
 }
 
-form > .checkbox-container label::after {
+.checkbox-container label::after {
     content: '';
-    left: -25px;
-    width: 18px;
-    height: 18px;
-    border-radius: 10%;
+    left: -1.5em;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: .2em;
     background-color: #fff;
 }
 
-form > .checkbox-container label::before {
+.checkbox-container label::before {
     font-family: 'FontAwesome';
     content: '\f00c';
-    left: -24px;
+    left: -1.45em;
     opacity: 0;
     color: #575757;
     transition: all .1s;
     z-index: 20;
 }
 
-form > .checkbox-container > input[type=checkbox] {
+.checkbox-container > input[type=checkbox] {
     visibility: hidden;
 }
 
-form > .checkbox-container > input[type=checkbox]:checked + label::before {
+.checkbox-container > input[type=checkbox]:checked + label::before {
     opacity: 1;
 }
