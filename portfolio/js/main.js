@@ -1,22 +1,17 @@
-const allLinks = document.querySelectorAll('a');
-const projectItems = document.querySelectorAll('.projects-item');
-const sideNav = document.getElementById('side-nav');
-const sideNavLinks = document.querySelectorAll('#side-nav a')
+const sideNav = document.getElementById('side-nav'),
+    sideNavLinks = document.querySelectorAll('#side-nav a');
 
+let clickCount = 0;
 
 const toggleTheme = () => {
-    document.body.classList.toggle('night-theme');
-    document.getElementById('form-submit-btn').classList.toggle('night-theme');
+    clickCount++;
 
-    for (let i of allLinks) {
-        i.classList.toggle('night-theme');
+    const styleLink = document.getElementById('night-theme-style');
+    if (clickCount % 2 !== 0) {
+        styleLink.href = 'css/night-theme-style.css';
+    } else {
+        styleLink.href = '';
     }
-
-    for (let i of projectItems) {
-        i.classList.toggle('night-theme');
-    }
-
-    sideNav.classList.toggle('night-theme');
 }
 
 window.onscroll = function () {
@@ -55,9 +50,9 @@ sideNav.addEventListener('click', function (e) {
     }
 })
 
-function getCoordinates (elem) {
-    const elementCord = document.getElementById(elem).getBBox();
-	const y = (elementCord.y + (elementCord.height / 2)).toFixed(0);
-	const x = (elementCord.x + (elementCord.width / 2)).toFixed(0);
-	console.log(x, y); 
-};
+//function getCoordinates(elem) {
+//    const elementCord = document.getElementById(elem).getBBox();
+//    const y = (elementCord.y + (elementCord.height / 2)).toFixed(0);
+//    const x = (elementCord.x + (elementCord.width / 2)).toFixed(0);
+//    console.log(x, y);
+//};
