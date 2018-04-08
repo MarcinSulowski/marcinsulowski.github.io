@@ -1,17 +1,21 @@
-const sideNav = document.getElementById('side-nav'),
-    sideNavLinks = document.querySelectorAll('#side-nav a');
-
-let clickCount = 0;
-
 const toggleTheme = () => {
-    clickCount++;
 
     const styleLink = document.getElementById('night-theme-style');
-    if (clickCount % 2 !== 0) {
+    if ( styleLink.href == location.href ) {
         styleLink.href = 'css/night-theme-style.css';
     } else {
         styleLink.href = '';
     }
+}
+
+const sideNav = document.getElementById('side-nav'),
+    sideNavLinks = document.querySelectorAll('#side-nav a');
+
+const date = new Date ();
+
+if ( date.getHours() >= 20 || date.getHours() <= 6 ) {
+    toggleTheme();
+    document.getElementById('theme-switch').checked = true;
 }
 
 window.onscroll = function () {
