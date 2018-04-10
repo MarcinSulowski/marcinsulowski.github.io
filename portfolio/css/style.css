@@ -222,8 +222,9 @@ label[for="theme-switch"]::after {
 
 .about-item-content {
     position: relative;
-    padding: 0 1em 1em 1em;
+    padding: 0 2em 1em 2em;
     border: 2px solid #CCA958;
+    border: 2px solid #424241;
     line-height: 2em;
     font-weight: 300;
 }
