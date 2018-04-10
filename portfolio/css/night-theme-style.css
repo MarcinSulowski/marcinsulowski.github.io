@@ -33,7 +33,12 @@ form input::placeholder {
     color: #b2a9a1;
 }
 
+.about-item-content {
+    border: 2px solid #CCA958;
+}
+
 .about-item-content::after,
 .about-item-content::before {
     border-top: .6em solid #424241;
 }
+
