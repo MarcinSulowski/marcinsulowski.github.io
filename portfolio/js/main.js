@@ -1,22 +1,38 @@
-const toggleTheme = () => {
+document.addEventListener('DOMContentLoaded', function () {
+    runTyping();
+    switchTheme.switchThemeOnTime();
+});
 
-    const styleLink = document.getElementById('night-theme-style');
-    if ( styleLink.href == location.href ) {
-        styleLink.href = 'css/night-theme-style.css';
-    } else {
-        styleLink.href = '';
+
+const switchTheme = (function () {
+
+    const toggleTheme = () => {
+        const stylesheetLink = document.getElementById('night-theme-style');
+
+        if ( stylesheetLink.href == location.href ) {
+            stylesheetLink.href = 'css/night-theme-style.css';
+        } else {
+            stylesheetLink.href = '';
+        }
     }
-}
+
+
+    const switchThemeOnTime = () => {
+        const date = new Date();
+
+        if ( date.getHours() >= 20 || date.getHours() <= 6 ) {
+            toggleTheme();
+            document.getElementById('theme-switch').checked = true;
+        }
+    }
+    
+    return { toggleTheme, switchThemeOnTime };
+    
+})();
+
 
 const sideNav = document.getElementById('side-nav'),
     sideNavLinks = document.querySelectorAll('#side-nav a');
-
-const date = new Date ();
-
-if ( date.getHours() >= 20 || date.getHours() <= 6 ) {
-    toggleTheme();
-    document.getElementById('theme-switch').checked = true;
-}
 
 window.onscroll = function () {
 
@@ -54,9 +70,57 @@ sideNav.addEventListener('click', function (e) {
     }
 })
 
-//function getCoordinates(elem) {
-//    const elementCord = document.getElementById(elem).getBBox();
-//    const y = (elementCord.y + (elementCord.height / 2)).toFixed(0);
-//    const x = (elementCord.x + (elementCord.width / 2)).toFixed(0);
-//    console.log(x, y);
-//};
+function runTyping() {
+    const outputElement = document.getElementById('output');
+    // milliseconds
+    const typeSpeed = 80;
+    const deleteSpeed = 30;
+    const deleteAfter = 1000;
+    const items = [
+		  "solving programming problems",
+		  "playing the saxophone",
+          "coding",
+		  "music",
+		  "David Lynch movies"
+		];
+
+    let sentence = 0;
+    let currentChar = 0;
+    let deleteInterval = null;
+
+    function type() {
+        if ( sentence >= items.length ) {
+            sentence = 0;
+        }
+
+        const chars = items[ sentence ].split("");
+
+        setTimeout(function () {
+            if ( currentChar >= chars.length ) {
+                setTimeout(function () {
+                    sentence++;
+
+                    deleteInterval = setInterval(function () {
+                        outputElement.innerHTML = outputElement.innerHTML.substr(0, currentChar - 1);
+
+                        currentChar--;
+
+                        if ( currentChar == 0 ) {
+                            clearInterval( deleteInterval );
+                            type();
+                        }
+                    }, deleteSpeed);
+                }, deleteAfter);
+
+                return;
+            }
+
+            outputElement.innerHTML += chars[ currentChar ];
+            currentChar++;
+
+            type();
+        }, typeSpeed);
+    }
+
+    type();
+}
