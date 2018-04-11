@@ -88,7 +88,8 @@ section {
     transition: all .3s;
 }
 
-.button:hover::before {
+.button:hover::before,
+.button.active {
     opacity: 1;
     left: 1em;
 }
@@ -97,12 +98,18 @@ section {
 /* main header */
 
 #main-header {
+    position: relative;
     text-align: center;
     height: 100vh;
+    width: 100%;
 }
 
 #main-header svg {
-    height: 22em;
+    height: 50vh;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #main-header .headings {
@@ -146,7 +153,7 @@ label[for="theme-switch"]::after {
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
-    box-shadow: 0 0 0.04em 0.04em #424241;
+    box-shadow: 0 0 0.1em 0.1em #424241;
     background-color: #f5f5f5;
     transition: all .3s ease-in;
 }
@@ -163,8 +170,9 @@ label[for="theme-switch"]::after {
 /* navigation */
 
 #main-nav {
-    margin-bottom: 6em;
     width: 100%;
+    margin-bottom: 5em;
+    padding: 1em 0;
     text-align: center;
     transition: all .3s;
 }
@@ -173,36 +181,20 @@ label[for="theme-switch"]::after {
     position: relative;
     display: inline-block;
     padding: 0 2em;
+    transition: padding .5s;
 }
 
-#side-nav {
-    position: fixed;
-    left: -10%;
-    border-top-right-radius: .5em;
-    border-bottom-right-radius: .5em;
-    transition: all .3s;
-    width: 2.2em;
-    box-shadow: 0 0 .2em .02em #424241;
+#main-nav.fixed {
+    position: fixed;   
+    top: 0;
+    left: 0;
+    background-color: #F4F0ED;
+    box-shadow: 0 .2em 1em .1em #b2a9a1;
+    z-index: 30;
 }
 
-#side-nav.visible {
-    left: 0%;
-}
-
-#side-nav a {
-    box-sizing: border-box;
-    display: block;
-    position: relative;
-    margin: 2em auto;
-    width: .8em;
-    height: .8em;
-    border-radius: 50%;
-    border: .1em solid #424241;
-}
-
-#side-nav a:hover,
-#side-nav a.active {
-    background-color: #CCA958;
+#main-nav.fixed .menu-item {
+    padding: 0 3em;
 }
 
 /* about section */
@@ -345,7 +337,8 @@ label[for="theme-switch"]::after {
     padding: .2em;
 }
 
-.project-info-btn:hover + .project-info {
+.project-info-btn:hover + .project-info,
+.project-info.visible {
     bottom: 10%;
 }
 

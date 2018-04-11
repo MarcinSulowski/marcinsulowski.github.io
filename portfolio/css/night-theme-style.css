@@ -8,13 +8,9 @@ a,
     color: #f5f5f5;
 }
 
-
-#side-nav.visible {
-    box-shadow: 0 0 .2em .02em #222;
-}
-
-#side-nav a {
-    border: .1em solid #CCA958;
+#main-nav.fixed {
+    background-color: #424241;
+    box-shadow: 0 0 .4em .01em #CCA958;
 }
 
 .projects-item {

@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     runTyping();
-    switchTheme.switchThemeOnTime();
+    switchTheme().onTime();
 });
 
 
-const switchTheme = (function () {
+const switchTheme = () => {
 
-    const toggleTheme = () => {
+    const toggle = () => {
         const stylesheetLink = document.getElementById('night-theme-style');
 
         if ( stylesheetLink.href == location.href ) {
@@ -16,59 +16,64 @@ const switchTheme = (function () {
         }
     }
 
-
-    const switchThemeOnTime = () => {
+    const onTime = () => {
         const date = new Date();
 
         if ( date.getHours() >= 20 || date.getHours() <= 6 ) {
-            toggleTheme();
+            toggle();
             document.getElementById('theme-switch').checked = true;
         }
     }
     
-    return { toggleTheme, switchThemeOnTime };
+    return { toggle, onTime };
     
-})();
-
-
-const sideNav = document.getElementById('side-nav'),
-    sideNavLinks = document.querySelectorAll('#side-nav a');
-
-window.onscroll = function () {
-
-    if (this.scrollY > 20) {
-        sideNav.classList.add('visible');
-    } else {
-        sideNav.classList.remove('visible');
-    }
-
-    if (this.scrollY < (this.innerHeight)) {
-        deactivateLinks();
-        sideNavLinks[0].classList.add('active');
-    } else if (this.scrollY > (this.innerHeight) && this.scrollY < ((this.innerHeight) * 2)) {
-        deactivateLinks();
-        sideNavLinks[1].classList.add('active');
-    } else if (this.scrollY > ((this.innerHeight) * 2) && this.scrollY < ((this.innerHeight) * 3)) {
-        deactivateLinks();
-        sideNavLinks[2].classList.add('active');
-    } else if (this.scrollY > ((this.innerHeight) * 3) && this.scrollY < ((this.innerHeight) * 4)) {
-        deactivateLinks();
-        sideNavLinks[3].classList.add('active');
-    }
 };
 
-const deactivateLinks = () => {
-    for (let i of sideNavLinks) {
-        i.classList.remove('active');
-    }
+const showElement = () => {
+    
+    
+    
 }
 
-sideNav.addEventListener('click', function (e) {
-    if (e.target.matches('a')) {
-        deactivateLinks();
-        e.target.classList.add('active');
+
+
+window.onscroll = function () {
+    
+    const mainNav = document.getElementById('main-nav');
+    
+    if ( this.scrollY > mainNav.offsetTop ) {
+        mainNav.classList.add('fixed');
+    } else {
+        mainNav.classList.remove('fixed');
     }
-})
+
+//    if (this.scrollY < (this.innerHeight)) {
+//        deactivateLinks();
+//        sideNavLinks[0].classList.add('active');
+//    } else if (this.scrollY > (this.innerHeight) && this.scrollY < ((this.innerHeight) * 2)) {
+//        deactivateLinks();
+//        sideNavLinks[1].classList.add('active');
+//    } else if (this.scrollY > ((this.innerHeight) * 2) && this.scrollY < ((this.innerHeight) * 3)) {
+//        deactivateLinks();
+//        sideNavLinks[2].classList.add('active');
+//    } else if (this.scrollY > ((this.innerHeight) * 3) && this.scrollY < ((this.innerHeight) * 4)) {
+//        deactivateLinks();
+//        sideNavLinks[3].classList.add('active');
+//    }
+};
+//
+//const deactivateLinks = () => {
+//    for (let i of sideNavLinks) {
+//        i.classList.remove('active');
+//    }
+//}
+//
+//sideNav.addEventListener('click', function (e) {
+//    if (e.target.matches('a')) {
+//        deactivateLinks();
+//        e.target.classList.add('active');
+//    }
+//})
 
 function runTyping() {
     const outputElement = document.getElementById('output');
@@ -81,7 +86,8 @@ function runTyping() {
 		  "playing the saxophone",
           "coding",
 		  "music",
-		  "David Lynch movies"
+		  "David Lynch movies",
+          "food"
 		];
 
     let sentence = 0;
