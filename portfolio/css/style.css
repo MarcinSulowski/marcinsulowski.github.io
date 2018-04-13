@@ -115,7 +115,8 @@ section {
 
 
 #main-header .headings {
-    margin-bottom: 2.8em;
+    width: 80%;
+    margin: 0 auto 2.8em auto;
 }
 
 #main-header h1 {
