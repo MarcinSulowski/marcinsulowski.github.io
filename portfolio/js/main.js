@@ -29,12 +29,19 @@ const switchTheme = () => {
     
 };
 
-const showElement = () => {
+document.getElementById('main-nav').addEventListener('click', function (e) {
     
+    e.preventDefault();
     
-    
-}
-
+    if ( e.target.tagName === 'A' ) {
+        const linkTarget = e.target.getAttribute('href').slice(1);
+        const targetOffset = document.getElementById(linkTarget).offsetTop;
+        const navDimensions = this.getBoundingClientRect();
+        
+        window.scroll({ top: targetOffset - navDimensions.height, left: 0, behavior: 'smooth' });
+    }
+        
+});
 
 
 window.onscroll = function () {
