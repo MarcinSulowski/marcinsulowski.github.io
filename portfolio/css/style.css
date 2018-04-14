@@ -8,6 +8,10 @@ body {
     letter-spacing: .1em;
 }
 
+.disable-scroll {
+    overflow: hidden;
+}
+
 body,
 h1,
 h2,
@@ -49,7 +53,7 @@ section {
 
 .section-header {
     text-align: left;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
 }
 
 .section-header h2 {
@@ -159,6 +163,10 @@ label[for="theme-switch"]::after {
     box-shadow: 0 0 0.1em 0.1em #424241;
     background-color: #f5f5f5;
     transition: all .3s ease-in;
+    background-image: url(../img/moon.svg);
+    background-size: 1em 1em;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #theme-switch:checked + label[for="theme-switch"] {
@@ -174,7 +182,6 @@ label[for="theme-switch"]::after {
 
 #main-nav {
     width: 100%;
-    margin-bottom: 5em;
     padding: 1em 0;
     text-align: center;
     transition: all .3s;
@@ -188,10 +195,10 @@ label[for="theme-switch"]::after {
 }
 
 #main-nav.fixed {
-    position: fixed;   
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #F4F0ED; 
+    background-color: #F4F0ED;
     box-shadow: 0 .2em 2em .01em #b2a9a1;
     z-index: 30;
 }
@@ -215,12 +222,12 @@ label[for="theme-switch"]::after {
     margin-bottom: .8em;
 }
 
-.about-item .col-1-2, 
-.about-item .col-2-2{
+.about-item .col-1-2,
+.about-item .col-2-2 {
     width: 50%;
 }
-.about-item .col-2-2 {
-}
+
+.about-item .col-2-2 {}
 
 .about-item-content {
     position: relative;
@@ -278,8 +285,7 @@ label[for="theme-switch"]::after {
 
 /* projects section */
 
-
-#projects-section > .projects-container {
+.projects-container {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
@@ -344,12 +350,12 @@ label[for="theme-switch"]::after {
     color: #424241;
     box-shadow: 0 0 .05em .05em #746a66;
     border-radius: 50%;
-    transition: color .3s;
+    transition: background-color .3s;
     cursor: pointer;
 }
 
 .project-info-btn:hover {
-    color: #b2a9a1;
+    background-color: #F4F0ED;
 }
 
 .project-info {
@@ -436,7 +442,7 @@ form input::placeholder {
 /* footer */
 
 footer {
-    padding: 1em 2em;
+    padding: 1em 4em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -450,4 +456,121 @@ footer {
     display: inline-block;
     font-size: 1.6em;
     padding-left: 20px;
+}
+
+/* expandable navigation */
+
+#mobile-nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.nav-toggle-button {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 2em;
+    left: 4em;
+    cursor: pointer;
+    width: 2.6em;
+    height: 2em;
+    z-index: 20;
+    border: .1em solid #424241;
+}
+
+.nav-toggle-button::after,
+.nav-toggle-button::before {
+    content: '';
+    position: absolute;
+    top: .3em;
+    width: .4em;
+    height: 1.4em;
+    background-color: #F4F0ED;
+}
+
+.nav-toggle-button::after {
+    left: -.3em;
+}
+
+.nav-toggle-button::before {
+    right: -.3em;
+}
+
+.nav-toggle-button span {
+    display: block;
+    border: .2em solid #424241;
+    width: 1.4em;
+    will-change: transform;
+    transition: all 0.8s;
+}
+
+.nav-toggle-button span:first-of-type {
+    border-top-color: transparent;
+    transform: translateX(-20%);
+}
+
+.nav-toggle-button span:last-of-type {
+    border-bottom-color: transparent;
+    transform: translateX(20%);
+
+}
+
+.nav-toggle-button span:nth-of-type(1n+1) {
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+
+#expandable-menu.collapsed .nav-toggle-button span {
+    transform: translateX(0);
+}
+
+#expandable-menu.collapsed #mobile-nav {
+    visibility: hidden;
+    transition: visibility .1s .8s;
+}
+
+#expandable-menu.collapsed .mobile-menu-item:nth-of-type(2n+1) {
+    transform: translateX(-100%);
+}
+
+#expandable-menu.collapsed .mobile-menu-item:nth-of-type(2n+2) {
+    transform: translateX(100%);
+}
+
+#mobile-nav ul {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.mobile-menu-item {
+    position: relative;
+    flex-basis: 25%;
+    overflow: hidden;
+    will-change: transform;
+    transition: transform 0.8s;
+    border: 1px solid #424241;
+    background: #F4F0ED;
+}
+
+.mobile-menu-item > a {
+    position: absolute;
+    padding: 1em;
+    color: #424241;
+    top: 50%;
+    left: 50%;
+    will-change: transform;
+    transform: translate(-50%, -50%);
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1.2em;
 }
