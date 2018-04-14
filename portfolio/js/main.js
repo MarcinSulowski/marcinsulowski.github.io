@@ -42,6 +42,29 @@ document.getElementById('main-nav').addEventListener('click', function (e) {
     }
         
 });
+//
+//const projectInfoBtns = document.querySelectorAll('.project-info-btn');
+//
+//for ( let i = 0; i < projectInfoBtns.length; i++ ) {
+//    
+//    projectInfoBtns[i].addEventListener('click', function (e) {
+//        this.nextElementSibling.classList.toggle('visible');
+//    })
+//}
+
+function toggleNavigation(e) {
+
+    document.querySelector('#expandable-menu').classList.toggle('collapsed');
+    document.body.classList.toggle('disable-scroll');
+}
+
+
+document.getElementById('form-submit-btn').addEventListener('click', function () {
+    
+    let url = "https://formspree.io/mr." + "sulowski" + "@" + "gmail" + "." + "com";
+        
+    this.parentElement.setAttribute('action', url);
+});
 
 
 window.onscroll = function () {
@@ -56,7 +79,7 @@ window.onscroll = function () {
 };
 
 
-function runTyping() {
+const runTyping = () => {
     const outputElement = document.getElementById('output');
     // milliseconds
     const typeSpeed = 80;

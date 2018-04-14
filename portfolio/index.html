@@ -26,26 +26,45 @@
     <!--   main header -->
     <header id="main-header">
 
-        <div class="theme-switch-container">
-            <input type="checkbox" id="theme-switch" onclick="switchTheme().toggle()">
-            <label for="theme-switch"></label>
-        </div>
+        <!--       mobile nav -->
+        <div id="expandable-menu" class="collapsed">
+            <nav id="mobile-nav">
+                <ul>
+                    <li class="mobile-menu-item"><a href="#main-header">Home</a></li>
+                    <li class="mobile-menu-item"><a href="#about-section">About</a></li>
+                    <li class="mobile-menu-item"><a href="#projects-section">Works</a></li>
+                    <li class="mobile-menu-item"><a href="#contact-section">Contact</a></li>
+                </ul>
+            </nav>
 
-        <div class="headings">
-            <h1>MARCIN SULOWSKI</h1>
-            <h2>FRONT-END DEVELOPER</h2>
-        </div>
+            <div class="nav-toggle-button" onclick="toggleNavigation()">
+                <span></span>
+                <span></span>
+            </div>
 
-        <nav id="main-nav">
-            <ul>
-                <li class="menu-item"><a class="button" href="#main-header"><span>[</span> home <span>]</span></a></li>
-                <li class="menu-item"><a class="button" href="#about-section"><span>[</span> about <span>]</span></a></li>
-                <li class="menu-item"><a class="button" href="#projects-section"><span>[</span> works <span>]</span></a></li>
-                <li class="menu-item"><a class="button" href="#contact-section"><span>[</span> contact <span>]</span></a></li>
-            </ul>
-        </nav>
+            <!--            theme switch     -->
+            <div class="theme-switch-container">
+                <input type="checkbox" id="theme-switch" onclick="switchTheme().toggle()">
+                <label for="theme-switch"></label>
+            </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="550" viewBox="0 0 1240 550">
+            <!--            headings     -->
+            <div class="headings">
+                <h1>MARCIN SULOWSKI</h1>
+                <h2>FRONT-END DEVELOPER</h2>
+            </div>
+
+            <!--           main navigation     -->
+            <nav id="main-nav">
+                <ul>
+                    <li class="menu-item"><a class="button" href="#main-header"><span>[</span> home <span>]</span></a></li>
+                    <li class="menu-item"><a class="button" href="#about-section"><span>[</span> about <span>]</span></a></li>
+                    <li class="menu-item"><a class="button" href="#projects-section"><span>[</span> works <span>]</span></a></li>
+                    <li class="menu-item"><a class="button" href="#contact-section"><span>[</span> contact <span>]</span></a></li>
+                </ul>
+            </nav>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="550" viewBox="0 0 1240 550">
   <g id="layer0" transform="translate(-56.844 -132.003)" opacity=".8">
    
     <path id="cog5-lg" d="M763.813 225.985c13.772.214 23.28 4.765 29.187 10.015 8.2 6.4 13.7 14.6 15 26 1.7 16-2.2 25.9-10 32-5.2 8.2-13.4 13.7-25 15-15.4 2.5-25.6-2.5-33-9-6.5-6.1-12.9-13.5-15-27-.1-13.8 3-24.4 10-31 7.2-6.6 13.7-13.8 26-16 .956-.025 1.894-.03 2.813-.016zm3.578-5.598c-12.029.046-22.266 3.9-30.391 8.613-7.6 7.5-14.9 17.1-17 29-1.6 18.1 1 31.5 8 39 7.3 9.8 18 16 29 18 18.3 2.6 30.8-1 39-9 10.1-5.2 15.3-16.9 18-29 3-15.6-1.3-29.1-9-38-5.6-8.7-15.9-15.3-29-18a58.15 58.15 0 0 0-8.61-.613zm-3.776-6.422c17.68.203 29.51 6.004 37.385 13.035 10.6 8.4 17.2 20.9 20 34 1.2 20.1-5.5 32.5-13 42-8.6 9.2-19.8 17.1-35 19-17.5 1.2-30.8-4.5-41-13-8.4-7.8-16.2-19.1-18-35-2.5-16.1 4.4-30.9 11-40 9.2-9.2 20.8-16.7 35-20a86.301 86.301 0 0 1 3.615-.035zM762 208c-8.5 1-16.2 3.6-24 6-5.7 4.2-11.8 9.5-17 13-7.6 12.4-15.4 24.5-14 46 1.8 18.5 9.5 30.7 19 40 12.1 9.1 24.4 16.8 45 15 9.3-.5 17.7-2.4 23-7 7.1-3.2 14.4-7.3 17-13 10.3-10 16.9-23.5 16-45-1.9-17.4-9.4-29.9-20-40-11-8.2-23.8-15.4-45-15zm5-36c16.9 1.2 30.5 5 40 10 11.5 5.2 20.8 11.9 28 20 9.2 7.4 14.3 18.3 20 28 4.3 12.2 8.5 24 7 41 .7 16.9-4.2 28-10 38-3.5 12.7-12.2 20-19 29-8.4 7.8-18.4 13.8-30 18-8 7.5-25.9 7.8-39 7-16.4 1.6-27.9-4.3-39-10-11.6-2.8-19.2-11.2-28-20-7.4-7-13-17.3-19-29-4.6-10.6-6-23.6-6-39-.9-9.5 3.4-26.5 7-37 6-10.1 12.6-19.5 21-27 7.3-8.8 17.4-14.6 27-21 12.5-3.5 24.5-7.5 40-8zm3.23-5.303c-12.85-.065-26.261 1.46-37.23 4.303-11.9 4.7-21.9 11.9-32 19-8.7 8.3-16.7 17.4-23 28-5 12-11.9 23.2-12 38-1.3 13.7-.2 32.4 4 44 4 13.6 10.9 24.7 18 33 8.3 9.1 17.5 17.1 27 24 10.8 6.8 24.7 10.8 38 12 14.5-.1 34.3 2.6 45-4 12.9-4.5 24.8-9.6 34-18 8.8-7.9 17.6-16.2 23-28 5.9-10.8 11.5-23.2 13-38 0-12.9 1.8-34.3-5-45-3.9-11.8-9.5-24.1-18-33-5.6-9.9-17-15.6-27-24-11-4.6-23.2-10.3-39-12a146.08 146.08 0 0 0-8.77-.303zm-.804-22.699c1.262-.048 2.761.252 4.574 1.002 16.1-1.5 5.6 23.7 21 20 13 7.9 14-15.9 25-9 15 1.7 8.2 16.4 9 25 6.1 12.6 19.2 5.7 27 3 9.1 4.9 14.2 17.1 4 24-2.1 12.9 6.2 21.2 20 18 9.2 4.9 9.4 23.5-3 23-8.9 4.9-2.4 25.4 6 24 12.8 2 5.9 25.6-5 22-11.3-.6-16 18.5-9 23 11.3 4.9 2.3 22.7-7 21-11.9-5.6-22.6 3.2-22 12 7.5 13.8-1.2 20.2-12 23-4.2-7.9-17.8-12.9-25-5-6.4 8.3-.2 23.4-17 22-12.2.6-7.6-21.1-23-16-16.1-3.6-10.3 19.8-26 13-14.8 3.1-.5-25.9-17-23-7.8-11.2-14.7 2.7-25 3-13.8-.8-7.4-17.5-5-24-5.1-7.4-9.2-18.9-24-13-13.1.9-13.5-18-5-22 8.3-3.4 2.7-22.4-7-24-13.4 5-14-21.6-3-21 10.1.7 15.4-20.5 7-25-9.2-1.9-11.3-20.6 1-22 16.8 3.9 19.3-6.7 22-17-8.4-8.4-4.9-19.7 4-24 9.8 5 20.8 9.8 28 0 7-7.6-2.1-26.5 13-25 12.6.1 11.3 19.4 26 10 11.375.7 8.587-16.668 17.426-17.002zm2.25-6.842C759.79 137.093 754.759 144.55 754 154c-14.5 9.8-13.4-14.7-26-11-9 4.1-25.3 6.1-20 21 3.4 17.3-16.7 7.8-23 3-5.8 7.1-19.1 11.9-18 23 11 7 4.9 26.8-8 21-14.4-3.7-14 14.6-17 23 7.6 3.7 20.4 17.4 6 23-13.9 1.1-12.8 15.5-11 28 5.7 8.1 27 4.8 20 20-9.8 5.3-12.5 18.4-4 26 .7 16.2 25-.8 27 11 3.4 10.8-7.7 23.9 5 28 9 13.1 19.5 3.8 27-2 17.7-2.5 5.7 24.7 18 24 11.5 8.1 23.6 4.6 25-7 14-12.3 18.6 8.4 23 13 12.1-1.9 29.4.1 26-16 1-17.9 20.2-6.4 23-1 9.6-3.4 22.4-5.9 22-19-8.5-12.5 4.6-24.6 14-16 13.1 2.5 15-13.5 20-20-1.8-7.6-20-18.3-3-23 14.8.9 16.4-12.8 17-25-.2-11.4-23.4-8.8-16-23 12.8-.6 16.3-17.3 9-27 2.6-14.8-25.9-3.4-23-17 8.9-6.7 8.7-21.9-1-27-5-14.1-18.2-2-28-4-4.2-8.4 4.2-26.8-11-27-9.8-10.1-21.7-1.9-27 5-14.2 4.1-5.4-21.8-21-20-2.688-.563-5.123-.832-7.324-.844z" fill="#2f2222"/>
@@ -113,7 +132,7 @@
                         <ul class="skills-list">
                             <li>JavaScript</li>
                             <li>HTML5</li>
-                            <li>CSS - SASS</li>
+                            <li>CSS - SASS – BEM</li>
                             <li>jQuery</li>
                             <li>AJAX</li>
                             <li>Bootstrap</li>
@@ -273,12 +292,12 @@
         <div class="contact-section-content">
             <img src="img/contact.svg" alt="">
 
-            <form action="">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Phone">
+            <form method="POST" onsumbit="myFunction()">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required multiple>
+                <input type="tel" placeholder="Phone">
 
-                <textarea placeholder="Your message"></textarea>
+                <textarea placeholder="Your message" required></textarea>
 
                 <button class="button" id="form-submit-btn" type="submit" value="Submit"><span>[</span> send <span>]</span></button>
             </form>
