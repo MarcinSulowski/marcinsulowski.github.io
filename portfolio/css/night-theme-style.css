@@ -47,3 +47,9 @@ form input::placeholder {
     border-bottom: 1px solid #f5f5f5;
 }
 
+
+label[for="theme-switch"]::after {
+    background-image: url(../img/sun.svg);
+
+}
+
