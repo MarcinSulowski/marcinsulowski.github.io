@@ -3,6 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
     switchTheme().onTime();
 });
 
+//  event listeners 
+
+document.getElementById('main-nav').addEventListener('click', smoothScroll);
+document.getElementById('mobile-nav').addEventListener('click', smoothScroll);
+document.getElementById('mobile-nav').addEventListener('click', toggleNavigation);
+
+document.getElementById('form-submit-btn').addEventListener('click', function () {
+    
+    let url = "https://formspree.io/mr." + "sulowski" + "@" + "gmail" + "." + "com";    
+    this.parentElement.setAttribute('action', url);
+});
+
+// functions
 
 const switchTheme = () => {
 
@@ -25,46 +38,33 @@ const switchTheme = () => {
         }
     }
     
-    return { toggle, onTime };
-    
-};
+    return { toggle, onTime };   
+}
 
-document.getElementById('main-nav').addEventListener('click', function (e) {
+function smoothScroll(e) {
     
     e.preventDefault();
     
-    if ( e.target.tagName === 'A' ) {
+    console.log(e.target);
+
+    if (e.target.tagName === 'A') {
         const linkTarget = e.target.getAttribute('href').slice(1),
-              targetOffset = document.getElementById(linkTarget).offsetTop,
-              navDimensions = this.getBoundingClientRect();
-        
-        window.scroll({ top: targetOffset - navDimensions.height, left: 0, behavior: 'smooth' });
+            targetOffset = document.getElementById(linkTarget).offsetTop,
+            navDimensions = this.getBoundingClientRect();
+
+        window.scroll({
+            top: targetOffset - navDimensions.height,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
-        
-});
-//
-//const projectInfoBtns = document.querySelectorAll('.project-info-btn');
-//
-//for ( let i = 0; i < projectInfoBtns.length; i++ ) {
-//    
-//    projectInfoBtns[i].addEventListener('click', function (e) {
-//        this.nextElementSibling.classList.toggle('visible');
-//    })
-//}
+}
 
 function toggleNavigation(e) {
 
     document.querySelector('#expandable-menu').classList.toggle('collapsed');
     document.body.classList.toggle('disable-scroll');
 }
-
-
-document.getElementById('form-submit-btn').addEventListener('click', function () {
-    
-    let url = "https://formspree.io/mr." + "sulowski" + "@" + "gmail" + "." + "com";
-        
-    this.parentElement.setAttribute('action', url);
-});
 
 
 window.onscroll = function () {
@@ -76,7 +76,7 @@ window.onscroll = function () {
     } else {
         mainNav.classList.remove('fixed');
     }
-};
+}
 
 
 const runTyping = () => {
@@ -134,3 +134,13 @@ const runTyping = () => {
 
     type();
 }
+
+    
+//const projectInfoBtns = document.querySelectorAll('.project-info-btn');
+//
+//for ( let i = 0; i < projectInfoBtns.length; i++ ) {
+//    
+//    projectInfoBtns[i].addEventListener('click', function (e) {
+//        this.nextElementSibling.classList.toggle('visible');
+//    })
+//}
