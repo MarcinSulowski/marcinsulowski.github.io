@@ -1,29 +1,51 @@
+/*
+event listeners 
+*/
+
 document.addEventListener('DOMContentLoaded', function () {
-    runTyping();
     switchTheme().onTime();
+    type(myFavouriteStrings, typewriterOutput);
 });
 
-//  event listeners 
+document.getElementById('main-nav').addEventListener('click', smoothScroll);
 
-document.querySelector('.main-nav').addEventListener('click', smoothScroll);
-document.querySelector('.mobile-nav').addEventListener('click', smoothScroll);
-document.querySelector('.mobile-nav').addEventListener('click', toggleNavigation);
+document.getElementById('mobile-nav').addEventListener('click', smoothScroll);
+
+document.getElementById('mobile-nav').addEventListener('click', toggleNavigation);
 
 document.getElementById('form-submit-btn').addEventListener('click', function () {
-    
-    let url = "https://formspree.io/mr." + "sulowski" + "@" + "gmail" + "." + "com";    
+
+    let url = "https://formspree.io/mr." + "sulowski" + "@" + "gmail" + "." + "com";
     this.parentElement.setAttribute('action', url);
 });
 
-// functions
+
+/*
+variables
+*/
+
+const myFavouriteStrings = [
+		  "solving programming problems",
+		  "playing the saxophone",
+          "coding",
+		  "music",
+		  "David Lynch movies",
+          "food"
+		];
+
+const typewriterOutput = document.getElementById('typewriter-output');
+
+/*
+functions
+*/
 
 const switchTheme = () => {
 
     const toggle = () => {
         const stylesheetLink = document.getElementById('night-theme-style');
 
-        if ( stylesheetLink.href == location.href ) {
-            stylesheetLink.href = 'css/night-theme-style.css';
+        if (stylesheetLink.href == location.href) {
+            stylesheetLink.href = 'css/style--night-theme.css';
         } else {
             stylesheetLink.href = '';
         }
@@ -32,19 +54,22 @@ const switchTheme = () => {
     const onTime = () => {
         const date = new Date();
 
-        if ( date.getHours() >= 20 || date.getHours() <= 6 ) {
+        if (date.getHours() >= 20 || date.getHours() <= 6) {
             toggle();
             document.getElementById('theme-switch').checked = true;
         }
     }
-    
-    return { toggle, onTime };   
+
+    return {
+        toggle,
+        onTime
+    };
 }
 
 function smoothScroll(e) {
-    
+
     e.preventDefault();
-    
+
     if (e.target.tagName === 'A') {
         const linkTarget = e.target.getAttribute('href').slice(1),
             targetOffset = document.getElementById(linkTarget).offsetTop,
@@ -66,10 +91,10 @@ function toggleNavigation(e) {
 
 
 window.onscroll = function () {
-    
+
     const mainNav = document.getElementById('main-nav');
-    
-    if ( this.scrollY > 189 ) {
+
+    if (this.scrollY > 189) {
         mainNav.classList.add('main-nav--fixed');
     } else {
         mainNav.classList.remove('main-nav--fixed');
@@ -77,63 +102,57 @@ window.onscroll = function () {
 }
 
 
-const runTyping = () => {
-    const outputElement = document.getElementById('output');
-    // milliseconds
-    const typeSpeed = 80;
-    const deleteSpeed = 30;
-    const deleteAfter = 1000;
-    const items = [
-		  "solving programming problems",
-		  "playing the saxophone",
-          "coding",
-		  "music",
-		  "David Lynch movies",
-          "food"
-		];
 
-    let sentence = 0;
-    let currentChar = 0;
-    let deleteInterval = null;
 
-    function type() {
-        if ( sentence >= items.length ) {
-            sentence = 0;
+function type(strings, outputElement) {
+
+    const typeSpeed = 80,
+        deleteSpeed = 30,
+        waitBetween = 500;
+
+    let sentenceIndex = 0,
+        currentChar = 0,
+        deleteInterval = null;
+    
+    function typeString() {
+        
+        if (sentenceIndex >= strings.length) {
+            sentenceIndex = 0;
         }
 
-        const chars = items[ sentence ].split("");
+        const chars = strings[sentenceIndex].split('');
 
         setTimeout(function () {
-            if ( currentChar >= chars.length ) {
+            if (currentChar >= chars.length) {
                 setTimeout(function () {
-                    sentence++;
+                    sentenceIndex++;
 
                     deleteInterval = setInterval(function () {
                         outputElement.innerHTML = outputElement.innerHTML.substr(0, currentChar - 1);
 
                         currentChar--;
 
-                        if ( currentChar == 0 ) {
-                            clearInterval( deleteInterval );
-                            type();
+                        if (currentChar == 0) {
+                            clearInterval(deleteInterval);
+                            typeString();
                         }
                     }, deleteSpeed);
-                }, deleteAfter);
+                }, waitBetween);
 
                 return;
             }
 
-            outputElement.innerHTML += chars[ currentChar ];
+            outputElement.innerHTML += chars[currentChar];
             currentChar++;
 
-            type();
+            typeString();
         }, typeSpeed);
     }
 
-    type();
+    typeString();
 }
 
-    
+
 //const projectInfoBtns = document.querySelectorAll('.project-info-btn');
 //
 //for ( let i = 0; i < projectInfoBtns.length; i++ ) {
