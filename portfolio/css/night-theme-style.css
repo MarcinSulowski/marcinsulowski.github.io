@@ -1,55 +1,83 @@
-body {
+.page {
     background-color: #424241;
     color: #f5f5f5;
 }
 
 a,
-#form-submit-btn {
+.btn--form {
     color: #f5f5f5;
 }
 
-#main-nav.fixed {
+.theme-switch__label::after {
+    background-image: url(../img/sun.svg);
+}
+
+.main-nav--fixed {
     background-color: #424241;
     box-shadow: 0 .2em 2em .01em #222;
 }
 
-.projects-item {
+.about-item {
+    border: 2px solid #CCA958;
+}
+
+.about-item__list--border {
+    border-right: 2px solid #CCA958;
+}
+
+.about-item::after,
+.about-item::before {
+    border-top: .6em solid #424241;
+}
+
+.about-item__link::after {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.works__item {
     border: 1px solid #424241;
     color: #424241;
 }
 
-form textarea,
-form input {
+.form__textarea,
+.form__input {
     background-color: #424241;
     color: #f5f5f5;
 }
 
-form textarea::placeholder,
-form input::placeholder {
+.form__input::placeholder,
+.form__textarea::placeholder {
     color: #b2a9a1;
 }
 
-.about-item-content {
-    border: 2px solid #CCA958;
+.hamburger {
+    border: .1em solid #f5f5f5;
 }
 
-.col-1-2 .skills-list {
-    border-right: 2px solid #CCA958;
+.hamburger__line {
+    border: .2em solid #f5f5f5;
+    border-right-color: transparent;
+    border-left-color: transparent;
 }
 
-.about-item-content::after,
-.about-item-content::before {
-    border-top: .6em solid #424241;
+.hamburger__line--upper {
+    border-top-color: transparent;
 }
 
-
-.about-item-content a::after {
-    border-bottom: 1px solid #f5f5f5;
+.hamburger__line--lower {
+    border-bottom-color: transparent;
 }
 
-
-label[for="theme-switch"]::after {
-    background-image: url(../img/sun.svg);
-
+.hamburger::after,
+.hamburger::before {
+    background-color: #424241;
 }
 
+.mobile-nav__item {
+    border: 1px solid #f5f5f5;
+    background: #424241;
+}
+
+.mobile-nav__link {
+    color: #f5f5f5;
+}

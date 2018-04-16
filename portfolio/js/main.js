@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //  event listeners 
 
-document.getElementById('main-nav').addEventListener('click', smoothScroll);
-document.getElementById('mobile-nav').addEventListener('click', smoothScroll);
-document.getElementById('mobile-nav').addEventListener('click', toggleNavigation);
+document.querySelector('.main-nav').addEventListener('click', smoothScroll);
+document.querySelector('.mobile-nav').addEventListener('click', smoothScroll);
+document.querySelector('.mobile-nav').addEventListener('click', toggleNavigation);
 
 document.getElementById('form-submit-btn').addEventListener('click', function () {
     
@@ -45,8 +45,6 @@ function smoothScroll(e) {
     
     e.preventDefault();
     
-    console.log(e.target);
-
     if (e.target.tagName === 'A') {
         const linkTarget = e.target.getAttribute('href').slice(1),
             targetOffset = document.getElementById(linkTarget).offsetTop,
@@ -62,7 +60,7 @@ function smoothScroll(e) {
 
 function toggleNavigation(e) {
 
-    document.querySelector('#expandable-menu').classList.toggle('collapsed');
+    document.querySelector('.mobile-menu').classList.toggle('mobile-menu--collapsed');
     document.body.classList.toggle('disable-scroll');
 }
 
@@ -72,9 +70,9 @@ window.onscroll = function () {
     const mainNav = document.getElementById('main-nav');
     
     if ( this.scrollY > 189 ) {
-        mainNav.classList.add('fixed');
+        mainNav.classList.add('main-nav--fixed');
     } else {
-        mainNav.classList.remove('fixed');
+        mainNav.classList.remove('main-nav--fixed');
     }
 }
 
