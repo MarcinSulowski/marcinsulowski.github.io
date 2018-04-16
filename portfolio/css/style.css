@@ -32,7 +32,7 @@ a,
 .form__btn {
     text-decoration: none;
     color: #424241;
-    transition: color .3s;
+    transition: color .3s ease-in;
 }
 
 
@@ -122,6 +122,11 @@ a:hover,
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.cogs-graphic--fallback {
+    width: 100%;
+    height: auto;
 }
 
 .main-head__headings {
@@ -476,6 +481,7 @@ a:hover,
     height: 2em;
     z-index: 20;
     border: .1em solid #424241;
+    transition: border .3s ease-in;
 }
 
 .hamburger::after,
@@ -501,7 +507,7 @@ a:hover,
     border: .2em solid #424241;
     width: 1.4em;
     will-change: transform;
-    transition: all 0.8s;
+    transition: transform .8s, border .3s ease-in;
     border-right-color: transparent;
     border-left-color: transparent;
 }
