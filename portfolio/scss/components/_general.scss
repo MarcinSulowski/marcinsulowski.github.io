@@ -1,0 +1,64 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $night-primary;
+    transition: color .3s ease-in;
+}
+
+
+a:hover, 
+.text--gold {
+    color: $gold;
+}
+
+.page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $day-primary;
+    color: $night-primary;
+    transition: background-color .3s ease-in, color .3s ease-in;
+    letter-spacing: .1em;
+
+    .disable-scroll {
+        overflow: hidden;
+    }
+}
+
+.section {
+    box-sizing: border-box;
+    padding: 2em 4em;
+    min-height: 100vh;
+
+    .section__head {
+        text-align: left;
+        margin-bottom: 4em;
+
+        .section__heading {
+            text-transform: uppercase;
+            margin-bottom: 1em;
+            font-weight: 400;
+        }
+
+        .section__text {
+            line-height: 2em;
+            font-weight: 300;
+        }
+    }
+}

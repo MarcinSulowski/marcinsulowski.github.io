@@ -1,0 +1,77 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.btn {
+
+    &::before {
+        @include pseudo;
+        top: .5em;
+        left: -30em;
+        width: .3em;
+        height: .3em;
+        border-radius: .5em;
+        background-color: $gold;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    &:hover::before {
+        opacity: 1;
+        left: 1em;
+    }
+
+    .btn__bracket {
+        color: $gold;
+
+        &:first-of-type {
+            margin-right: 1em;
+        }
+
+        &:last-of-type {
+            margin-left: 1em;
+        }
+    }
+
+}
+
+.btn--form {
+    cursor: pointer;
+    position: relative;
+    font-family: $base-font;
+    border: none;
+    background: none;
+    font-size: 1em;
+    letter-spacing: .1em;
+    color: $night-primary;
+    transition: color .3s ease-in;
+
+    &:hover {
+        color: $gold;
+    }
+
+    &:hover::before {
+        left: -1em;
+    }
+}
+
+.info-btn {
+    align-self: flex-end;
+    width: 1.4em;
+    height: 1.4em;
+    font-size: 1.8em;
+    background-color: $beige;
+    border: none;
+    color: $night-primary;
+    box-shadow: 0 0 .05em .05em #746a66;
+    border-radius: 50%;
+    transition: background-color .3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #F4F0ED;
+    }
+
+    &:hover + .info {
+        bottom: 10%;
+    }
+}

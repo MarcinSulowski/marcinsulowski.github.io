@@ -1,0 +1,26 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.main-nav {
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    transition: all .3s;
+
+    &--fixed {
+        @include fixed(0,0);
+        background-color: $day-primary;
+        box-shadow: 0 .2em 2em .01em $beige;
+        z-index: 30;
+
+        .main-nav__item {
+            padding: 0 3em;
+        }
+    }
+    .main-nav__item {
+        position: relative;
+        display: inline-block;
+        padding: 0 2em;
+        transition: padding .5s;
+    }
+}

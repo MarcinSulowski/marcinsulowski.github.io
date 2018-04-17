@@ -1,0 +1,40 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.section-contact__content {
+    display: flex;
+    justify-content: space-around;
+
+    .section-contact__img {
+        flex-basis: 50%;
+    }
+}
+
+.form {
+    flex-basis: 50%;
+    text-align: center;
+
+    .form__textarea,
+    .form__input {
+        box-sizing: border-box;
+        width: 100%;
+        display: block;
+        margin-bottom: 3em;
+        border: .1em solid $gold;
+        padding: 1em;
+        letter-spacing: .1em;
+        font-family: $base-font;
+        color: $night-primary;
+        background-color: $day-primary;
+    }
+
+    .form__textarea {
+        height: 22em;
+    }
+
+    .form__input::placeholder,
+    .form__textarea::placeholder {
+        text-transform: uppercase;
+    }
+
+}

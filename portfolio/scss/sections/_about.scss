@@ -1,0 +1,69 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.about-item {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: 0 2em 1em 2em;
+    border: 2px solid $night-primary;
+    line-height: 2em;
+    font-weight: 300;
+
+    &::after,
+    &::before {
+        @include pseudo;
+        border-top: .6em solid $day-primary;
+        width: 96%;
+        left: 2%;
+    }
+
+    &::after {
+        top: -.3em;
+    }
+
+    &::before {
+        bottom: -.3em;
+    }
+
+    &--skills {
+        display: flex;
+    }
+}
+
+
+.about-item__hard-skills,
+.about-item__soft-skills {
+    width: 50%;
+}
+
+
+.about-item__heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: .8em;
+}
+
+.about-item__link {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        @include pseudo;
+        bottom: .3em;
+        right: 0;
+        width: 100%;
+        border-bottom: .1em solid $night-primary;
+    }
+}
+
+.about-item__list {
+    padding: 0 2em;
+
+    &--border {
+        border-right: .1em solid $night-primary;
+    }
+}

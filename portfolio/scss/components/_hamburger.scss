@@ -1,0 +1,53 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.hamburger {
+    @include flex-centr-col;
+    position: absolute;
+    top: 2em;
+    left: 4em;
+    cursor: pointer;
+    width: 2.6em;
+    height: 2em;
+    z-index: 20;
+    border: .1em solid $night-primary;
+    transition: border .3s ease-in;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: .3em;
+        width: .4em;
+        height: 1.4em;
+        background-color: $day-primary;
+        transition: background-color .3s ease-in;
+    }
+
+    &::after {
+        left: -.3em;
+    }
+
+    &::before {
+        right: -.3em;
+    }
+}
+
+.hamburger__line {
+    border: .2em solid $night-primary;
+    width: 1.4em;
+    transition: transform .8s, border .3s ease-in;
+    border-right-color: transparent;
+    border-left-color: transparent;
+
+}
+
+.hamburger__line--upper {
+    border-top-color: transparent;
+    transform: translateX(-20%);
+}
+
+.hamburger__line--lower {
+    border-bottom-color: transparent;
+    transform: translateX(20%);
+}

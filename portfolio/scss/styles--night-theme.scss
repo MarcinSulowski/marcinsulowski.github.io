@@ -1,0 +1,95 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+.page {
+    background-color: $night-primary;
+    color: $white;
+}
+
+a,
+.btn--form {
+    color: $white;
+}
+
+.theme-switch__label::after {
+    background-image: url(../img/sun.svg);
+}
+
+.about-item {
+    border: .1em solid $gold;
+
+    &::after,
+    &::before {
+        border-top: .6em solid $night-primary;
+    }
+}
+
+.about-item__list--border {
+    border-right: .1em solid $beige;
+}
+
+
+.about-item__link::after {
+    border-bottom: 1px solid $white;
+}
+
+.works {
+
+    .works__item {
+        border: 1px solid $night-primary;
+        color: $night-primary;
+    }
+}
+
+.form__textarea,
+.form__input {
+    background-color: $night-primary;
+    color: $white;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: $beige;
+}
+
+.main-nav--fixed {
+    background-color: $night-primary;
+    box-shadow: 0 .2em 2em .01em #222;
+}
+
+.hamburger {
+    border: .1em solid $white;
+}
+
+.hamburger__line {
+    border: .2em solid $white;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.hamburger__line--upper {
+    border-top-color: transparent;
+}
+
+.hamburger__line--lower {
+    border-bottom-color: transparent;
+}
+
+.hamburger::after,
+.hamburger::before {
+    background-color: $night-primary;
+}
+
+.mobile-nav {
+    .mobile-nav__list {
+        .mobile-nav__item {
+            border: 1px solid $white;
+            background: $night-primary;
+
+            .mobile-nav__link {
+                color: $white;
+
+            }
+        }
+    }
+}

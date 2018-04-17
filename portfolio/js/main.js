@@ -45,7 +45,7 @@ const switchTheme = () => {
         const stylesheetLink = document.getElementById('night-theme-style');
 
         if (stylesheetLink.href == location.href) {
-            stylesheetLink.href = 'css/style--night-theme.css';
+            stylesheetLink.href = 'css/styles--night-theme.css';
         } else {
             stylesheetLink.href = '';
         }

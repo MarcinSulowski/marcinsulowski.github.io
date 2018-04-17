@@ -1,0 +1,47 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+/* theme switch  */
+
+.theme-switch {
+    position: absolute;
+    top: 2em;
+    right: 4em;
+}
+
+.theme-switch__label {
+    position: relative;
+    display: block;
+    width: 3em;
+    height: 1.5em;
+    border-radius: 2em;
+    background-color: $night-primary;
+
+    &::after {
+        @include pseudo;
+        left: 0;
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+        box-shadow: 0 0 0.1em 0.1em $night-primary;
+        background-color: $white;
+        transition: all .3s ease-in;
+        background-image: url(../img/moon.svg);
+        background-size: 1em;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.theme-switch__input {
+    display: none;
+
+    &:checked + .theme-switch__label {
+        background-color: $white;
+    }
+
+    &:checked + .theme-switch__label::after {
+        background-color: $white;
+        left: 1.5em;
+    }
+}

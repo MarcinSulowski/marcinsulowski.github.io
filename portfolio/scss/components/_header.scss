@@ -1,0 +1,44 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.main-head {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 2em 4em;
+    
+    .main-head__headings {
+        @include margin-auto;
+        margin-bottom: 2.8em;
+
+        .main-head__heading {
+            display: inline-block;
+            padding: .3em .6em;
+            margin-bottom: 0.2em;
+            border: 2px solid #cca958;
+            font-size: 2.6em;
+            font-weight: 400;
+        }
+
+        .main-head__subheading {
+            font-size: 1.3em;
+            font-weight: 300;
+            letter-spacing: .1em;
+        }
+    }
+}
+
+.cogs-graphic {
+    height: 50vh;
+    max-width: 80%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cogs-graphic--fallback {
+    width: 100%;
+    height: auto;
+}
