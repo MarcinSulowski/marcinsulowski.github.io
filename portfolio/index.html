@@ -249,12 +249,12 @@
         <div class="section-contact__content">
             <img class="section-contact__img" src="img/contact.svg" alt="">
 
-            <form class="form">
-                <input class="form__input" type="text" placeholder="Name">
-                <input class="form__input" type="email" placeholder="Email">
-                <input class="form__input" type="tel" placeholder="Phone">
+            <form class="form" method="post" action="https://formspree.io/mr.sulowski@gmail.com" autocomplete="on">
+                <input class="form__input" type="text" name="name" placeholder="Name" required>
+                <input class="form__input" type="email" name="email" placeholder="Email" required multiple>
+                <input class="form__input" type="tel" name="message" placeholder="Phone" minlength="9" required>
 
-                <textarea class="form__textarea" placeholder="Your message"></textarea>
+                <textarea class="form__textarea" placeholder="Your message" required></textarea>
 
                 <button class="btn btn--form" id="form-submit-btn" type="submit" value="Submit"><span class="btn__bracket">[</span> send <span class="btn__bracket">]</span></button>
             </form>
