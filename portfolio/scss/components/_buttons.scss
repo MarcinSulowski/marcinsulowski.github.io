@@ -67,8 +67,6 @@
     cursor: pointer;
 
     @include mq('phone-wide', max) {
-        width: 40px;
-        height: 40px;
         font-size: 1.6em;
     }
 
