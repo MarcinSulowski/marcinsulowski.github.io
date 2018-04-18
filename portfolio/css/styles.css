@@ -321,6 +321,8 @@ a:hover,
   @media only screen and (max-width: 479px) {
     .info-btn {
       font-size: 1.6em; } }
+  .info-btn:focus {
+    outline: 0; }
   .info-btn:hover {
     background-color: #F4F0ED; }
   .info-btn:hover + .info {
@@ -684,6 +686,9 @@ a:hover,
     font-family: "Montserrat", sans-serif;
     color: #424241;
     background-color: #F4F0ED; }
+    .form .form__textarea:focus,
+    .form .form__input:focus {
+      outline: 0.1em solid #CCA958; }
   .form .form__textarea {
     height: 22em; }
   .form .form__input::placeholder,

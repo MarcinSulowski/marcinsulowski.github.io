@@ -35,6 +35,13 @@
     position: $pos;
 }
 
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
 $breakpoints: ( "phone": 400px,
 "phone-wide": 480px,
 "phablet": 560px,

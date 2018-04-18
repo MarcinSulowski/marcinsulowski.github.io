@@ -37,6 +37,10 @@
         font-family: $base-font;
         color: $night-primary;
         background-color: $day-primary;
+
+        &:focus {
+            outline: .1em solid $gold;
+        }
     }
 
     .form__textarea {
@@ -47,5 +51,4 @@
     .form__textarea::placeholder {
         text-transform: uppercase;
     }
-
 }
