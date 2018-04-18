@@ -69,16 +69,25 @@
 
 .info {
     box-sizing: border-box;
+    text-align: center;
     position: absolute;
-    width: 60%;
+    width: 68%;
     height: 80%;
     bottom: -100%;
-    left: 20%;
+    left: 16%;
     background: $night-primary;
     padding: 1em;
     color: $white;
     z-index: 10;
     transition: bottom .5s;
+
+    @include mq('tablet-small', max) {
+        width: 100%;
+        left: 0;
+        top: -100%;
+        transition: top .5s;
+
+    }
 
     .info__heading {
         text-transform: uppercase;

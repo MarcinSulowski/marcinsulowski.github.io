@@ -65,7 +65,7 @@
     border-radius: 50%;
     transition: background-color .3s;
     cursor: pointer;
-    
+
     @include mq('phone-wide', max) {
         font-size: 1.6em;
     }
@@ -76,5 +76,10 @@
 
     &:hover + .info {
         bottom: 10%;
+
+        @include mq('tablet-small', max) {
+            top: 0;
+
+        }
     }
 }
