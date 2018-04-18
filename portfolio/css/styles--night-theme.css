@@ -24,13 +24,13 @@ a,
   border: 1px solid #424241;
   color: #424241; }
 
-.form__textarea,
-.form__input {
+.form .form__textarea,
+.form .form__input {
   background-color: #424241;
   color: #f5f5f5; }
 
-.form__input::placeholder,
-.form__textarea::placeholder {
+.form .form__input::placeholder,
+.form .form__textarea::placeholder {
   color: #b2a9a1; }
 
 .main-nav--fixed {
