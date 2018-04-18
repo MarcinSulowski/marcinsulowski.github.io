@@ -7,12 +7,23 @@
 
     .section-contact__img {
         flex-basis: 50%;
+
+        @include mq('tablet-wide', max) {
+            flex-basis: 40%;
+        }
+        @include mq('custom-879', max) {
+            display: none;
+        }
     }
 }
 
 .form {
     flex-basis: 50%;
     text-align: center;
+
+    @include mq('custom-879', max) {
+        flex-basis: 100%;
+    }
 
     .form__textarea,
     .form__input {

@@ -41,15 +41,18 @@ a,
     }
 }
 
-.form__textarea,
-.form__input {
-    background-color: $night-primary;
-    color: $white;
-}
+.form {
 
-.form__input::placeholder,
-.form__textarea::placeholder {
-    color: $beige;
+    .form__textarea,
+    .form__input {
+        background-color: $night-primary;
+        color: $white;
+    }
+
+    .form__input::placeholder,
+    .form__textarea::placeholder {
+        color: $beige;
+    }
 }
 
 .main-nav--fixed {

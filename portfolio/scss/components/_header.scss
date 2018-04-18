@@ -8,23 +8,34 @@
     box-sizing: border-box;
     padding: 2em 4em;
     
+    @include mq('tablet-small', max) {
+        padding: 2em;
+    }
+
     .main-head__headings {
         @include margin-auto;
         margin-bottom: 2.8em;
+        width: 100%;
+
+        @include mq('custom-879', max) {
+            margin-top: 5em;
+//            margin-bottom: 6em;
+        }
 
         .main-head__heading {
             display: inline-block;
             padding: .3em .6em;
             margin-bottom: 0.2em;
-            border: 2px solid #cca958;
-            font-size: 2.6em;
-            font-weight: 400;
+            border: 2px solid $gold;
+
+            @include mq('custom-879', max) {
+                display: block;
+            }
         }
 
         .main-head__subheading {
-            font-size: 1.3em;
             font-weight: 300;
-            letter-spacing: .1em;
+            font-size: $h3-font-size;
         }
     }
 }
@@ -36,6 +47,12 @@
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+
+    @include mq('custom-879', max) {
+        max-width: 100%;
+        position: static;
+        transform: translateX(0);
+    }
 }
 
 .cogs-graphic--fallback {

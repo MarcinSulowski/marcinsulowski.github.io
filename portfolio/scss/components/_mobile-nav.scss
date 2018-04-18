@@ -19,6 +19,12 @@
     .hamburger__line {
         transform: translateX(0);
     }
+    
+    display: none;
+    
+    @include mq('custom-879', max) {
+        display: block;
+    }
 }
 
 
@@ -49,6 +55,7 @@
                 text-transform: uppercase;
                 letter-spacing: 0.2em;
                 font-size: 1.2em;
+                font-weight: $font-regular;
             }
         }
     }

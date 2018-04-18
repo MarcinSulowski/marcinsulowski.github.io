@@ -9,6 +9,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @include mq('tablet-small', max) {
+        padding: 1em 2em;
+    }
+
     .footer-nav__item {
         display: inline-block;
         font-size: 1.6em;

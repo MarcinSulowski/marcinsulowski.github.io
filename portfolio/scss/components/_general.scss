@@ -12,6 +12,26 @@ figure {
     margin: 0;
 }
 
+h1 {
+    font-size: $h1-font-size;
+    font-weight: $font-regular;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    font-weight: $font-regular;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    font-weight: $font-regular;
+}
+
+h4 {
+    font-size: $h4-font-size;
+    font-weight: $font-regular;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -20,21 +40,23 @@ ul {
 a {
     text-decoration: none;
     color: $night-primary;
-    transition: color .3s ease-in;
+    transition: color .3s;
 }
 
 
-a:hover, 
+a:hover,
 .text--gold {
     color: $gold;
 }
 
 .page {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $base-font;
     background-color: $day-primary;
     color: $night-primary;
     transition: background-color .3s ease-in, color .3s ease-in;
     letter-spacing: .1em;
+    font-size: $base-font-size;
+    font-weight: 300;
 
     .disable-scroll {
         overflow: hidden;
@@ -45,20 +67,22 @@ a:hover,
     box-sizing: border-box;
     padding: 2em 4em;
     min-height: 100vh;
+    
+    @include mq('tablet-small', max) {
+        padding: 2em;
+    }
 
     .section__head {
         text-align: left;
-        margin-bottom: 4em;
+        margin-bottom: 5em;
 
         .section__heading {
             text-transform: uppercase;
-            margin-bottom: 1em;
-            font-weight: 400;
+            margin-bottom: .6em;
         }
 
         .section__text {
             line-height: 2em;
-            font-weight: 300;
         }
     }
 }

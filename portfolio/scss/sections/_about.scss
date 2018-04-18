@@ -2,14 +2,20 @@
 @import '../helpers/mixins';
 
 .about-item {
+    box-sizing: border-box;
     position: relative;
     width: 70%;
     margin: 0 auto;
     margin-bottom: 2em;
-    padding: 0 2em 1em 2em;
+    padding: 1em 2em;
     border: 2px solid $night-primary;
     line-height: 2em;
-    font-weight: 300;
+
+    @include mq('tablet-wide', max) {
+        width: 100%;
+    }
+
+
 
     &::after,
     &::before {
@@ -29,20 +35,32 @@
 
     &--skills {
         display: flex;
+
+        @include mq('tablet', max) {
+            flex-flow: row wrap;
+        }
     }
 }
 
 
 .about-item__hard-skills,
 .about-item__soft-skills {
-    width: 50%;
+    flex-basis: 50%;
+
+    @include mq('tablet', max) {
+        flex-basis: 100%;
+    }
+}
+
+.about-item__hard-skills {
+        @include mq('tablet', max) {
+        margin-bottom: 2em;
+    }
 }
 
 
 .about-item__heading {
     text-align: center;
-    font-weight: 400;
-    font-size: 1.2em;
     text-transform: uppercase;
     margin-bottom: .8em;
 }
@@ -65,5 +83,9 @@
 
     &--border {
         border-right: .1em solid $night-primary;
+
+        @include mq('tablet', max) {
+            border-right: none;
+        }
     }
 }

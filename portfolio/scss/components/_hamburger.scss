@@ -12,6 +12,10 @@
     z-index: 20;
     border: .1em solid $night-primary;
     transition: border .3s ease-in;
+    
+    @include mq('tablet-small', max) {
+        left: 2em;
+    }
 
     &::after,
     &::before {
