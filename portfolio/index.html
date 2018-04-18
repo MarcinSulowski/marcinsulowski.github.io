@@ -12,7 +12,6 @@
 
     <!--    custom styles     -->
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" id="night-theme-styles">
 
 </head>
 
@@ -60,9 +59,10 @@
                 <li class="main-nav__item"><a class="main-nav__link btn" href="#contact-section"><span class="btn__bracket">[</span> contact <span class="btn__bracket">]</span></a></li>
             </ul>
         </nav>
-        
+
         <!--        cogs svg     -->
-        <object type="image/svg+xml" data="img/cogs.svg" class="cogs-graphic">
+        <object type="image/svg+xml" data="img/cog.svg" class="cogs-graphic">
+            <!--           fallback image     -->
             <img src="img/cogs--fallback.png" class="cogs-graphic--fallback" alt="No SVG support">
         </object>
 
@@ -225,7 +225,7 @@
                     <h4 class="info__heading">Technological stack</h4>
                     <ul>
                         <li class="info__list-item text">BEM methodology</li>
-                        <li class="info__list-item text">SVG animation</li> 
+                        <li class="info__list-item text">SVG animation</li>
                         <li class="info__list-item text">CSS - SASS</li>
                         <li class="info__list-item text">JavaScript</li>
                         <li class="info__list-item text">HTML5</li>
@@ -249,12 +249,12 @@
         <div class="section-contact__content">
             <img class="section-contact__img" src="img/contact.svg" alt="">
 
-            <form class="form" method="POST">
-                <input class="form__input" type="text" placeholder="Name" required>
-                <input class="form__input" type="email" placeholder="Email" required multiple>
+            <form class="form">
+                <input class="form__input" type="text" placeholder="Name">
+                <input class="form__input" type="email" placeholder="Email">
                 <input class="form__input" type="tel" placeholder="Phone">
 
-                <textarea class="form__textarea" placeholder="Your message" required></textarea>
+                <textarea class="form__textarea" placeholder="Your message"></textarea>
 
                 <button class="btn btn--form" id="form-submit-btn" type="submit" value="Submit"><span class="btn__bracket">[</span> send <span class="btn__bracket">]</span></button>
             </form>
