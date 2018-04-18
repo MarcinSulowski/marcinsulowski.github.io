@@ -325,11 +325,9 @@ a:hover,
     outline: 0; }
   .info-btn:hover {
     background-color: #F4F0ED; }
-  .info-btn:hover + .info {
-    bottom: 10%; }
-    @media only screen and (max-width: 639px) {
-      .info-btn:hover + .info {
-        top: 0; } }
+  @media only screen and (min-width: 1024px) {
+    .info-btn:hover + .info {
+      bottom: 10%; } }
 
 /* footer */
 .footer {
@@ -648,6 +646,11 @@ a:hover,
       left: 0;
       top: -100%;
       transition: top .5s; } }
+  .info.visible {
+    bottom: 10%; }
+    @media only screen and (max-width: 639px) {
+      .info.visible {
+        top: 0; } }
   .info .info__heading {
     text-transform: uppercase;
     padding-bottom: .6em;

@@ -69,7 +69,7 @@
     @include mq('phone-wide', max) {
         font-size: 1.6em;
     }
-    
+
     &:focus {
         outline: 0;
     }
@@ -79,11 +79,9 @@
     }
 
     &:hover + .info {
-        bottom: 10%;
 
-        @include mq('tablet-small', max) {
-            top: 0;
-
+        @include mq('tablet-wide') {
+            bottom: 10%;
         }
     }
 }

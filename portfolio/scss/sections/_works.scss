@@ -86,7 +86,15 @@
         left: 0;
         top: -100%;
         transition: top .5s;
+    }
 
+    &.visible {
+        bottom: 10%;
+
+        @include mq('tablet-small', max) {
+            top: 0;
+
+        }
     }
 
     .info__heading {
