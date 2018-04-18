@@ -402,6 +402,95 @@ a:hover,
   border-bottom-color: transparent;
   transform: translateX(20%); }
 
+.cog12 {
+  animation: clockwise 5s linear 0s infinite;
+  transform-origin: 1168px 597px; }
+
+.cog11 {
+  animation: counter-clockwise 10s linear 0s infinite;
+  transform-origin: 1038px 575px; }
+
+.cog10 {
+  animation: clockwise 7.98s linear 0s infinite;
+  transform-origin: 1047px 433px;
+  transform: rotate(-2deg); }
+
+.cog9 {
+  animation: counter-clockwise 7.96s linear 0s infinite;
+  transform-origin: 849px 608px; }
+
+.cog8 {
+  animation: counter-clockwise 12.95s linear 0s infinite;
+  transform-origin: 920px 408px; }
+
+.cog7 {
+  animation: counter-clockwise 9.98s linear 0s infinite;
+  transform-origin: 958px 212px; }
+
+.cog6 {
+  animation: clockwise 11.96s linear 0s infinite;
+  transform-origin: 704px 578px; }
+
+.cog5 {
+  animation: clockwise 14.95s linear 0s infinite;
+  transform-origin: 766px 267px; }
+
+.cog4 {
+  animation: counter-clockwise 19.9s linear 0s infinite;
+  transform-origin: 491px 408px; }
+
+.cog3 {
+  animation: clockwise 4.98s linear 0s infinite;
+  transform-origin: 351px 241px; }
+
+.cog2 {
+  animation: clockwise 10.96s linear 0s infinite;
+  transform-origin: 223px 406px; }
+
+.cog1 {
+  animation: counter-clockwise 4.98s linear 0s infinite;
+  transform-origin: 129px 508px; }
+
+.lightbulb__fill {
+  animation: lightbulb 5s linear 0s infinite;
+  will-change: transform; }
+
+.lightbulb__wire {
+  animation: wire 5s linear 0s infinite;
+  will-change: transform; }
+
+@keyframes clockwise {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes counter-clockwise {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(-360deg); } }
+
+@keyframes lightbulb {
+  0%,
+  100% {
+    opacity: 0; }
+  30% {
+    opacity: 0.8; }
+  40%,
+  85% {
+    opacity: 1; } }
+
+@keyframes wire {
+  0%,
+  100% {
+    opacity: 0.1; }
+  10% {
+    opacity: 0.8; }
+  30%,
+  75% {
+    opacity: 1; } }
+
 @media only screen and (max-width: 1023px) {
   .section--about .section__text {
     display: block;
@@ -600,3 +689,54 @@ a:hover,
   .form .form__input::placeholder,
   .form .form__textarea::placeholder {
     text-transform: uppercase; }
+
+.night-theme {
+  background-color: #424241;
+  color: #f5f5f5; }
+  .night-theme a,
+  .night-theme .btn--form {
+    color: #f5f5f5; }
+  .night-theme .theme-switch__label::after {
+    background-image: url(../img/sun.svg); }
+  .night-theme .about-item {
+    border: 0.1em solid #CCA958; }
+    .night-theme .about-item::after, .night-theme .about-item::before {
+      border-top: 0.6em solid #424241; }
+  .night-theme .about-item__list--border {
+    border-right: 0.1em solid #b2a9a1; }
+    @media only screen and (max-width: 767px) {
+      .night-theme .about-item__list--border {
+        border-right: none; } }
+  .night-theme .about-item__link::after {
+    border-bottom: 1px solid #f5f5f5; }
+  .night-theme .works .works__item {
+    border: 1px solid #424241;
+    color: #424241; }
+  .night-theme .form .form__textarea,
+  .night-theme .form .form__input {
+    background-color: #424241;
+    color: #f5f5f5; }
+  .night-theme .form .form__input::placeholder,
+  .night-theme .form .form__textarea::placeholder {
+    color: #b2a9a1; }
+  .night-theme .main-nav--fixed {
+    background-color: #424241;
+    box-shadow: 0 .2em 2em .01em #222; }
+  .night-theme .hamburger {
+    border: 0.1em solid #CCA958; }
+  .night-theme .hamburger__line {
+    border: 0.2em solid #f5f5f5;
+    border-right-color: transparent;
+    border-left-color: transparent; }
+  .night-theme .hamburger__line--upper {
+    border-top-color: transparent; }
+  .night-theme .hamburger__line--lower {
+    border-bottom-color: transparent; }
+  .night-theme .hamburger::after,
+  .night-theme .hamburger::before {
+    background-color: #424241; }
+  .night-theme .mobile-nav .mobile-nav__list .mobile-nav__item {
+    border: 1px solid #f5f5f5;
+    background: #424241; }
+    .night-theme .mobile-nav .mobile-nav__list .mobile-nav__item .mobile-nav__link {
+      color: #f5f5f5; }
