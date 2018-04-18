@@ -8,10 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.getElementById('main-nav').addEventListener('click', smoothScroll);
-
 document.getElementById('mobile-nav').addEventListener('click', smoothScroll);
-
-document.getElementById('mobile-nav').addEventListener('click', toggleNavigation);
 
 document.getElementById('form-submit-btn').addEventListener('click', function () {
 
@@ -21,32 +18,19 @@ document.getElementById('form-submit-btn').addEventListener('click', function ()
 
 
 /*
-variables
-*/
-
-const myFavouriteStrings = [
-		  "solving programming problems",
-		  "playing the saxophone",
-          "coding",
-		  "music",
-		  "David Lynch movies",
-          "food"
-		];
-
-const typewriterOutput = document.getElementById('typewriter-output');
-
-/*
 functions
 */
 
+
+// switch theme function
 const switchTheme = () => {
 
     const toggle = () => {
         const stylesheetLink = document.getElementById('night-theme-styles');
-        let href = stylesheetLink.getAttribute('href');        
+        let href = stylesheetLink.getAttribute('href');
 
         if (href === null) {
-            stylesheetLink.setAttribute('href','css/styles--night-theme.css');
+            stylesheetLink.setAttribute('href', 'css/styles--night-theme.css');
         } else {
             stylesheetLink.removeAttribute('href');
         }
@@ -67,23 +51,39 @@ const switchTheme = () => {
     };
 }
 
+//smooth scroll function
 function smoothScroll(e) {
 
     e.preventDefault();
 
-    if (e.target.tagName === 'A') {
-        const linkTarget = e.target.getAttribute('href').slice(1),
-            targetOffset = document.getElementById(linkTarget).offsetTop,
-            navDimensions = this.getBoundingClientRect();
+    if (e.target.classList.contains('main-nav__link')) {
+
+        const linkTarget = e.target.getAttribute('href').slice(1);
+        const targetOffset = document.getElementById(linkTarget).offsetTop;
+        const navDimensions = this.getBoundingClientRect();
 
         window.scroll({
             top: targetOffset - navDimensions.height,
             left: 0,
             behavior: 'smooth'
         });
+
+    } else if (e.target.classList.contains('mobile-nav__link')) {
+        const linkTarget = e.target.getAttribute('href').slice(1);
+        const targetOffset = document.getElementById(linkTarget).offsetTop;
+
+        window.scroll({
+            top: targetOffset,
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        toggleNavigation();
     }
+
 }
 
+// toggle nav function
 function toggleNavigation(e) {
 
     document.querySelector('.mobile-menu').classList.toggle('mobile-menu--collapsed');
@@ -91,6 +91,7 @@ function toggleNavigation(e) {
 }
 
 
+// chages main-nav's position to fixed onscroll
 window.onscroll = function () {
 
     const mainNav = document.getElementById('main-nav');
@@ -102,24 +103,32 @@ window.onscroll = function () {
     }
 }
 
-
-/* JavaScript Media Queries */
+// JS media queries
 if (matchMedia) {
     const mq = window.matchMedia("(max-width: 879px)");
     mq.addListener(WidthChange);
     WidthChange(mq);
 }
 
-// media query change
 function WidthChange(mq) {
 
     const cogsElement = document.querySelector('.cogs-graphic');
-    mq.matches? cogsElement.setAttribute('data', 'img/lightbulb.svg') : cogsElement.setAttribute('data', 'img/cogs.svg');
-
-
+    mq.matches ? cogsElement.setAttribute('data', 'img/lightbulb.svg') : cogsElement.setAttribute('data', 'img/cogs.svg');
 }
 
+// typewriter effect - variables
+const myFavouriteStrings = [
+		  "solving programming problems",
+		  "playing the saxophone",
+          "coding",
+		  "music",
+		  "David Lynch movies",
+          "food"
+		];
 
+const typewriterOutput = document.getElementById('typewriter-output');
+
+// typewriter effect - function
 function type(strings, outputElement) {
 
     const typeSpeed = 80,
