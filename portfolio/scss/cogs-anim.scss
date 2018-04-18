@@ -69,56 +69,56 @@
     will-change: transform;
 }
 
-//
-//@keyframes clockwise {
-//    from {
-//        transform: rotate(0);
-//    }
-//    to {
-//        transform: rotate(360deg);
-//    }
-//}
-//
-//@keyframes counter-clockwise {
-//    from {
-//        transform: rotate(0);
-//    }
-//    to {
-//        transform: rotate(-360deg);
-//    }
-//}
-//
-//@keyframes lightbulb {
-//
-//    0%,
-//    100% {
-//        opacity: 0;
-//    }
-//
-//    30% {
-//        opacity: 0.8;
-//    }
-//
-//    40%,
-//    85% {
-//        opacity: 1;
-//    }
-//}
-//
-//
-//@keyframes wire {
-//
-//    0%,
-//    100% {
-//        opacity: 0.1;
-//    }
-//
-//    10% {
-//        opacity: 0.8;
-//    }
-//
-//    30%,
-//    75% {
-//        opacity: 1;
-//    }
-//}
+
+@keyframes clockwise {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes counter-clockwise {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes lightbulb {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.8;
+    }
+
+    40%,
+    85% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes wire {
+
+    0%,
+    100% {
+        opacity: 0.1;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    30%,
+    75% {
+        opacity: 1;
+    }
+}
