@@ -13,9 +13,27 @@
         padding: 1em 2em;
     }
 
+    @include mq('phone-wide', max) {
+        padding: 1em;
+    }
+
+    .text--copyright {
+        @include mq('phone-wide', max) {
+            display: none;
+        }
+    }
+
     .footer-nav__item {
         display: inline-block;
         font-size: 1.6em;
-        padding-left: 1em;
+
+        &:last-of-type {
+            padding-left: 1em;
+
+            @include mq('phone', max) {
+                padding-left: .8em;
+            }
+
+        }
     }
 }

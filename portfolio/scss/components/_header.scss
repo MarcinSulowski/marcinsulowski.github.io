@@ -27,6 +27,11 @@
 
         @include mq('phone-wide', max) {
             margin-top: 4em;
+            margin-bottom: 1.8em;
+        }        
+        
+        @include mq('phone', max) {
+            margin-bottom: 1em;
         }
 
         .main-head__heading {
