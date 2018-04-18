@@ -102,6 +102,21 @@ window.onscroll = function () {
 }
 
 
+/* JavaScript Media Queries */
+if (matchMedia) {
+    const mq = window.matchMedia("(max-width: 879px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+}
+
+// media query change
+function WidthChange(mq) {
+
+    const cogsElement = document.querySelector('.cogs-graphic');
+    mq.matches? cogsElement.setAttribute('data', 'img/lightbulb.svg') : cogsElement.setAttribute('data', 'img/cogs.svg');
+
+
+}
 
 
 function type(strings, outputElement) {
@@ -113,9 +128,9 @@ function type(strings, outputElement) {
     let sentenceIndex = 0,
         currentChar = 0,
         deleteInterval = null;
-    
+
     function typeString() {
-        
+
         if (sentenceIndex >= strings.length) {
             sentenceIndex = 0;
         }
