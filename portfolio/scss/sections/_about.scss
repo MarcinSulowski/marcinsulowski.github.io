@@ -1,6 +1,15 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
+.section--about {
+    .section__text {
+        @include mq('tablet-wide', max) {
+            display: block;
+            height: 2em;
+        }
+    }
+}
+
 .about-item {
     box-sizing: border-box;
     position: relative;
@@ -11,10 +20,21 @@
     border: 2px solid $night-primary;
     line-height: 2em;
 
+    @include mq('desktop-wide', max) {
+        width: 80%;
+    }
+
+    @include mq('desktop', max) {
+        width: 90%;
+    }
+
     @include mq('tablet-wide', max) {
         width: 100%;
     }
 
+    @include mq('phone', max) {
+        padding: 1em;
+    }
 
 
     &::after,
@@ -38,6 +58,10 @@
 
         @include mq('tablet', max) {
             flex-flow: row wrap;
+        }
+
+        @include mq('phone', max) {
+            text-align: center;
         }
     }
 }

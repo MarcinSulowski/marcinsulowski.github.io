@@ -8,12 +8,12 @@
     height: 48em;
 
     @include mq('tablet-wide', max) {
-        height: 86em;
+        height: 90em;
     }
 
     .works__item {
-        @include flex-row;
-        text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
         justify-content: space-between;
         box-sizing: border-box;
         position: relative;
@@ -53,6 +53,7 @@
 
 .project {
     align-self: center;
+    text-align: center;
 
     .project__img {
         height: 5em;

@@ -26,6 +26,10 @@ a,
 
 .about-item__list--border {
     border-right: .1em solid $beige;
+
+    @include mq('tablet', max) {
+        border-right: none;
+    }
 }
 
 

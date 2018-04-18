@@ -27,6 +27,10 @@ h2 {
 
     @include mq('phone-wide', max) {
         font-size: $h2-font-size - .2em;
+    }    
+    
+    @include mq('phone', max) {
+        font-size: $h2-font-size - .6em;
     }
 }
 

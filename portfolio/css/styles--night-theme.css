@@ -16,6 +16,9 @@ a,
 
 .about-item__list--border {
   border-right: 0.1em solid #b2a9a1; }
+  @media only screen and (max-width: 767px) {
+    .about-item__list--border {
+      border-right: none; } }
 
 .about-item__link::after {
   border-bottom: 1px solid #f5f5f5; }

@@ -55,7 +55,7 @@ const switchTheme = () => {
     const onTime = () => {
         const date = new Date();
 
-        if (date.getHours() >= 10 || date.getHours() <= 6) {
+        if (date.getHours() >= 20 || date.getHours() <= 6) {
             toggle();
             document.getElementById('theme-switch').checked = true;
         }
