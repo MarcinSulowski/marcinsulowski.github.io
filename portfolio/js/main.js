@@ -42,19 +42,20 @@ functions
 const switchTheme = () => {
 
     const toggle = () => {
-        const stylesheetLink = document.getElementById('night-theme-style');
+        const stylesheetLink = document.getElementById('night-theme-styles');
+        let href = stylesheetLink.getAttribute('href');        
 
-        if (stylesheetLink.href == 'css/') {
-            stylesheetLink.href = 'css/styles--night-theme.css';
+        if (href === null) {
+            stylesheetLink.setAttribute('href','css/styles--night-theme.css');
         } else {
-            stylesheetLink.href = 'css/';
+            stylesheetLink.removeAttribute('href');
         }
     }
 
     const onTime = () => {
         const date = new Date();
 
-        if (date.getHours() >= 20 || date.getHours() <= 6) {
+        if (date.getHours() >= 10 || date.getHours() <= 6) {
             toggle();
             document.getElementById('theme-switch').checked = true;
         }
