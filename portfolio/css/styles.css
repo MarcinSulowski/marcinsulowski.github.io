@@ -312,6 +312,8 @@ a:hover,
   cursor: pointer; }
   @media only screen and (max-width: 479px) {
     .info-btn {
+      width: 40px;
+      height: 40px;
       font-size: 1.6em; } }
   .info-btn:hover {
     background-color: #F4F0ED; }
