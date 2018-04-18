@@ -474,11 +474,10 @@ a:hover,
   height: 48em; }
   @media only screen and (max-width: 1023px) {
     .works {
-      height: 86em; } }
+      height: 90em; } }
   .works .works__item {
     display: flex;
-    flex-flow: row wrap;
-    text-align: center;
+    flex-flow: column nowrap;
     justify-content: space-between;
     box-sizing: border-box;
     position: relative;
@@ -509,7 +508,8 @@ a:hover,
       left: -.5em; }
 
 .project {
-  align-self: center; }
+  align-self: center;
+  text-align: center; }
   .project .project__img {
     height: 5em;
     margin-bottom: 1em; }
