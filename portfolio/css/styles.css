@@ -11,18 +11,30 @@ figure {
 h1 {
   font-size: 2.6em;
   font-weight: 400; }
+  @media only screen and (max-width: 479px) {
+    h1 {
+      font-size: 2.4em; } }
 
 h2 {
   font-size: 1.8em;
   font-weight: 400; }
+  @media only screen and (max-width: 479px) {
+    h2 {
+      font-size: 1.6em; } }
 
 h3 {
   font-size: 1.4em;
   font-weight: 400; }
+  @media only screen and (max-width: 479px) {
+    h3 {
+      font-size: 1.1em; } }
 
 h4 {
   font-size: 1.2em;
   font-weight: 400; }
+  @media only screen and (max-width: 479px) {
+    h4 {
+      font-size: 0.9em; } }
 
 ul {
   list-style-type: none;
@@ -32,6 +44,12 @@ a {
   text-decoration: none;
   color: #424241;
   transition: color .3s; }
+
+.text {
+  font-size: 16px; }
+  @media only screen and (max-width: 479px) {
+    .text {
+      font-size: 14px; } }
 
 a:hover,
 .text--gold {
@@ -55,6 +73,9 @@ a:hover,
   @media only screen and (max-width: 639px) {
     .section {
       padding: 2em; } }
+  @media only screen and (max-width: 479px) {
+    .section {
+      padding: 1em; } }
   .section .section__head {
     text-align: left;
     margin-bottom: 5em; }
@@ -63,6 +84,9 @@ a:hover,
       margin-bottom: .6em; }
     .section .section__head .section__text {
       line-height: 2em; }
+      @media only screen and (max-width: 479px) {
+        .section .section__head .section__text {
+          font-size: 14px; } }
 
 .main-head {
   position: relative;
@@ -73,6 +97,9 @@ a:hover,
   @media only screen and (max-width: 639px) {
     .main-head {
       padding: 2em; } }
+  @media only screen and (max-width: 479px) {
+    .main-head {
+      padding: 1em; } }
   .main-head .main-head__headings {
     margin-left: auto;
     margin-right: auto;
@@ -191,6 +218,10 @@ a:hover,
   @media only screen and (max-width: 639px) {
     .theme-switch {
       right: 2em; } }
+  @media only screen and (max-width: 479px) {
+    .theme-switch {
+      right: 1em;
+      top: 1em; } }
 
 .theme-switch__label {
   position: relative;
@@ -274,6 +305,9 @@ a:hover,
   border-radius: 50%;
   transition: background-color .3s;
   cursor: pointer; }
+  @media only screen and (max-width: 479px) {
+    .info-btn {
+      font-size: 1.6em; } }
   .info-btn:hover {
     background-color: #F4F0ED; }
   .info-btn:hover + .info {
@@ -310,6 +344,10 @@ a:hover,
   @media only screen and (max-width: 639px) {
     .hamburger {
       left: 2em; } }
+  @media only screen and (max-width: 479px) {
+    .hamburger {
+      left: 1em;
+      top: 1em; } }
   .hamburger::after, .hamburger::before {
     content: '';
     position: absolute;
@@ -398,6 +436,9 @@ a:hover,
 
 .about-item__list {
   padding: 0 2em; }
+  @media only screen and (max-width: 767px) {
+    .about-item__list {
+      padding: 0; } }
   .about-item__list--border {
     border-right: 0.1em solid #424241; }
     @media only screen and (max-width: 767px) {
@@ -432,6 +473,9 @@ a:hover,
     font-size: 1.6em;
     font-weight: 400;
     color: #424241; }
+    @media only screen and (max-width: 479px) {
+      .works .works__number {
+        font-size: 1.3em; } }
     .works .works__number::after {
       content: "";
       display: block;
