@@ -53,7 +53,7 @@
 }
 
 .about-item__hard-skills {
-        @include mq('tablet', max) {
+    @include mq('tablet', max) {
         margin-bottom: 2em;
     }
 }
@@ -80,6 +80,10 @@
 
 .about-item__list {
     padding: 0 2em;
+
+    @include mq('tablet', max) {
+        padding: 0;
+    }
 
     &--border {
         border-right: .1em solid $night-primary;

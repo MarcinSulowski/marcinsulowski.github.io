@@ -10,6 +10,11 @@
 
     @include mq('tablet-small', max) {
         right: 2em;
+    }    
+    
+    @include mq('phone-wide', max) {
+        right: 1em;
+        top: 1em;
     }
 }
 

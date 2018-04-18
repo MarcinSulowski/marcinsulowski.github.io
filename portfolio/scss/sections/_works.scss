@@ -34,6 +34,10 @@
         font-weight: $font-regular;
         color: $night-primary;
 
+        @include mq('phone-wide', max) {
+            font-size: 1.3em;
+        }
+
         &::after {
             @include pseudo;
             border-bottom: 2px solid $night-primary;

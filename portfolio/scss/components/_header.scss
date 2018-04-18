@@ -7,9 +7,13 @@
     height: 100vh;
     box-sizing: border-box;
     padding: 2em 4em;
-    
+
     @include mq('tablet-small', max) {
         padding: 2em;
+    }
+
+    @include mq('phone-wide', max) {
+        padding: 1em;
     }
 
     .main-head__headings {
@@ -19,7 +23,6 @@
 
         @include mq('custom-879', max) {
             margin-top: 5em;
-//            margin-bottom: 6em;
         }
 
         .main-head__heading {

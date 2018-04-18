@@ -15,21 +15,37 @@ figure {
 h1 {
     font-size: $h1-font-size;
     font-weight: $font-regular;
+
+    @include mq('phone-wide', max) {
+        font-size: $h1-font-size - .2em;
+    }
 }
 
 h2 {
     font-size: $h2-font-size;
     font-weight: $font-regular;
+
+    @include mq('phone-wide', max) {
+        font-size: $h2-font-size - .2em;
+    }
 }
 
 h3 {
     font-size: $h3-font-size;
     font-weight: $font-regular;
+
+    @include mq('phone-wide', max) {
+        font-size: $h3-font-size - .3em;
+    }
 }
 
 h4 {
     font-size: $h4-font-size;
     font-weight: $font-regular;
+
+    @include mq('phone-wide', max) {
+        font-size: $h4-font-size - .3em;
+    }
 }
 
 ul {
@@ -43,6 +59,13 @@ a {
     transition: color .3s;
 }
 
+.text {
+    font-size: $base-font-size;
+
+    @include mq('phone-wide', max) {
+        font-size: $base-font-size - 2;
+    }
+}
 
 a:hover,
 .text--gold {
@@ -67,9 +90,13 @@ a:hover,
     box-sizing: border-box;
     padding: 2em 4em;
     min-height: 100vh;
-    
+
     @include mq('tablet-small', max) {
         padding: 2em;
+    }
+
+    @include mq('phone-wide', max) {
+        padding: 1em;
     }
 
     .section__head {
@@ -83,6 +110,9 @@ a:hover,
 
         .section__text {
             line-height: 2em;
+            @include mq('phone-wide', max) {
+                font-size: $base-font-size - 2;
+            }
         }
     }
 }
