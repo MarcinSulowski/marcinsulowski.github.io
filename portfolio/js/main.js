@@ -11,6 +11,7 @@ const documentElements = {
     cogsGraphic:    document.querySelector('.cogs-graphic'),
     mobileMenu:     document.querySelector('.mobile-menu'),
     form:           document.querySelector('form'),
+    infoBtns:       document.querySelectorAll('.info-btn'),
     typewriterOutput: document.getElementById('typewriter-output'),
     mobileNav:      document.getElementById('mobile-nav'),
     mainNav:        document.getElementById('main-nav'),
@@ -24,6 +25,11 @@ event listeners
 documentElements.mainNav.addEventListener('click', smoothScroll);
 documentElements.mobileNav.addEventListener('click', smoothScroll);
 
+documentElements.infoBtns.forEach(function (element) {
+    element.addEventListener('click', function () {
+        this.nextElementSibling.classList.toggle('visible');
+    })
+});
 
 /*
 functions
@@ -86,7 +92,6 @@ function toggleNavigation(e) {
     documentElements.mobileMenu.classList.toggle('mobile-menu--collapsed');
     document.body.classList.toggle('disable-scroll');
 }
-
 
 // changes main-nav's position to fixed on scroll
 window.onscroll = function () {
@@ -168,4 +173,3 @@ function type( strings, outputElement ) {
 
     typeString();
 }
-
