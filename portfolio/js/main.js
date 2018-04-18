@@ -44,10 +44,10 @@ const switchTheme = () => {
     const toggle = () => {
         const stylesheetLink = document.getElementById('night-theme-style');
 
-        if (stylesheetLink.href == location.href) {
+        if (stylesheetLink.href == 'css/') {
             stylesheetLink.href = 'css/styles--night-theme.css';
         } else {
-            stylesheetLink.href = '';
+            stylesheetLink.href = 'css/';
         }
     }
 
