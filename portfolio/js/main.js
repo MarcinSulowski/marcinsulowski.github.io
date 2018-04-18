@@ -1,20 +1,28 @@
+document.addEventListener('DOMContentLoaded', function () {
+    switchTheme().onTime();
+    type(myFavouriteStrings, documentElements.typewriterOutput);
+});
+
+/*
+document elements
+*/
+
+const documentElements = {
+    cogsGraphic:    document.querySelector('.cogs-graphic'),
+    mobileMenu:     document.querySelector('.mobile-menu'),
+    form:           document.querySelector('form'),
+    typewriterOutput: document.getElementById('typewriter-output'),
+    mobileNav:      document.getElementById('mobile-nav'),
+    mainNav:        document.getElementById('main-nav'),
+    themeSwitch:    document.getElementById('theme-switch'),
+};
+
 /*
 event listeners 
 */
 
-document.addEventListener('DOMContentLoaded', function () {
-    switchTheme().onTime();
-    type(myFavouriteStrings, typewriterOutput);
-});
-
-document.getElementById('main-nav').addEventListener('click', smoothScroll);
-document.getElementById('mobile-nav').addEventListener('click', smoothScroll);
-
-document.getElementById('form-submit-btn').addEventListener('click', function () {
-
-    let url = "https://formspree.io/mr." + "sulowski" + "@" + "gmail" + "." + "com";
-    this.parentElement.setAttribute('action', url);
-});
+documentElements.mainNav.addEventListener('click', smoothScroll);
+documentElements.mobileNav.addEventListener('click', smoothScroll);
 
 
 /*
@@ -26,22 +34,15 @@ functions
 const switchTheme = () => {
 
     const toggle = () => {
-        const stylesheetLink = document.getElementById('night-theme-styles');
-        let href = stylesheetLink.getAttribute('href');
-
-        if (href === null) {
-            stylesheetLink.setAttribute('href', 'css/styles--night-theme.css');
-        } else {
-            stylesheetLink.removeAttribute('href');
-        }
+        document.body.classList.toggle('night-theme');
     }
 
     const onTime = () => {
         const date = new Date();
 
-        if (date.getHours() >= 20 || date.getHours() <= 6) {
+        if ( date.getHours() >= 20 || date.getHours() <= 6 ) {
             toggle();
-            document.getElementById('theme-switch').checked = true;
+            documentElements.themeSwitch.checked = true;
         }
     }
 
@@ -51,69 +52,61 @@ const switchTheme = () => {
     };
 }
 
-//smooth scroll function
 function smoothScroll(e) {
 
     e.preventDefault();
 
-    if (e.target.classList.contains('main-nav__link')) {
+    const linkTarget = e.target.getAttribute('href');
+    const targetOffset = document.querySelector(linkTarget).offsetTop;
+    let scrollTop = 0;
 
-        const linkTarget = e.target.getAttribute('href').slice(1);
-        const targetOffset = document.getElementById(linkTarget).offsetTop;
+    if ( e.target.classList.contains('main-nav__link') ) {
+
         const navDimensions = this.getBoundingClientRect();
+        scrollTop = targetOffset - navDimensions.height;
 
-        window.scroll({
-            top: targetOffset - navDimensions.height,
-            left: 0,
-            behavior: 'smooth'
-        });
 
-    } else if (e.target.classList.contains('mobile-nav__link')) {
-        const linkTarget = e.target.getAttribute('href').slice(1);
-        const targetOffset = document.getElementById(linkTarget).offsetTop;
+    } else if ( e.target.classList.contains('mobile-nav__link') ) {
 
-        window.scroll({
-            top: targetOffset,
-            left: 0,
-            behavior: 'smooth'
-        });
-
+        scrollTop = targetOffset;
         toggleNavigation();
     }
+
+    window.scroll({
+        top: scrollTop,
+        left: 0,
+        behavior: 'smooth'
+    });
 
 }
 
 // toggle nav function
 function toggleNavigation(e) {
 
-    document.querySelector('.mobile-menu').classList.toggle('mobile-menu--collapsed');
+    documentElements.mobileMenu.classList.toggle('mobile-menu--collapsed');
     document.body.classList.toggle('disable-scroll');
 }
 
 
-// chages main-nav's position to fixed onscroll
+// changes main-nav's position to fixed on scroll
 window.onscroll = function () {
 
-    const mainNav = document.getElementById('main-nav');
-
-    if (this.scrollY > 189) {
-        mainNav.classList.add('main-nav--fixed');
+    if ( this.scrollY > 189 ) {
+        documentElements.mainNav.classList.add('main-nav--fixed');
     } else {
-        mainNav.classList.remove('main-nav--fixed');
+        documentElements.mainNav.classList.remove('main-nav--fixed');
     }
 }
 
 // JS media queries
-if (matchMedia) {
+if ( matchMedia ) {
     const mq = window.matchMedia("(max-width: 879px)");
     mq.addListener(WidthChange);
     WidthChange(mq);
 }
 
 function WidthChange(mq) {
-
-    const cogsElement = document.querySelector('.cogs-graphic');
-    mq.matches ? cogsElement.setAttribute('data', 'img/lightbulb.svg') : cogsElement.setAttribute('data', 'img/cogs.svg');
+    mq.matches ? documentElements.cogsGraphic.setAttribute('data', 'img/lightbulb.svg') : documentElements.cogsGraphic.setAttribute('data', 'img/cogs.svg');
 }
 
 // typewriter effect - variables
@@ -126,10 +119,9 @@ const myFavouriteStrings = [
           "food"
 		];
 
-const typewriterOutput = document.getElementById('typewriter-output');
 
 // typewriter effect - function
-function type(strings, outputElement) {
+function type( strings, outputElement ) {
 
     const typeSpeed = 80,
         deleteSpeed = 30,
@@ -141,14 +133,14 @@ function type(strings, outputElement) {
 
     function typeString() {
 
-        if (sentenceIndex >= strings.length) {
+        if ( sentenceIndex >= strings.length ) {
             sentenceIndex = 0;
         }
 
-        const chars = strings[sentenceIndex].split('');
+        const chars = strings[ sentenceIndex ].split('');
 
         setTimeout(function () {
-            if (currentChar >= chars.length) {
+            if ( currentChar >= chars.length ) {
                 setTimeout(function () {
                     sentenceIndex++;
 
@@ -157,7 +149,7 @@ function type(strings, outputElement) {
 
                         currentChar--;
 
-                        if (currentChar == 0) {
+                        if ( currentChar == 0 ) {
                             clearInterval(deleteInterval);
                             typeString();
                         }
@@ -167,7 +159,7 @@ function type(strings, outputElement) {
                 return;
             }
 
-            outputElement.innerHTML += chars[currentChar];
+            outputElement.innerHTML += chars[ currentChar ];
             currentChar++;
 
             typeString();
@@ -177,12 +169,3 @@ function type(strings, outputElement) {
     typeString();
 }
 
-
-//const projectInfoBtns = document.querySelectorAll('.project-info-btn');
-//
-//for ( let i = 0; i < projectInfoBtns.length; i++ ) {
-//    
-//    projectInfoBtns[i].addEventListener('click', function (e) {
-//        this.nextElementSibling.classList.toggle('visible');
-//    })
-//}
