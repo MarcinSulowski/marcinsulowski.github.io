@@ -129,7 +129,7 @@ a:hover,
     .main-head .main-head__headings .main-head__subheading {
       font-weight: 300; }
 
-.cogs-graphic {
+.header-svg {
   height: 50vh;
   max-width: 80%;
   position: absolute;
@@ -137,16 +137,16 @@ a:hover,
   left: 50%;
   transform: translateX(-50%); }
   @media only screen and (max-width: 878px) {
-    .cogs-graphic {
+    .header-svg {
       width: 100%; } }
   @media only screen and (max-width: 399px) {
-    .cogs-graphic {
+    .header-svg {
       bottom: 5%; } }
   @media only screen and (max-width: 820px) and (orientation: landscape) {
-    .cogs-graphic {
+    .header-svg {
       display: none; } }
 
-.cogs-graphic--fallback {
+.header-svg--fallback {
   width: 100%;
   height: auto; }
 
