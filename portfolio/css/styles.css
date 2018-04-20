@@ -351,7 +351,8 @@ a:hover,
       padding-left: 1em; }
       @media only screen and (max-width: 399px) {
         .footer .footer-nav__item:last-of-type {
-          padding-left: .8em; } }
+          padding-left: .8em;
+          font-size: 1.4em; } }
 
 .hamburger {
   display: flex;
@@ -696,7 +697,8 @@ a:hover,
     height: 22em; }
   .form .form__input::placeholder,
   .form .form__textarea::placeholder {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 11px; }
 
 .night-theme {
   background-color: #424241;

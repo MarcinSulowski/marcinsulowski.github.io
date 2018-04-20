@@ -50,5 +50,6 @@
     .form__input::placeholder,
     .form__textarea::placeholder {
         text-transform: uppercase;
+        font-size: $base-font-size - 5;
     }
 }
