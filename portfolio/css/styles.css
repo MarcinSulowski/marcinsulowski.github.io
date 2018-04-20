@@ -347,12 +347,14 @@ a:hover,
   .footer .footer-nav__item {
     display: inline-block;
     font-size: 1.6em; }
+    @media only screen and (max-width: 399px) {
+      .footer .footer-nav__item {
+        font-size: 1.4em; } }
     .footer .footer-nav__item:last-of-type {
       padding-left: 1em; }
       @media only screen and (max-width: 399px) {
         .footer .footer-nav__item:last-of-type {
-          padding-left: .8em;
-          font-size: 1.4em; } }
+          padding-left: .8em; } }
 
 .hamburger {
   display: flex;

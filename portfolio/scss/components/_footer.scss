@@ -27,12 +27,15 @@
         display: inline-block;
         font-size: 1.6em;
 
+        @include mq('phone', max) {
+            font-size: 1.4em;
+        }
+
         &:last-of-type {
             padding-left: 1em;
 
             @include mq('phone', max) {
                 padding-left: .8em;
-                font-size: 1.4em;
             }
 
         }
