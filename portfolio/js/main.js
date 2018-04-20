@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    detectIE();
     switchTheme().onTime();
     type(myFavouriteStrings, documentElements.typewriterOutput);
 });
@@ -8,7 +9,7 @@ document elements
 */
 
 const documentElements = {
-    cogsGraphic:    document.querySelector('.cogs-graphic'),
+    headerSvg:    document.querySelector('.header-svg'),
     mobileMenu:     document.querySelector('.mobile-menu'),
     form:           document.querySelector('form'),
     infoBtns:       document.querySelectorAll('.info-btn'),
@@ -31,9 +32,34 @@ documentElements.infoBtns.forEach(function (element) {
     })
 });
 
+
+
 /*
 functions
 */
+
+function setTransformValues() {
+    documentElements.headerSvg.addEventListener("load", function () {
+        const svgDoc = this.getSVGDocument();
+        const cogs = svgDoc.querySelectorAll('.cog');
+
+        cogs.forEach(function (element) {
+            let transform = getComputedStyle(element).getPropertyValue('transform');
+            element.setAttribute('transform', transform);
+        })
+
+    });
+}
+
+
+// detect IE
+function detectIE() {
+    const trident = window.navigator.userAgent.indexOf('Trident/');
+
+    if (trident > 0) {
+        setTransformValues();
+    }
+}
 
 
 // switch theme function
@@ -57,6 +83,8 @@ const switchTheme = () => {
         onTime
     };
 }
+
+
 
 function smoothScroll(e) {
 
@@ -111,7 +139,7 @@ if ( matchMedia ) {
 }
 
 function WidthChange(mq) {
-    mq.matches ? documentElements.cogsGraphic.setAttribute('data', 'img/lightbulb.svg') : documentElements.cogsGraphic.setAttribute('data', 'img/cogs.svg');
+    mq.matches ? documentElements.headerSvg.setAttribute('data', 'img/lightbulb.svg') : documentElements.headerSvg.setAttribute('data', 'img/cogs.svg');
 }
 
 // typewriter effect - variables
