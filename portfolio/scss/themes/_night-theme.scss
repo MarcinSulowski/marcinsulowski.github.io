@@ -9,6 +9,11 @@
     .btn--form {
         color: $white;
     }
+    
+    a:hover,
+    .btn--form:hover {
+        color: $gold;
+    }
 
     .theme-switch__label::after {
         background-image: url(../img/sun.svg);

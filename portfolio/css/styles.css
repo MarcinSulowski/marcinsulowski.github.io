@@ -708,6 +708,9 @@ a:hover,
   .night-theme a,
   .night-theme .btn--form {
     color: #f5f5f5; }
+  .night-theme a:hover,
+  .night-theme .btn--form:hover {
+    color: #CCA958; }
   .night-theme .theme-switch__label::after {
     background-image: url(../img/sun.svg); }
   .night-theme .about-item {
