@@ -43,9 +43,9 @@ function setTransformValues() {
         const svgDoc = this.getSVGDocument();
         const cogs = svgDoc.querySelectorAll('.cog');
 
-        cogs.forEach(function (element) {
-            let transform = getComputedStyle(element).getPropertyValue('transform');
-            element.setAttribute('transform', transform);
+        cogs.forEach(function (cog) {
+            let transform = getComputedStyle(cog).getPropertyValue('transform');
+            cog.setAttribute('transform', transform);
         })
 
     });
@@ -84,12 +84,10 @@ const switchTheme = () => {
     };
 }
 
-
-
 function smoothScroll(e) {
 
     e.preventDefault();
-
+    
     const linkTarget = e.target.getAttribute('href');
     const targetOffset = document.querySelector(linkTarget).offsetTop;
     let scrollTop = 0;
@@ -98,7 +96,6 @@ function smoothScroll(e) {
 
         const navDimensions = this.getBoundingClientRect();
         scrollTop = targetOffset - navDimensions.height;
-
 
     } else if ( e.target.classList.contains('mobile-nav__link') ) {
 
@@ -111,7 +108,7 @@ function smoothScroll(e) {
         left: 0,
         behavior: 'smooth'
     });
-
+    
 }
 
 // toggle nav function
