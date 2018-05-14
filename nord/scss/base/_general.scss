@@ -1,0 +1,150 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+body {
+    background-color: $creamy-white;
+    font-family: $base-font;
+    color: $white;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure,
+blockquote {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+}
+
+.col-1-2 {
+    position: relative;
+}
+
+.col-1-2,
+.col-2-2 {
+    width: 50%;
+}
+
+.section__content {
+    margin: 0 auto;
+    width: 60em;
+}
+
+.header--center {
+    text-align: center;
+    margin-bottom: 4em;
+
+    .header__heading {
+        margin-bottom: 1em;
+    }
+
+    .header__text {
+        line-height: 2em;
+    }
+}
+
+.header--left {
+
+    .header__heading {
+        margin-bottom: 2em;
+    }
+
+    .header__text {
+        margin-bottom: 6em;
+        line-height: 2em;
+    }
+}
+
+
+.btn {
+    font-family: $base-font;
+    color: $white;
+    font-size: $base-font-size - 3;
+    text-transform: uppercase;
+    padding: 1em 0;
+    width: 9em;
+    border: none;
+    cursor: pointer;
+    will-change: transform;
+    transition: transform .3s ease-in;
+
+    &--green {
+        background-color: $green;
+    }
+
+    &--white {
+        background-color: $white;
+        color: $green;
+    }
+
+    &--black {
+        background-color: $black;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.slides-nav {
+    width: 10em;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+
+    &__item {
+        position: absolute;
+        top: 1em;
+
+        &:first-of-type {
+            left: 0;
+        }
+
+        &:nth-of-type(2) {
+            left: 2.5em;
+        }
+
+        &:nth-of-type(3) {
+            left: 5em;
+        }
+
+        &:nth-of-type(4) {
+            left: 7.5em;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-color: $white;
+        opacity: .5;
+        border-radius: .5em;
+        will-change: transform;
+        transition: all .3s linear;
+
+        &.active {
+            width: 2em;
+            opacity: 1;
+            transform: scaleX(1) translateX(-.5em);
+        }
+    }
+}
