@@ -26,6 +26,13 @@
         padding: 10em 2em;
     }
 
+    @include mq('phone-wide', max) {
+        background: $green;
+    }
+
+    @include mq('phone', max) {
+        padding-top: 5em;
+    }
 
     .header__heading {
         @include mq('tablet-wide', max) {
@@ -112,6 +119,11 @@
     line-height: 2em;
     padding: 4em;
 
+
+    @include mq('phablet', max) {
+        padding: 3em 2em;
+    }
+
     &.active {
         transform: rotateX(0);
         opacity: 1;
@@ -139,10 +151,29 @@
     .testimonial__quote {
         margin-bottom: 1.8em;
         color: $black;
+
+
+        @include mq('tablet-small', max) {
+            font-size: $base-font-size - 2;
+        }
+
+
+        @include mq('phone-wide', max) {
+            font-size: $base-font-size - 3;
+        }
     }
 
     .testimonial__author {
         color: $green;
+
+
+        @include mq('tablet-small', max) {
+            font-size: $base-font-size - 2;
+        }
+
+        @include mq('phone-wide', max) {
+            font-size: $base-font-size - 3;
+        }
     }
 }
 

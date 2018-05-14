@@ -5,10 +5,9 @@ h1 {
     font-size: $h1-font-size;
     font-weight: $font-semi-bold;
     color: $black-lite;
-    
-        @include mq('tablet', max) {
-        padding-left: 4em;
-        padding-right: 4em;
+
+    @include mq('tablet-small', max) {
+        font-size: $h1-font-size - .4em;
     }
 }
 
@@ -16,11 +15,19 @@ h2 {
     font-size: $h1-font-size;
     font-weight: $font-semi-bold;
     color: $white;
+
+    @include mq('tablet-small', max) {
+        font-size: $h1-font-size - .4em;
+    }
 }
 
 .text {
     font-size: $base-font-size - 1;
     font-weight: $font-regular;
+
+    @include mq('tablet-small', max) {
+        font-size: $base-font-size - 2;
+    }
 
     &--white {
         color: $white;
@@ -29,31 +36,12 @@ h2 {
     &--black {
         color: $black;
     }
-    
+
     &--green {
         color: $green;
     }
-    
+
     &--italic {
         font-style: italic;
     }
-}
-
-
-.text .text--quotes {
-    @extend .text--italic;
-    @extend .text--green;
-}
-
-q {
-    quotes: "“" "”" "‘" "’";
-    padding: 2em;
-}
-
-q:before {
-    content: open-quote;
-}
-
-q:after {
-    content: close-quote;
 }

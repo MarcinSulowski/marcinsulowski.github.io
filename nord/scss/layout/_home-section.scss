@@ -4,21 +4,30 @@
     background-image: url(../img/bg-home.svg);
     overflow: hidden;
 
+    @include mq('phone-wide', max) {
+        background: $green;
+    }
 
     @include mq('tablet-wide', max) {
-        text-align: center;
-        
+
         .col-1-2 {
             display: none;
         }
         .col-2-2 {
             width: 100%;
         }
-        
+
         .header__text {
             color: $black;
         }
     }
+
+
+    @include mq('phone', max) {
+        padding-top: 1em;
+    }
+
+
 }
 
 
@@ -41,8 +50,26 @@
     margin-bottom: 15em;
 
 
+    @include mq('phone-wide', max) {
+        margin-bottom: 8em;
+    }
+
+    @include mq('tablet', max) {
+        font-size: $base-font-size - 2;
+    }
+
+    @include mq('phone', max) {
+        align-items: flex-start;
+
+    }
+
+
     &__item {
         display: inline-block;
+        @include mq('phone', max) {
+            display: block;
+            margin-bottom: 2em;
+        }
     }
 
     &__link {
@@ -51,6 +78,15 @@
 
         &:last-of-type {
             margin-left: 2em;
+
+            @include mq('phone-wide', max) {
+                margin-left: 1em;
+            }
+
+            @include mq('phone-wide', max) {
+                margin: 0;
+            }
+
         }
     }
 

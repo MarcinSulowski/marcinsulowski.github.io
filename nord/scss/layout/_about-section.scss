@@ -36,6 +36,11 @@
         }
     }
 
+    @include mq('phone', max) {
+        padding-top: 5em;
+    }
+
+
 }
 
 .slides {
