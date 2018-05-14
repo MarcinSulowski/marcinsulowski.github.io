@@ -1,28 +1,36 @@
-const testimNavLinks = document.querySelectorAll('.slides-nav--testimonials .slides-nav__link');
-const testimonials = document.querySelectorAll('.testimonial');
+(function () {
 
-testimNavLinks.forEach(function (link) {
-    
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
+    const testimonialNavLinks = document.querySelectorAll('.slides-nav--testimonials .slides-nav__link');
+    const aboutNavLinks = document.querySelectorAll('.slides-nav--about .slides-nav__link');
+    const testimonialSlides = document.querySelectorAll('.testimonial');
+    const aboutSlides = document.querySelectorAll('.slides__items');
 
-        for (let i = 0; i < testimNavLinks.length; i++) {
-            if (testimNavLinks[i].classList.contains('active')) {
-                testimNavLinks[i].classList.remove('active');
-            }
-        }
+    const deactivateElms = (elm = []) => {
+        elm.forEach((elm) => {
+            elm.classList.remove('active');
+        });
+    };
 
-        link.classList.add('active');
+    const animateSlides = (links = [], slides = []) => {
+        links.forEach((link) => {
 
-        testimonials.forEach(function (el) {
+            const linkHref = link.getAttribute('href');
+            const hrefTarget = document.querySelector(linkHref);
+            
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
 
-            if (el.classList.contains('active')) {
-                el.classList.remove('active');
-            }
-        })
+                deactivateElms(links);
+                deactivateElms(slides);
 
-        const href = link.getAttribute('href');
-        const testimonial = document.querySelector(href);
-        testimonial.classList.add('active');
-    })
-})
+                link.classList.toggle('active');
+                hrefTarget.classList.add('active');
+            })
+        });
+    };
+
+    animateSlides(testimonialNavLinks, testimonialSlides);
+    animateSlides(aboutNavLinks, aboutSlides);
+
+}());
