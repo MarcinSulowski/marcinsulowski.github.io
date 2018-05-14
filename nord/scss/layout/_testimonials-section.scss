@@ -61,7 +61,11 @@
 .testimonials {
     position: absolute;
     bottom: 6em;
-    right: 10%;
+    left: 40em;
+
+    @include mq('desktop-wide', max) {
+        left: 30em;
+    }
 
     @include mq('desktop', max) {
         position: static;
