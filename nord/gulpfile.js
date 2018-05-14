@@ -1,10 +1,11 @@
 const gulp = require('gulp'),
     sass = require('gulp-sass'),
+    rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano');
 
 gulp.task('sass', function () {
-    
-    return gulp.src('scss/*.scss')
+
+    return gulp.src('scss/**/*.scss')
         .pipe(sass())
         .on('error', function (err) {
             console.log(err.toString());
@@ -14,7 +15,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('scss/**/*.scss', ['sass']);
 });
 
 gulp.task('minify-css', function () {
