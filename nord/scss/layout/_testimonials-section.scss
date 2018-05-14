@@ -3,32 +3,79 @@
 
 .section--testimonials {
     position: relative;
-    padding: 15em 0 0 0;
-    min-height: 70vh;
+    padding: 12em 0 0 0;
+    min-height: 40em;
     background-image: url(../img/bg-testimonials.svg);
-    background-size: cover;
     overflow: hidden;
+
+    @include mq('desktop-wide', max) {
+        background-size: 100% 100vw;
+    }
+
+    @include mq('desktop', max) {
+        background-size: 100% 300vw;
+    }
+
+
+    @include mq('tablet', max) {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    @include mq('phablet', max) {
+        padding: 10em 2em;
+    }
+
+
+    .header__heading {
+        @include mq('tablet-wide', max) {
+            color: $black;
+        }
+    }
 }
 
 .testimonials-section__img {
     position: absolute;
     width: 18em;
     bottom: -3em;
-    left: 300px;
+    left: 15em;
     transform: rotate(-27deg);
+
+    @include mq('desktop-wide', max) {
+        left: 8em;
+        transform: rotate(-17deg);
+    }
+
+    @include mq('desktop', max) {
+        display: none;
+    }
 }
 
 .testimonials {
     position: absolute;
     bottom: 6em;
-    left: 39%;
+    right: 10%;
+
+    @include mq('desktop', max) {
+        position: static;
+    }
 
     .testimonials__tooltip {
+        position: relative;
         height: 15em;
         width: 40em;
         border-radius: 1em;
         background-color: $white;
         margin-bottom: 1em;
+
+        @include mq('desktop', max) {
+            margin: 0 auto;
+        }
+
+        @include mq('tablet', max) {
+            width: 100%;
+            height: 20em;
+        }
 
         &::after {
             @include center(both);
@@ -36,6 +83,12 @@
             left: -2em;
             border: 2em solid;
             border-color: transparent $white transparent transparent;
+
+            @include mq('desktop', max) {
+                border-color: transparent transparent $white transparent;
+                top: -2em;
+                left: 50%;
+            }
         }
 
         .testimonials__content {
@@ -52,16 +105,17 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    left: -100%;
+    transform: rotateX(90deg);
     opacity: 0;
-    transition: left .5s linear, opacity 1s ease-out;
+    will-change: transform;
+    transition: transform .6s ease-in, opacity .6s linear;
     line-height: 2em;
     padding: 4em;
 
     &.active {
+        transform: rotateX(0);
         opacity: 1;
-        left: 0;
-    }    
+    }
 
     &::before,
     &::after {

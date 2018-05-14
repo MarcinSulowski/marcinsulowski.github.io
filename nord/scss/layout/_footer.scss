@@ -2,6 +2,10 @@
     padding: 4em;
     text-align: center;
     
+    @include mq('phone-wide', max) {
+        padding: 4em 2em;
+    }
+    
     .footer__logo {
         margin-bottom: 2em;
     }

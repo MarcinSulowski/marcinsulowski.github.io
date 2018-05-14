@@ -5,6 +5,11 @@ h1 {
     font-size: $h1-font-size;
     font-weight: $font-semi-bold;
     color: $black-lite;
+    
+        @include mq('tablet', max) {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
 }
 
 h2 {
@@ -13,19 +18,8 @@ h2 {
     color: $white;
 }
 
-h3 {
-    font-size: $h3-font-size;
-    font-weight: $font-regular;
-
-}
-
-h4 {
-    font-size: $h4-font-size;
-    font-weight: $font-regular;
-}
-
 .text {
-    font-size: $base-font-size;
+    font-size: $base-font-size - 1;
     font-weight: $font-regular;
 
     &--white {

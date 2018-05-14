@@ -2,6 +2,10 @@
     background-color: $black;
     text-align: center;
     padding: 4em 0 5em 0;
+
+    @include mq('phone-wide', max) {
+        padding: 4em 2em 5em;
+    }
 }
 
 .form__input {
@@ -15,7 +19,24 @@
     width: 30em;
     padding: 1em 2em;
 
+    @include mq('tablet-small', max) {
+        margin-bottom: 2em;
+    }
+
+    @include mq('phone-wide', max) {
+        width: 100%;
+    }
+
     &::placeholder {
         color: $white;
     }
+}
+
+.form__btn {
+    @include mq('tablet-small', max) {
+        display: block;
+        width: 10em;
+        margin: 0 auto;
+    }
+
 }

@@ -4,6 +4,7 @@
 body {
     background-color: $creamy-white;
     font-family: $base-font;
+    font-size: $base-font-size;
     color: $white;
 }
 
@@ -29,6 +30,7 @@ a {
     text-decoration: none;
 }
 
+
 .flex-container {
     display: flex;
     width: 100%;
@@ -43,10 +45,24 @@ a {
     width: 50%;
 }
 
-.section__content {
-    margin: 0 auto;
-    width: 60em;
+.section {
+    background-size: cover;
+
+    @include mq('tablet-wide', max) {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    &__content {
+        margin: 0 auto;
+        width: 60em;
+
+        @include mq('tablet-wide', max) {
+            width: 100%;
+        }
+    }
 }
+
 
 .header--center {
     text-align: center;
@@ -86,6 +102,15 @@ a {
     will-change: transform;
     transition: transform .3s ease-in;
 
+    &--block {
+        display: block;
+        text-align: center;
+        
+        @include mq('tablet-wide', max) {
+            margin: 0 auto;
+        }
+    }
+
     &--green {
         background-color: $green;
     }
@@ -102,10 +127,11 @@ a {
     &:hover {
         transform: scale(1.05);
     }
+
 }
 
 .slides-nav {
-    width: 10em;
+    width: 8em;
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -139,7 +165,7 @@ a {
         opacity: .5;
         border-radius: .5em;
         will-change: transform;
-        transition: all .3s linear;
+        transition: all .5s linear;
 
         &.active {
             width: 2em;

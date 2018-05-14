@@ -2,8 +2,23 @@
     padding-top: 2em;
     padding-bottom: 5em;
     background-image: url(../img/bg-home.svg);
-    background-size: cover;
     overflow: hidden;
+
+
+    @include mq('tablet-wide', max) {
+        text-align: center;
+        
+        .col-1-2 {
+            display: none;
+        }
+        .col-2-2 {
+            width: 100%;
+        }
+        
+        .header__text {
+            color: $black;
+        }
+    }
 }
 
 
@@ -12,6 +27,10 @@
     width: 20em;
     bottom: -10em;
     left: 0;
+
+    @include mq('tablet-wide', max) {
+        display: none;
+    }
 }
 
 .main-nav {
@@ -34,7 +53,7 @@
             margin-left: 2em;
         }
     }
-    
+
     &__logo {
         padding-left: .6em;
     }
