@@ -69,25 +69,53 @@
 
                         <h2 class="header__heading">What you get</h2>
                         <p class="header__text">People are definitely a company's greatest asset. <br />It doesn't make any difference <br />whether the product is cars or cosmetics. <br />A company is only as good as the people it keeps.</p>
-                        <a href=""><button class="btn btn--green">get it now</button></a>
+                        <a class="btn btn--green btn--block" href="">get it now</a>
 
                     </header>
                 </div>
 
                 <div class="col-2-2">
                     <div class="slides">
-                        <figure class="slides__item"><img src="img/screen1.png" alt=""></figure>
-                        <figure class="slides__item"><img src="img/screen1.png" alt=""></figure>
-                        <figure class="slides__item"><img src="img/screen1.png" alt=""></figure>
-                        <figure class="slides__item"><img src="img/screen1.png" alt=""></figure>
+                        <div class="slides__items active" id="slide1">
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">1</figcaption>
+                            </figure>
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">2</figcaption>
+                            </figure>
+                        </div>
+                        <div class="slides__items" id="slide2">
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">3</figcaption>
+                            </figure>
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">4</figcaption>
+                            </figure>
+                        </div>
+                        <div class="slides__items" id="slide3">
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">5</figcaption>
+                            </figure>
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">6</figcaption>
+                            </figure>
+                        </div>
+                        <div class="slides__items" id="slide4">
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">7</figcaption>
+                            </figure>
+                            <figure class="slide__item"><img src="img/screen1.png" alt="">
+                                <figcaption class="slide__caption">8</figcaption>
+                            </figure>
+                        </div>
                     </div>
 
-                    <nav class="slides-nav">
+                    <nav class="slides-nav slides-nav--about">
                         <ul>
-                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth" href=""></a></li>
-                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth" href=""></a></li>
-                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth" href=""></a></li>
-                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth" href=""></a></li>
+                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth active" href="#slide1"></a></li>
+                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth" href="#slide2"></a></li>
+                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth" href="#slide3"></a></li>
+                            <li class="slides-nav__item"><a class="slides-nav__link noZensmooth" href="#slide4"></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -163,7 +191,7 @@
 
         </header>
 
-        <form class="form" method="post" action="" autocomplete="on">
+        <form class="form" autocomplete="on">
 
             <input class="form__input" type="email" name="email" placeholder="Your Mail" required multiple>
             <button class="form__btn btn btn--white" type="submit" value="Submit">send</button>
