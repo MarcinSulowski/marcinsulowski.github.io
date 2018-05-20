@@ -8,15 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
 document elements
 */
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-119592054-1');
+
+
 const documentElements = {
-    headerSvg:    document.querySelector('.header-svg'),
-    mobileMenu:     document.querySelector('.mobile-menu'),
-    form:           document.querySelector('form'),
-    infoBtns:       document.querySelectorAll('.info-btn'),
+    headerSvg: document.querySelector('.header-svg'),
+    mobileMenu: document.querySelector('.mobile-menu'),
+    form: document.querySelector('form'),
+    infoBtns: document.querySelectorAll('.info-btn'),
     typewriterOutput: document.getElementById('typewriter-output'),
-    mobileNav:      document.getElementById('mobile-nav'),
-    mainNav:        document.getElementById('main-nav'),
-    themeSwitch:    document.getElementById('theme-switch'),
+    mobileNav: document.getElementById('mobile-nav'),
+    mainNav: document.getElementById('main-nav'),
+    themeSwitch: document.getElementById('theme-switch'),
 };
 
 /*
@@ -72,7 +84,7 @@ const switchTheme = () => {
     const onTime = () => {
         const date = new Date();
 
-        if ( date.getHours() >= 20 || date.getHours() <= 6 ) {
+        if (date.getHours() >= 20 || date.getHours() <= 6) {
             toggle();
             documentElements.themeSwitch.checked = true;
         }
@@ -87,17 +99,17 @@ const switchTheme = () => {
 function smoothScroll(e) {
 
     e.preventDefault();
-    
+
     const linkTarget = e.target.getAttribute('href');
     const targetOffset = document.querySelector(linkTarget).offsetTop;
     let scrollTop = 0;
 
-    if ( e.target.classList.contains('main-nav__link') ) {
+    if (e.target.classList.contains('main-nav__link')) {
 
         const navDimensions = this.getBoundingClientRect();
         scrollTop = targetOffset - navDimensions.height;
 
-    } else if ( e.target.classList.contains('mobile-nav__link') ) {
+    } else if (e.target.classList.contains('mobile-nav__link')) {
 
         scrollTop = targetOffset;
         toggleNavigation();
@@ -108,7 +120,7 @@ function smoothScroll(e) {
         left: 0,
         behavior: 'smooth'
     });
-    
+
 }
 
 // toggle nav function
@@ -121,7 +133,7 @@ function toggleNavigation(e) {
 // changes main-nav's position to fixed on scroll
 window.onscroll = function () {
 
-    if ( this.scrollY > 189 ) {
+    if (this.scrollY > 189) {
         documentElements.mainNav.classList.add('main-nav--fixed');
     } else {
         documentElements.mainNav.classList.remove('main-nav--fixed');
@@ -129,7 +141,7 @@ window.onscroll = function () {
 }
 
 // JS media queries
-if ( matchMedia ) {
+if (matchMedia) {
     const mq = window.matchMedia("(max-width: 879px)");
     mq.addListener(WidthChange);
     WidthChange(mq);
@@ -151,7 +163,7 @@ const myFavouriteStrings = [
 
 
 // typewriter effect - function
-function type( strings, outputElement ) {
+function type(strings, outputElement) {
 
     const typeSpeed = 80,
         deleteSpeed = 30,
@@ -163,14 +175,14 @@ function type( strings, outputElement ) {
 
     function typeString() {
 
-        if ( sentenceIndex >= strings.length ) {
+        if (sentenceIndex >= strings.length) {
             sentenceIndex = 0;
         }
 
-        const chars = strings[ sentenceIndex ].split('');
+        const chars = strings[sentenceIndex].split('');
 
         setTimeout(function () {
-            if ( currentChar >= chars.length ) {
+            if (currentChar >= chars.length) {
                 setTimeout(function () {
                     sentenceIndex++;
 
@@ -179,7 +191,7 @@ function type( strings, outputElement ) {
 
                         currentChar--;
 
-                        if ( currentChar == 0 ) {
+                        if (currentChar == 0) {
                             clearInterval(deleteInterval);
                             typeString();
                         }
@@ -189,7 +201,7 @@ function type( strings, outputElement ) {
                 return;
             }
 
-            outputElement.innerHTML += chars[ currentChar ];
+            outputElement.innerHTML += chars[currentChar];
             currentChar++;
 
             typeString();
