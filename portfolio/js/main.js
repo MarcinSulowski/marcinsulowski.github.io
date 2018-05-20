@@ -8,18 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document elements
 */
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-
-window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-    dataLayer.push(arguments);
-}
-gtag('js', new Date());
-
-gtag('config', 'UA-119592054-1');
-
-
 const documentElements = {
     headerSvg: document.querySelector('.header-svg'),
     mobileMenu: document.querySelector('.mobile-menu'),
