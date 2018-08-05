@@ -1,119 +1,120 @@
-@import '../helpers/variables';
-@import '../helpers/mixins';
+@import "../helpers/variables";
+@import "../helpers/mixins";
 
 .section--about {
-    .section__text {
-        @include mq('tablet-wide', max) {
-            display: block;
-            height: 2em;
-        }
+  .section__text {
+    @include mq("tablet-wide", max) {
+      display: block;
+      height: 2em;
     }
+  }
 }
 
 .about-item {
-    box-sizing: border-box;
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 2em;
-    padding: 1em 2em;
-    border: 2px solid $night-primary;
-    line-height: 2em;
+  box-sizing: border-box;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  padding: 1em 2em;
+  border: 2px solid $night-primary;
+  line-height: 2em;
 
-    @include mq('desktop-wide', max) {
-        width: 80%;
+  @include mq("desktop-wide", max) {
+    width: 80%;
+  }
+
+  @include mq("desktop", max) {
+    width: 90%;
+  }
+
+  @include mq("tablet-wide", max) {
+    width: 100%;
+  }
+
+  @include mq("phone", max) {
+    padding: 1em;
+  }
+
+  &::after,
+  &::before {
+    @include pseudo;
+    border-top: 0.6em solid $day-primary;
+    width: 96%;
+    left: 2%;
+  }
+
+  &::after {
+    top: -0.3em;
+  }
+
+  &::before {
+    bottom: -0.3em;
+  }
+
+  &--skills {
+    display: flex;
+
+    @include mq("tablet", max) {
+      flex-flow: row wrap;
     }
 
-    @include mq('desktop', max) {
-        width: 90%;
+    @include mq("phone", max) {
+      text-align: center;
     }
-
-    @include mq('tablet-wide', max) {
-        width: 100%;
-    }
-
-    @include mq('phone', max) {
-        padding: 1em;
-    }
-
-
-    &::after,
-    &::before {
-        @include pseudo;
-        border-top: .6em solid $day-primary;
-        width: 96%;
-        left: 2%;
-    }
-
-    &::after {
-        top: -.3em;
-    }
-
-    &::before {
-        bottom: -.3em;
-    }
-
-    &--skills {
-        display: flex;
-
-        @include mq('tablet', max) {
-            flex-flow: row wrap;
-        }
-
-        @include mq('phone', max) {
-            text-align: center;
-        }
-    }
+  }
 }
-
 
 .about-item__hard-skills,
 .about-item__soft-skills {
-    flex-basis: 50%;
+  flex-basis: 50%;
 
-    @include mq('tablet', max) {
-        flex-basis: 100%;
-    }
+  @include mq("tablet", max) {
+    flex-basis: 100%;
+  }
 }
 
 .about-item__hard-skills {
-    @include mq('tablet', max) {
-        margin-bottom: 2em;
-    }
+  @include mq("tablet", max) {
+    margin-bottom: 2em;
+  }
 }
 
-
 .about-item__heading {
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: .8em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
 }
 
 .about-item__link {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 
-    &::after {
-        @include pseudo;
-        bottom: .3em;
-        right: 0;
-        width: 100%;
-        border-bottom: .1em solid $night-primary;
-    }
+  &::after {
+    @include pseudo;
+    bottom: 0.3em;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.1em solid $night-primary;
+  }
+
+  &--strike {
+    text-decoration: line-through;
+  }
 }
 
 .about-item__list {
-    padding: 0 2em;
+  padding: 0 2em;
 
-    @include mq('tablet', max) {
-        padding: 0;
+  @include mq("tablet", max) {
+    padding: 0;
+  }
+
+  &--border {
+    border-right: 0.1em solid $night-primary;
+
+    @include mq("tablet", max) {
+      border-right: none;
     }
-
-    &--border {
-        border-right: .1em solid $night-primary;
-
-        @include mq('tablet', max) {
-            border-right: none;
-        }
-    }
+  }
 }

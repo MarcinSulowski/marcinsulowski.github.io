@@ -32,9 +32,9 @@
     width: 96%;
     left: 2%; }
   .about-item::after {
-    top: -.3em; }
+    top: -0.3em; }
   .about-item::before {
-    bottom: -.3em; }
+    bottom: -0.3em; }
   .about-item--skills {
     display: flex; }
     @media only screen and (max-width: 767px) {
@@ -59,7 +59,7 @@
 .about-item__heading {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: .8em; }
+  margin-bottom: 0.8em; }
 
 .about-item__link {
   display: inline-block;
@@ -68,10 +68,12 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: .3em;
+    bottom: 0.3em;
     right: 0;
     width: 100%;
     border-bottom: 0.1em solid #424241; }
+  .about-item__link--strike {
+    text-decoration: line-through; }
 
 .about-item__list {
   padding: 0 2em; }
